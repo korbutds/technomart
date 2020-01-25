@@ -9,13 +9,14 @@
     <!-- Секция header -->
 
     <header>
-      <!-- Р -->
-      <div class="header-up">
-        <a class="logo">Техномарт</a>
+      <div class="header-order">
+        <a class="logo"><img src="logo" alt="Техномарт"></a>
         <input type="search" name="header-search" placeholder="Поиск:">
-        <a class="header-btn" href="#">Закладки</a>
-        <a class="header-btn" href="#">Корзина</a>
-        <a class="header-btn" href="#">Оформить заказ</a>
+        <div class="order-btn">
+          <a class="header-btn" href="#">Закладки</a>
+          <a class="header-btn" href="#">Корзина</a>
+          <a class="header-btn" href="#">Оформить заказ</a>
+        </div>
       </div>
 
       <div class="header-info">
@@ -26,8 +27,13 @@
           <a class="header-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <a class="btn" href="#">Войти</a>
-        <a class="btn" href="#">Регистрация</a>
+        <div class="user-login">
+          <ul class="login-btn">
+            <li><a class="btn" href="#">Войти</a></li>
+            <li><a class="btn" href="#">Регистрация</a></li>
+          </ul>
+        </div>
+        <div class="user-menu"></div>
       </div>
 
       <nav class="header-navigation">
@@ -53,7 +59,7 @@
           строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями: </p>
-        <ul>
+        <ul class="about-partners">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
@@ -76,9 +82,19 @@
     <!-- Секция footer -->
 
     <footer>
-      <div class="footer-up">
-        <a class="logo">Техномарт</a>
-        <ul>
+      <div class="footer-about">
+        <a class="logo" href="index.html"><img src="logo" alt="Техномарт"></a>
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <a class="footer-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a></p>
+      </div>
+      <div class="footer-links">
+        <ul class="footer-navigation">
+          <li><a href="">Материалы</a></li>
+          <li><a href="">Техника</a></li>
+          <li><a href="">Инструмент</a></li>
+          <li><a href="">Спецпредложения</a></li>
+        </ul>
+        <ul class="footer-navigation gold">
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="">Католог</a></li>
@@ -86,36 +102,22 @@
           <li><a href="">Контакты</a></li>
         </ul>
       </div>
-
-      <div class="footer-middle">
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          <a class="footer-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a></p>
-        <ul>
-          <li><a href="">Материалы</a></li>
-          <li><a href="">Техника</a></li>
-          <li><a href="">Инструмент</a></li>
-          <li><a href="">Спецпредложения</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2010–2019 Компания «Техномарт»<br>
+      <div class="footer-contact">
+        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
           Все права защищены</p>
-          <div class="social-footer">
-            <ul>
-              <li><a href="#">Вконтакте</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-            </ul>
-          </div>
-          <p>
-            Обратная связь:<br>
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p>
-            Разработано —<br>
-            <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
-          </p>
+        <ul class="footer-social">
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <p class="footer-feedback">
+          Обратная связь:<br>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="footer-feedback">
+          Разработано —<br>
+          <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+        </p>
       </div>
     </footer>
   </body>
