@@ -9,56 +9,64 @@
     <!-- Секция header -->
 
     <header>
-      <div class="header-order">
-        <a class="logo"><img src="logo" alt="Техномарт"></a>
-        <input type="search" name="header-search" placeholder="Поиск:">
-        <div class="order-btn">
-          <a class="header-btn" href="#">Закладки: <span class="counter">0</span></a>
-          <a class="header-btn" href="#">Корзина <span class="counter">0</span></a>
-          <a class="header-btn order-btn" href="#">Оформить заказ</a>
+      <div class="container">
+        <div class="header-order">
+          <a class="logo" href="index.html"><img src="logo" alt="Техномарт"></a>
+          <input type="search" name="header-search" placeholder="Поиск:">
+          <div class="order-container">
+            <a class="header-btn" href="#">Закладки: <span class="bookmark-counter">0</span></a>
+            <a class="header-btn active" href="#">Корзина <span class="basket-counter">10</span></a>
+            <a class="order-btn" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
 
-      <div class="header-info">
-        <p>Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта</p>
-        <div class="header-contacts">
-          <a class="header-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
-        <div class="user-login">
-          <ul class="login-btn">
-            <li><a class="btn" href="#">Войти</a></li>
-            <li><a class="btn" href="#">Регистрация</a></li>
-          </ul>
-        </div>
-        <div class="user-menu">
-          <a class="loggout-btn" href="#">Равшан Джамшутович</a>
-          <ul class="loged-out-btn">
-            <li><a href="#">Мои заказы</a></li>
-            <li><a href="#">Личный кабинет</a></li>
-          </ul>
+      <div class="header-content">
+        <div class="container">
+          <div class="header-info">
+          <p>
+            Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта
+            </p>
+            <div class="header-contacts">
+              <a class="header-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </div>
+            <div class="user-login">
+              <ul class="login-btn">
+                <li><a class="btn" href="#">Войти</a></li>
+                <li><a class="btn" href="#">Регистрация</a></li>
+              </ul>
+            </div>
+            <div class="user-menu">
+              <a class="loggout-btn" href="#">Равшан Джамшутович</a>
+              <ul class="loged-out-btn">
+                <li><a href="#">Мои заказы</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="header-navigation">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
-
-      <nav class="header-navigation">
-        <ul>
-          <li><a href="">Главная</a></li>
-          <li><a href="">Компания</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Спецпредложения</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
-      </nav>
     </header>
 
     <!-- Секция main -->
 
     <main>
-      <div class="container">
+      <div class="container ">
 
         <section class="features-section">
           <ul class="features-list">
@@ -88,26 +96,23 @@
                 <span class="features-description">Бесплатно</span>
             </li>
           </ul>
-          <!-- Slider -->
+          <!-- Slider. Взял отсюда: https://github.com/itchief/how-to/blob/master/slider/index.html-->
           <div class="features-slider">
             <div class="slider-list">
               <div class="slider">
                 <h3 class="slider-title">Дрели</h3><br>
                 <span class="slider-description">Соседям на радость</span><br>
-                <button class="left-btn" href="#">left</button>
-                <button class="right-btn" href="#">right</button><br>
                 <a class="catalog-btn" href="#">Весь каталог</a>
               </div>
               <div class="slider">
                 <h3 class="slider-title">Перфораторы</h3><br>
                 <span class="slider-description">Настоящие мужские игрушки</span><br>
-                <button class="left-btn" href="#">left</button>
-                <button class="right-btn" href="#">right</button><br>
                 <a class="catalog-btn" href="inner.html">Весь каталог</a>
               </div>
             </div>
+            <button class="left-btn" href="#" type="button">left</button>
+            <button class="right-btn" href="#" type="button">right</button><br>
           </div>
-          </li>
         </section>
 
         <section class="popular-section">
@@ -130,7 +135,7 @@
               <span class="item-cost">25500 р.</span>
               <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
                 <a class="basket-btn" href="#">Купить</a>
-                <button class="bookmark-btn">В закладки</button>
+                <button class="bookmark-btn" type="button">В закладки</button>
               </div>
             </li>
             <!-- 2 товар -->
@@ -147,7 +152,7 @@
               <span class="item-cost">15500 р.</span>
               <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
                 <a class="basket-btn" href="#">Купить</a>
-                <button class="bookmark-btn">В закладки</button>
+                <button class="bookmark-btn" type="button">В закладки</button>
               </div>
             </li>
             <!-- 3 товар -->
@@ -164,7 +169,7 @@
               <span class="item-cost">25500 р.</span>
               <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
                 <a class="basket-btn" href="#">Купить</a>
-                <button class="bookmark-btn">В закладки</button>
+                <button class="bookmark-btn" type="button">В закладки</button>
               </div>
             </li>
             <!-- 4 товар -->
@@ -181,7 +186,7 @@
               <span class="item-cost">12500 р.</span>
               <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
                 <a class="basket-btn" href="#">Купить</a>
-                <button class="bookmark-btn">В закладки</button>
+                <button class="bookmark-btn" type="button">В закладки</button>
               </div>
             </li>
           </ul>
@@ -301,10 +306,14 @@
 
         <section class="about-section">
           <h2 class="section-title">Компания "Техномарт"</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и<br>
-            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-            Техномарт работает со многими транспортными компаниями: </p>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и<br>
+            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
           <ul class="about-partners">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
@@ -317,7 +326,8 @@
 
         <section class="contacts-section">
           <h2 class="section-title">Контакты</h2>
-          <p>Вы можете забрать товар сами<br>
+          <p>
+            Вы можете забрать товар сами<br>
             заехав в наш офис:
           </p>
           <a href="#">
@@ -333,27 +343,31 @@
     <footer>
       <div class="footer-about">
         <a class="logo" href="index.html"><img src="logo" alt="Техномарт"></a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          <a class="footer-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a></p>
+        <p>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <a class="footer-phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
+        </p>
       </div>
       <div class="footer-links">
         <ul class="footer-navigation">
-          <li><a href="">Материалы</a></li>
-          <li><a href="">Техника</a></li>
-          <li><a href="">Инструмент</a></li>
-          <li><a href="">Спецпредложения</a></li>
+          <li><a href="#">Материалы</a></li>
+          <li><a href="#">Техника</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li><a href="#">Спецпредложения</a></li>
         </ul>
         <ul class="footer-navigation gold">
-          <li><a href="">Компания</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
-          Все права защищены</p>
+        <p class="footer-copyright">
+          © 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
+        </p>
         <ul class="footer-social">
           <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Facebook</a></li>
@@ -363,7 +377,7 @@
           Обратная связь:<br>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p class="footer-feedback">
+        <p class="footer-note">
           Разработано —<br>
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
