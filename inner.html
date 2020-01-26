@@ -5,27 +5,27 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-
     <!-- Секция header -->
-
     <header>
-      <div class="container">
-        <div class="header-order">
+      <!-- Блок верхней части header -->
+      <div class="header-order">
+        <div class="container">
           <a class="logo" href="index.html"><img src="logo" alt="Техномарт"></a>
           <input type="search" name="header-search" placeholder="Поиск:">
           <div class="order-container">
-            <a class="header-btn" href="#">Закладки: <span class="bookmark-counter">0</span></a>
-            <a class="header-btn active" href="#">Корзина <span class="basket-counter">10</span></a>
+            <a class="header-btn header-bookmark" href="#">Закладки: <span class="bookmark-counter">0</span></a>
+            <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
             <a class="order-btn" href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
-
+      <!-- Блок средней части header и навигации. -->
       <div class="header-content">
         <div class="container">
+          <!-- Блок средней части header -->
           <div class="header-info">
-          <p>
-            Интернет-магазин<br>
+            <p>
+              Интернет-магазин<br>
               строительных материалов<br>
               и инструментов для ремонта
             </p>
@@ -41,13 +41,13 @@
             </div>
             <div class="user-menu">
               <a class="loggout-btn" href="#">Равшан Джамшутович</a>
-              <ul class="loged-out-btn">
+              <ul>
                 <li><a href="#">Мои заказы</a></li>
                 <li><a href="#">Личный кабинет</a></li>
               </ul>
             </div>
           </div>
-
+          <!-- Блок с навигацией -->
           <nav class="header-navigation">
             <ul>
               <li><a href="#">Главная</a></li>
@@ -64,6 +64,7 @@
     </header>
 
     <main>
+
       <section class="products-info container">
         <ul class="breadcrumbs">
           <li><a href="catalog.html">Каталог</a></li>
@@ -71,6 +72,7 @@
           <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
         <h1 class="page-title">Перфораторы</h1>
+        <!-- Секция с фильтрами пока не оформляется -->
         <section class="filter-section">
           <h2 class="visual-hidden">Фильтр товаров</h2>
           <p>Фильтр:</p>
@@ -93,15 +95,6 @@
           <section class="catalog-section">
             <h2 class="visual-hidden">Список товаров</h2>
             <ul class="catalog-list">
-              <!-- Вот туть я поплыл) -->
-              <!-- 1ый товар -->
-              <!-- Расскажу свою логику. Скажи где ошибся, пожалуйста. Ставлю элементу списка класс new-item.
-              в css прописываю
-              .catalog-list li.new-item {
-                background-image: url("new.png");
-                background-position: top right;
-                        }
-                      -->
               <li class="catalog-item">
                 <span class="new-label"></span>
                 <img src="#" alt="Перфоратор BOSCH BFG 3000">
@@ -264,16 +257,18 @@
               <a class="next" href="#">Следующая</a>
             </div>
           </section>
-
-          <section class="inner-about-section">
-            <h2 class="section-title">Пара слов о перфораторах</h2>
-            <p>
-              Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-              Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
-              В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-            </p>
-          </section>
         </section>
+      </section>
+      <!-- Информационная секция -->
+      <section class="inner-about-section">
+        <div class="container">
+          <h2 class="section-title">Пара слов о перфораторах</h2>
+          <p>
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
       </section>
     </main>
 
