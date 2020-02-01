@@ -112,8 +112,8 @@
             <img src="img/bfg-9000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 9000">
             <h3 class="item-name">
               <a href="#">
-              <span>Перфоратор BOSCH</span>
-              <span>BFG 9000</span>
+                <span>Перфоратор BOSCH</span>
+                <span>BFG 9000</span>
               </a>
             </h3>
             <span class="old-price">32500 р.</span>
@@ -125,11 +125,11 @@
           </li>
           <!-- 2 товар -->
           <li class="catalog-item"><!--Вот тут не уверен, что поведение должно быть схоже с inner.html-->
-            <img src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <img src="img/bfg-3000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 3000">
             <h3 class="item-name">
               <a href="#">
-              <span>Перфоратор BOSCH</span>
-              <span>BFG 3000</span>
+                <span>Перфоратор BOSCH</span>
+                <span>BFG 3000</span>
               </a>
             </h3>
             <span class="old-price">22500 р.</span>
@@ -141,11 +141,11 @@
           </li>
           <!-- 3 товар -->
           <li class="catalog-item"><!--Вот тут не уверен, что поведение должно быть схоже с inner.html-->
-            <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+            <img src="img/bfg-6000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 6000">
             <h3 class="item-name">
               <a href="#">
-              <span>Перфоратор BOSCH</span>
-              <span>BFG 6000</span>
+                <span>Перфоратор BOSCH</span>
+                <span>BFG 6000</span>
               </a>
             </h3>
             <span class="old-price">30500 р.</span>
@@ -157,11 +157,11 @@
           </li>
           <!-- 4ый товар -->
           <li class="catalog-item new-item"><!--Вот тут не уверен, что поведение должно быть схоже с inner.html-->
-            <img src="img/bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+            <img src="img/bfg-2000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 2000">
             <h3 class="item-name">
               <a href="#">
-              <span>Перфоратор BOSCH</span>
-              <span>BFG 2000</span>
+                <span>Перфоратор BOSCH</span>
+                <span>BFG 2000</span>
               </a>
             </h3>
             <span class="old-price"></span>
@@ -313,36 +313,8 @@
               Вы можете забрать товар сами
               заехав в наш офис:
             </p>
-            <a href="#"><img src="img/map.jpg" alt="Карта проезда"></a><!--В будущем здесб будет JS-->
+            <button type="button"><img src="img/map.jpg" alt="Карта проезда"></button><!--В будущем здесб будет JS-->
             <a class="btn">Заблудились? Напишите нам!</a><!--Должен появиться pop-up write-us-->
-          </section>
-          <section class="map-pop-up">
-            <button class="close-btn" type="button">x</button>
-            <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
-          </section>
-          <section class="write-pop-up">
-            <div class="form-area">
-              <button class="close-btn" type="button">x</button>
-              <form action="https://echo.htmlacademy.ru" method="POST">
-                <p>
-                  <label for="write-name">Ваше имя:</label>
-                <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-                </p>
-                <p>
-                  <label>
-                    Ваш e-mail:
-                    <input type="email" name="e-mail" value="" placeholder="Ваш e-mail">
-                  </label>
-                </p>
-                <p>
-                  <label for="letter-us">Текст письма:</label>
-                  <textarea id="letter-us" placeholder="В свободной форме"></textarea>
-                </p>
-              </form>
-            </div>
-            <div class="pop-up-btns">
-              <button class="btn" type="submit">Отправить</button>
-            </div>
           </section>
         </div>
       </section>
@@ -401,6 +373,35 @@
         </div>
       </div>
     </footer>
+    <!-- Pop-up's block -->
+    <section class="map-pop-up">
+      <button class="close-btn" type="button">x</button>
+      <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
+    </section>
+    <section class="write-pop-up">
+      <div class="form-area">
+        <button class="close-btn" type="button">x</button>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="write-name">Ваше имя:</label>
+          <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label>
+              Ваш e-mail:
+              <input type="email" name="e-mail" value="" placeholder="Ваш e-mail">
+            </label>
+          </p>
+          <p>
+            <label for="letter-us">Текст письма:</label>
+            <textarea id="letter-us" placeholder="В свободной форме"></textarea>
+          </p>
+        </form>
+      </div>
+      <div class="pop-up-btns">
+        <button class="btn" type="submit">Отправить</button>
+      </div>
+    </section>
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">
         <path fill="currentColor" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"></path>
