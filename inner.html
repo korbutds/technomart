@@ -17,7 +17,7 @@
           </a>
           <input type="search" name="header-search" placeholder="Поиск:">
           <div class="order-container">
-            <a class="header-btn header-bookmark" href="#">Закладки: <span class="bookmark-counter">0</span></a>
+            <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
             <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
             <a class="order-btn" href="#">Оформить заказ</a>
           </div>
@@ -44,7 +44,10 @@
               </ul>
             </div>
             <div class="user-menu">
-              <a class="loggout-btn" href="#">Равшан Джамшутович</a>
+              <div class="user-name">
+                <a class="profile-btn" href="#">Равшан Джамшутович</a>
+                <button class="loggout-btn" type="button"></button>
+              </div>
               <ul>
                 <li><a href="#">Мои заказы</a></li>
                 <li><a href="#">Личный кабинет</a></li>
@@ -248,13 +251,24 @@
             <!-- Пагинация. Здесь вопрос. В макете 3 страницы. Но может же быть больше!
             Может нужно добавить кнупку "предыдущее"? на первой странице она будет не активна class "disabled" -->
             <div class="catalog-pagination">
-              <a class="current" href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a class="next" href="#">Следующая</a>
+              <a class="current page-btn" href="#">1</a>
+              <a clas="page-btn" href="#">2</a>
+              <a clas="page-btn" href="#">3</a>
+              <a class="page-btn" href="#">Следующая</a>
             </div>
           </section>
         </section>
+      </section>
+      <!-- Pop-up's block -->
+      <section class="cart-section">
+        <div class="cart-info">
+          <button class="close-btn" type="button">x</button>
+          <h2>Товар добавлен в корзину!</h2>
+        </div>
+        <div class="pop-up-btns">
+          <a class="btn" href="#">Оформить заказ</a>
+          <button class="btn" type="button">Продолжить покупки</button>
+        </div>
       </section>
       <!-- Информационная секция -->
       <section class="inner-about-section">

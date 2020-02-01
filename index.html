@@ -17,7 +17,7 @@
           </a>
           <input type="search" name="header-search" placeholder="Поиск:">
           <div class="order-container">
-            <a class="header-btn header-bookmark" href="#">Закладки: <span class="bookmark-counter">0</span></a>
+            <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
             <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
             <a class="order-btn" href="#">Оформить заказ</a>
           </div>
@@ -42,7 +42,10 @@
               <li><a class="btn" href="#">Регистрация</a></li>
             </ul>
             <div class="user-menu">
-              <a class="loggout-btn" href="#">Равшан Джамшутович</a>
+              <div class="user-name">
+                <a class="profile-btn" href="#">Равшан Джамшутович</a>
+                <button class="loggout-btn" type="button"></button>
+              </div>
               <ul>
                 <li><a href="#">Мои заказы</a></li>
                 <li><a href="#">Личный кабинет</a></li>
@@ -106,7 +109,7 @@
         <ul class="popular-list">
           <!-- 1 товар -->
           <li class="catalog-item"><!--Вот тут не уверен, что поведение должно быть схоже с inner.html-->
-            <img src="img/bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+            <img src="img/bfg-9000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 9000">
             <h3 class="item-name">
               <a href="#">
               <span>Перфоратор BOSCH</span>
@@ -313,6 +316,34 @@
             <a href="#"><img src="img/map.jpg" alt="Карта проезда"></a><!--В будущем здесб будет JS-->
             <a class="btn">Заблудились? Напишите нам!</a><!--Должен появиться pop-up write-us-->
           </section>
+          <section class="map-pop-up">
+            <button class="close-btn" type="button">x</button>
+            <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
+          </section>
+          <section class="write-pop-up">
+            <div class="form-area">
+              <button class="close-btn" type="button">x</button>
+              <form action="https://echo.htmlacademy.ru" method="POST">
+                <p>
+                  <label for="write-name">Ваше имя:</label>
+                <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                  <label>
+                    Ваш e-mail:
+                    <input type="email" name="e-mail" value="" placeholder="Ваш e-mail">
+                  </label>
+                </p>
+                <p>
+                  <label for="letter-us">Текст письма:</label>
+                  <textarea id="letter-us" placeholder="В свободной форме"></textarea>
+                </p>
+              </form>
+            </div>
+            <div class="pop-up-btns">
+              <button class="btn" type="submit">Отправить</button>
+            </div>
+          </section>
         </div>
       </section>
     </main>
@@ -355,13 +386,6 @@
             Все права защищены
           </p>
           <ul class="footer-social">
-            <li>
-              <a href="#">
-                <svg class="icon">
-                  <use xlink:href="#logo-technomart"></use>
-                </svg>
-              </a>
-            </li>
             <li><a href="#">Вконтакте</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Instagram</a></li>
