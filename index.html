@@ -10,7 +10,7 @@
       <!-- Блок верхней части header -->
       <div class="header-order">
         <div class="container">
-          <a class="logo">
+          <a class="logo" aria-label="Техномарт">
             <svg class="icon">
               <use xlink:href="#logo-technomart"></use>
             </svg>
@@ -69,34 +69,35 @@
     </header>
     <!-- Секция main -->
     <main>
+      <h1 class="visual-hidden">Интернет-магазин строительных материалов ТЕХНОМАРТ</h1>
       <!-- Секция с преимуществами -->
       <section class="features-section container">
         <h2 class="visual-hidden">Наши преимущества.</h2>
         <ul class="features-list">
           <!-- 1 фича -->
           <li class="features-item new-item">
-            <h3 class="features-name" aria-label="Посмотреть материалы">Материалы</h3>
-            <a class="features-description" href="#">На любой вкус</a>
+            <h3 class="features-name">Материалы</h3>
+            <a class="features-description" href="#" aria-label="Посмотреть материалы">На любой вкус</a>
           </li>
           <!-- 2 фича -->
           <li class="features-item new-item">
-            <h3 class="features-name" aria-label="Выбрать инструмент">Инструмент</h3>
-            <a class="features-description" href="#">На все случаи</a>
+            <h3 class="features-name">Инструмент</h3>
+            <a class="features-description" href="#" aria-label="Выбрать инструмент">На все случаи</a>
           </li>
           <!-- 3 фича -->
           <li class="features-item new-item">
-            <h3 class="features-name" aria-label="Выбрать технику">Техника</h3>
-            <a class="features-description" href="#">Для стройки</a>
+            <h3 class="features-name">Техника</h3>
+            <a class="features-description" href="#" aria-label="Выбрать технику">Для стройки</a>
           </li>
           <!-- 4 фича -->
           <li class="features-item new-item">
-            <h3 class="features-name" aria-label="Скидка 50 процентов">Скидка 50%</h3>
-            <a class="features-description" href="#">На 350 товаров</a>
+            <h3 class="features-name">Скидка 50%</h3>
+            <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
           </li>
           <!-- 5 фича -->
           <li class="features-item new-item">
-            <h3 class="features-name" aria-label="У нас доставка">Доставка</h3>
-            <a class="features-description" href="#">Бесплатно</a>
+            <h3 class="features-name">Доставка</h3>
+            <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
           </li>
         </ul>
         <!-- Slider будет тут-->
@@ -326,12 +327,12 @@
       <div class="footer-links">
         <div class="container">
           <div class="footer-about">
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="Техномарт">
               <svg class="icon">
                 <use xlink:href="#logo-tecnomart"></use>
               </svg>
             </a>
-            <p>
+            <p aria-label="адрес город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               <a class="footer-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
             </p>
@@ -360,9 +361,9 @@
             Все права защищены
           </p>
           <ul class="footer-social">
-            <li><a href="#">Вконтакте</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="#" aria-label="Мы вконтакте"></a></li>
+            <li><a href="#" aria-label="Мы в facebook"></a></li>
+            <li><a href="#" aria-label="Мы в instagram"></a></li>
           </ul>
           <p class="footer-feedback">
             Обратная связь:<br>
@@ -378,14 +379,14 @@
     <!-- Pop-up's block -->
     <section class="map-pop-up">
       <h2 class="visual-hidden">Карта проезда.</h2>
-      <button class="close-btn" type="button" aria-label="close">x</button>
+      <button class="close-btn" type="button" aria-label="закрыть"></button>
       <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
     </section>
     <section class="write-pop-up">
       <h2 class="visual-hidden">Напишите нам.</h2>
-      <div class="form-area">
-        <button class="close-btn" type="button" aria-label="close">x</button>
-        <form action="https://echo.htmlacademy.ru" method="POST">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form-area">
+          <button class="close-btn" type="button" aria-label="закрыть"></button>
           <p>
             <label for="write-name">Ваше имя:</label>
             <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
@@ -398,9 +399,11 @@
             <label for="letter-us">Текст письма:</label>
             <textarea id="letter-us" placeholder="В свободной форме"></textarea>
           </p>
+        </div>
+        <div class="btn-area">
           <button class="btn" type="submit">Отправить</button>
-        </form>
-      </div>
+        </div>
+      </form>
       <div class="pop-up-btns"></div>
     </section>
     <!-- svg-sprite -->
