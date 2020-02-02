@@ -15,7 +15,7 @@
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
-          <input type="search" name="header-search" placeholder="Поиск:">
+          <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
           <div class="order-container">
             <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
             <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
@@ -34,8 +34,8 @@
               и инструментов для ремонта
             </p>
             <div class="header-contacts">
-              <a class="header-phone" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <a class="header-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
+              <p aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <ul class="user-login">
               <li><a class="btn" href="#">Войти</a></li>
@@ -44,7 +44,7 @@
             <div class="user-menu">
               <div class="user-name">
                 <a class="profile-btn" href="#">Равшан Джамшутович</a>
-                <button class="loggout-btn" type="button"></button>
+                <button class="loggout-btn" type="button" aria-label="Кнопка 'выйти из системы'"></button>
               </div>
               <ul>
                 <li><a href="#">Мои заказы</a></li>
@@ -71,6 +71,7 @@
     <main>
       <!-- Секция с преимуществами -->
       <section class="features-section container">
+        <h2 class="visual-hidden">Наши преимущества.</h2>
         <ul class="features-list">
           <!-- 1 фича -->
           <li class="features-item new-item">
@@ -182,50 +183,50 @@
         <ul>
           <!-- 1 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="BOSCH">
-              <img src="img/bosch-logo.png" alt="инструмент BOSCH">
+            <a href="#" title="BOSCH" aria-label="Выбрать инструмент компании bosch">
+              <img src="img/bosch-logo.png" alt="Инструмент компании BOSCH">
             </a>
           </li>
           <!-- 2 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="Makita">
-              <img src="img/makita-logo.png" alt="инструмент Makita">
+            <a href="#" title="Makita" aria-label="Выбрать инструмент компании makita">
+              <img src="img/makita-logo.png" alt="Инструмент компании Makita">
             </a>
           </li>
           <!-- 3 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="DeWalt">
-              <img src="img/dewalt-logo.png" alt="инструмент DeWalt">
+            <a href="#" title="DeWalt" aria-label="Выбрать инструмент компании dewalt">
+              <img src="img/dewalt-logo.png" alt="Инструмент компании DeWalt">
             </a>
           </li>
           <!-- 4 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="Интерскол">
-              <img src="img/interscol-logo.png" alt="инструмент Интерскол">
+            <a href="#" title="Интерскол" aria-label="Выбрать инструмент компании интерскол">
+              <img src="img/interscol-logo.png" alt="Инструмент компании Интерскол">
             </a>
           </li>
           <!-- 5 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="HITACHI">
-              <img src="img/hitachi-logo.png" alt="инструмент HITACHI">
+            <a href="#" title="HITACHI" aria-label="Выбрать инструмент компании hitachi">
+              <img src="img/hitachi-logo.png" alt="Инструмент компании HITACHI">
             </a>
           </li>
           <!-- 6 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="LG">
-              <img src="img/lg-logo.png" alt="инструмент LG">
+            <a href="#" title="LG"  aria-label="Выбрать инструмент компании lg">
+              <img src="img/lg-logo.png" alt="Инструмент компании LG">
             </a>
           </li>
           <!-- 7 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="AEG">
-              <img src="img/aeg-logo.png" alt="инструмент AEG">
+            <a href="#" title="AEG" aria-label="Выбрать инструмент компании aeg"><!--Не уверен в выборе area0label, но хотел поэксперементировать. Просто получается, что у нас на ссылке есть title а в img есть alt, которые по сути говорят читалке одно и тоже.-->
+              <img src="img/aeg-logo.png" alt="Инструмент компании AEG">
             </a>
           </li>
           <!-- 8 производитель -->
           <li class="manufacturer-item">
-            <a href="#" title="metabo">
-              <img src="img/metabo-logo.png" alt="инструмент metabo">
+            <a href="#" title="metabo" aria-label="Выбрать инструмент компании metabo">
+              <img src="img/metabo-logo.png" alt="Инструмент компании metabo">
             </a>
           </li>
         </ul>
@@ -279,7 +280,7 @@
                   Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
-                <a class="btn" href="#">Отправить заявку</a>
+                <a class="btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
               </li>
             </ul>
           </li>
@@ -287,6 +288,7 @@
       </section>
       <!-- Секция о компании и контакты -->
       <section class="about-contacts">
+        <h2 class="visual-hidden">О компании.</h2>
         <div class="container">
           <!-- Секция about -->
           <section class="about-section">
@@ -314,7 +316,7 @@
               заехав в наш офис:
             </p>
             <button type="button"><img src="img/map.jpg" alt="Карта проезда"></button><!--В будущем здесб будет JS-->
-            <a class="btn">Заблудились? Напишите нам!</a><!--Должен появиться pop-up write-us-->
+            <a class="btn" href="#">Заблудились? Напишите нам!</a><!--Должен появиться pop-up write-us-->
           </section>
         </div>
       </section>
@@ -331,7 +333,7 @@
             </a>
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              <a class="footer-phone" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
+              <a class="footer-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
             </p>
           </div>
           <div class="footer-navigation">
@@ -375,33 +377,33 @@
     </footer>
     <!-- Pop-up's block -->
     <section class="map-pop-up">
-      <button class="close-btn" type="button">x</button>
+      <h2 class="visual-hidden">Карта проезда.</h2>
+      <button class="close-btn" type="button" aria-label="close">x</button>
       <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
     </section>
     <section class="write-pop-up">
+      <h2 class="visual-hidden">Напишите нам.</h2>
       <div class="form-area">
-        <button class="close-btn" type="button">x</button>
+        <button class="close-btn" type="button" aria-label="close">x</button>
         <form action="https://echo.htmlacademy.ru" method="POST">
           <p>
             <label for="write-name">Ваше имя:</label>
-          <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
           </p>
           <p>
-            <label>
-              Ваш e-mail:
-              <input type="email" name="e-mail" value="" placeholder="Ваш e-mail">
-            </label>
+            <label for="write-email">Ваш e-mail:</label>
+            <input id="write-email" type="email" name="e-mail" value="" placeholder="Ваш e-mail">
           </p>
           <p>
             <label for="letter-us">Текст письма:</label>
             <textarea id="letter-us" placeholder="В свободной форме"></textarea>
           </p>
+          <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
-      <div class="pop-up-btns">
-        <button class="btn" type="submit">Отправить</button>
-      </div>
+      <div class="pop-up-btns"></div>
     </section>
+    <!-- svg-sprite -->
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">
         <path fill="currentColor" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"></path>

@@ -15,7 +15,7 @@
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
-          <input type="search" name="header-search" placeholder="Поиск:">
+          <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
           <div class="order-container">
             <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
             <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
@@ -34,8 +34,8 @@
               и инструментов для ремонта
             </p>
             <div class="header-contacts">
-              <a class="header-phone" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <a class="header-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
+              <p aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="user-login">
               <ul class="login-btn">
@@ -46,7 +46,7 @@
             <div class="user-menu">
               <div class="user-name">
                 <a class="profile-btn" href="#">Равшан Джамшутович</a>
-                <button class="loggout-btn" type="button"></button>
+                <button class="loggout-btn" type="button" aria-label="Кнопка 'выйти из системы'"></button>
               </div>
               <ul>
                 <li><a href="#">Мои заказы</a></li>
@@ -69,9 +69,9 @@
         </div>
       </div>
     </header>
-
+    <!-- Секция main -->
     <main>
-
+      <!-- Секция каталог -->
       <section class="products-info container">
         <ul class="breadcrumbs">
           <li><a href="catalog.html">Каталог</a></li>
@@ -250,8 +250,8 @@
             </ul>
             <!-- Пагинация. Здесь вопрос. В макете 3 страницы. Но может же быть больше!
             Может нужно добавить кнупку "предыдущее"? на первой странице она будет не активна class "disabled" -->
-            <div class="catalog-pagination">
-              <a class="current page-btn" href="#">1</a>
+            <div class="catalog-pagination" aria-label="Выбор страницы">
+              <a class="current page-btn" href="#" aria-label="Текущая страница">1</a>
               <a clas="page-btn" href="#">2</a>
               <a clas="page-btn" href="#">3</a>
               <a class="page-btn" href="#">Следующая</a>
@@ -281,9 +281,9 @@
                 <use xlink:href="#logo-technomart"></use>
               </svg>
             </a>
-            <p>
+            <p aria-label="адрес">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              <a class="footer-phone" href="tel:+7(812)5550555">+7 (812) 555-05-55</a>
+              <a class="footer-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
             </p>
           </div>
           <div class="footer-navigation">
@@ -328,14 +328,15 @@
     <!-- Pop-up's block -->
     <section class="cart-section">
       <div class="cart-info">
-        <button class="close-btn" type="button">x</button>
+        <button class="close-btn" type="button" aria-label="close">x</button>
         <h2>Товар добавлен в корзину!</h2>
       </div>
       <div class="pop-up-btns">
         <a class="btn" href="#">Оформить заказ</a>
-        <button class="btn" type="button">Продолжить покупки</button>
+        <a class="btn" href="#">Продолжить покупки</a>
       </div>
     </section>
+    <!-- svg-sprite -->
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">
         <path fill="currentColor" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"></path>
