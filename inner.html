@@ -69,9 +69,8 @@
         </div>
       </div>
     </header>
-    <!-- Секция main -->
+
     <main>
-      <!-- Секция каталог -->
       <section class="products-info container">
         <ul class="breadcrumbs">
           <li><a href="catalog.html">Каталог</a></li>
@@ -79,26 +78,83 @@
           <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
         <h1 class="page-title">Перфораторы</h1>
-        <!-- Секция с фильтрами пока не оформляется -->
+
         <section class="filter-section">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <p>Фильтр:</p>
-          <h3>Цена:</h3>
-          <h3>Производители:</h3>
-          <h3>Питание:</h3>
-          <button>Показать</button>
-          <form></form>
+          <p class="filter-title">Фильтр:</p>
+          <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
+            <fieldset class="range-field">
+              <legend class="visually-hidden">Цена</legend>
+              <h3 class="form-title">Цена:</h3>
+              <div class="range-section">
+                <label for="price"></label>
+                <input type="range" id="price" name="price" min="0" max="100000" step="100" aria-label="Укажите диапозон цен">
+              </div>
+              <div class="output-area">
+                <input type="text" name="min-price" aria-label="Минимальная цена">
+                -
+                <input type="text" name="max-price" aria-label="Максимальная цена">
+              </div>
+            </fieldset>
+            <fieldset class="manufacturer-field">
+              <legend class="visually-hidden">Производители</legend>
+              <h3 class="form-title">Производители:</h3>
+              <div class="manufacturer-filter">
+                <ul aria-label="Выбор производителя">
+                  <li class="manufacturer-choise">
+                    <input type="checkbox" name="manufacturer" id="filter-bosch" value="bosch">
+                    <label for="filter-bosch">Bosch</label>
+                  </li>
+                  <li class="manufacturer-choise">
+                    <input type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
+                    <label for="filter-interscol">Интерскол</label>
+                  </li>
+                  <li class="manufacturer-choise">
+                    <input type="checkbox" name="manufacturer" id="filter-makita" value="makita">
+                    <label for="filter-makita">Makita</label>
+                  </li>
+                  <li class="manufacturer-choise">
+                    <input type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
+                    <label for="filter-dewalt">Dewalt</label>
+                  </li>
+                  <li class="manufacturer-choise">
+                    <input type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
+                    <label for="filter-hitachi">Hitachi</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="power-field">
+              <legend class="visually-hidden">Питание</legend>
+              <h3 class="form-title">Питание:</h3>
+              <div class="power-filter">
+                <ul aria-label="Выбор типа питания инструмента">
+                  <li class="power-list">
+                    <input type="radio" name="power-type" value="battery" checked>
+                    <label for="power-type">Аккумуляторные</label>
+                  </li>
+                  <li class="power-list">
+                    <input type="radio" name="power-type" value="mains">
+                    <label for="power-type">Сетевые</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <button type="submit">Показать</button>
+          </form>
         </section>
+
         <section class="catalog-container">
           <section class="sorter-section">
             <h2 class="visually-hidden">Сортировка товара</h2>
-            <p>Сортировка:</p>
+            <p class="filter-title">Сортировка:</p>
             <button type="button">По цене</button>
             <button type="button">По типу</button>
             <button type="button">По фунционалу</button>
             <button type="button">Up</button>
             <button type="button">Down</button>
           </section>
+
           <section class="catalog-section">
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="catalog-list">
@@ -259,7 +315,7 @@
           </section>
         </section>
       </section>
-      <!-- Информационная секция -->
+
       <section class="inner-about-section">
         <div class="container">
           <h2 class="section-title">Пара слов о перфораторах</h2>
@@ -271,7 +327,7 @@
         </div>
       </section>
     </main>
-    <!-- Фут -->
+
     <footer>
       <div class="footer-links">
         <div class="container">
@@ -310,9 +366,9 @@
             Все права защищены
           </p>
           <ul class="footer-social">
-            <li><a href="#" aria-label="Мы вконтакте"></a></li>
-            <li><a href="#" aria-label="Мы в facebook"></a></li>
-            <li><a href="#" aria-label="Мы в instagram"></a></li>
+            <li><a class="social-btn" href="#" aria-label="Мы вконтакте"></a></li>
+            <li><a class="social-btn" href="#" aria-label="Мы в facebook"></a></li>
+            <li><a class="social-btn" href="#" aria-label="Мы в instagram"></a></li>
           </ul>
           <p class="footer-feedback">
             Обратная связь:
