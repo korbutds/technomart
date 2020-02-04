@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: каталог "Техномарт"</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- Секция header -->
@@ -34,7 +37,7 @@
               и инструментов для ремонта
             </p>
             <div class="header-contacts">
-              <a class="header-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
+              <a class="header-phone" href="tel:+7(812)5550555" aria-label="Телефон">+7 (812) 555-05-55</a>
               <p aria-label="адрес" aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="user-login">
@@ -84,10 +87,8 @@
           <p class="filter-title">Фильтр:</p>
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="range-field">
-              <legend class="visually-hidden">Цена</legend>
-              <h3 class="form-title">Цена:</h3>
+              <legend class="form-title">Цена</legend>
               <div class="range-section">
-                <label for="price"></label>
                 <input type="range" id="price" name="price" min="0" max="100000" step="100" aria-label="Укажите диапозон цен">
               </div>
               <div class="output-area">
@@ -97,48 +98,42 @@
               </div>
             </fieldset>
             <fieldset class="manufacturer-field">
-              <legend class="visually-hidden">Производители</legend>
-              <h3 class="form-title">Производители:</h3>
-              <div class="manufacturer-filter">
-                <ul aria-label="Выбор производителя">
-                  <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-bosch" value="bosch">
-                    <label for="filter-bosch">Bosch</label>
-                  </li>
-                  <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
-                    <label for="filter-interscol">Интерскол</label>
-                  </li>
-                  <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-makita" value="makita">
-                    <label for="filter-makita">Makita</label>
-                  </li>
-                  <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
-                    <label for="filter-dewalt">Dewalt</label>
-                  </li>
-                  <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
-                    <label for="filter-hitachi">Hitachi</label>
-                  </li>
-                </ul>
-              </div>
+              <legend class="form-title">Производители</legend>
+              <ul aria-label="Выбор производителя">
+                <li class="manufacturer-choise">
+                  <input type="checkbox" name="manufacturer" id="filter-bosch" value="bosch">
+                  <label for="filter-bosch">Bosch</label>
+                </li>
+                <li class="manufacturer-choise">
+                  <input type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
+                  <label for="filter-interscol">Интерскол</label>
+                </li>
+                <li class="manufacturer-choise">
+                  <input type="checkbox" name="manufacturer" id="filter-makita" value="makita">
+                  <label for="filter-makita">Makita</label>
+                </li>
+                <li class="manufacturer-choise">
+                  <input type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
+                  <label for="filter-dewalt">Dewalt</label>
+                </li>
+                <li class="manufacturer-choise">
+                  <input type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
+                  <label for="filter-hitachi">Hitachi</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="power-field">
-              <legend class="visually-hidden">Питание</legend>
-              <h3 class="form-title">Питание:</h3>
-              <div class="power-filter">
-                <ul aria-label="Выбор типа питания инструмента">
-                  <li class="power-list">
-                    <input type="radio" name="power-type" value="battery" checked>
-                    <label for="power-type">Аккумуляторные</label>
-                  </li>
-                  <li class="power-list">
-                    <input type="radio" name="power-type" value="mains">
-                    <label for="power-type">Сетевые</label>
-                  </li>
-                </ul>
-              </div>
+              <legend class="form-title">Питание</legend>
+              <ul aria-label="Выбор типа питания инструмента">
+                <li class="power-list">
+                  <input type="radio" name="power-type" value="battery" checked>
+                  <label for="power-type">Аккумуляторные</label>
+                </li>
+                <li class="power-list">
+                  <input type="radio" name="power-type" value="mains">
+                  <label for="power-type">Сетевые</label>
+                </li>
+              </ul>
             </fieldset>
             <button type="submit">Показать</button>
           </form>
@@ -151,8 +146,8 @@
             <button type="button">По цене</button>
             <button type="button">По типу</button>
             <button type="button">По фунционалу</button>
-            <button type="button">Up</button>
-            <button type="button">Down</button>
+            <button type="button">▲</button>
+            <button type="button">▼</button>
           </section>
 
           <section class="catalog-section">
@@ -161,151 +156,149 @@
               <!-- 1ый товар -->
               <li class="catalog-item">
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 3000</span>
                   </a>
                 </h3>
-                <span class="old-price">22500 р.</span>
-                <span class="item-cost">15500 р.</span>
-                <div class="item-action"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">22500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">15500 р.</span>
               </li>
               <!-- 2ой товар -->
               <li class="catalog-item">
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 6000</span>
                   </a>
                 </h3>
-                <span class="old-price">30500 р.</span>
-                <span class="item-cost">25500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">30500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">25500 р.</span>
               </li>
               <!-- 3ий товар -->
               <li class="catalog-item new-item">
                 <img src="img/bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 2000</span>
                   </a>
                 </h3>
-                <span class="old-price"></span>
-                <span class="item-cost">12500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена"></span>
+                <span class="item-cost" aria-label="Новая цена">12500 р.</span>
               </li>
               <!-- 4ый товар -->
               <li class="catalog-item">
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 3000</span>
                   </a>
                 </h3>
-                <span class="old-price">22500 р.</span>
-                <span class="item-cost">15500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">22500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">15500 р.</span>
               </li>
               <!-- 5ый товар -->
               <li class="catalog-item new-item">
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 6000</span>
                   </a>
                 </h3>
-                <span class="old-price">30500 р.</span>
-                <span class="item-cost">25500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">30500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">25500 р.</span>
               </li>
               <!-- 6ой товар -->
               <li>
                 <span class="catalog-item new-label"></span>
                 <img src="img/bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 2000</span>
                   </a>
                 </h3>
-                <span class="old-price"></span>
-                <span class="item-cost">12500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена"></span>
+                <span class="item-cost" aria-label="Новая цена">12500 р.</span>
               </li>
               <!-- 7ой товар -->
               <li class="catalog-item new-item">
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 3000</span>
                   </a>
                 </h3>
-                <span class="old-price">22500 р.</span>
-                <span class="item-cost">15500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">22500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">15500 р.</span>
               </li>
               <!-- 8ой товар -->
               <li class="catalog-item sale-item">
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 6000</span>
                   </a>
                 </h3>
-                <span class="old-price">30500 р.</span>
-                <span class="item-cost">25500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена">30500 р.</span>
+                <span class="item-cost" aria-label="Новая цена">25500 р.</span>
               </li>
               <!-- 9ый товар -->
               <li class="catalog-item">
                 <img src="img/bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+                <div class="item-hover">
+                  <a class="basket-btn" href="#">Купить</a>
+                  <button class="bookmark-btn" type="button">В закладки</button>
+                </div>
                 <h3 class="item-name">
                   <a href="#">
                     <span>Перфоратор BOSCH</span>
                     <span>BFG 2000</span>
                   </a>
                 </h3>
-                <span class="old-price"></span>
-                <span class="item-cost">12500 р.</span>
-                <div class="item-hover"><!--По умолчанию display: none li:hover display: block-->
-                  <a class="basket-btn" href="#">Купить</a>
-                  <button class="bookmark-btn" type="button">В закладки</button>
-                </div>
+                <span class="old-price" aria-label="Старая цена"></span>
+                <span class="item-cost" aria-label="Новая цена">12500 р.</span>
               </li>
             </ul>
-            <!-- Пагинация. Здесь вопрос. В макете 3 страницы. Но может же быть больше!
-            Может нужно добавить кнупку "предыдущее"? на первой странице она будет не активна class "disabled" -->
             <div class="catalog-pagination" aria-label="Выбор страницы">
               <a class="current page-btn" href="#" aria-label="Текущая страница">1</a>
               <a clas="page-btn" href="#">2</a>
@@ -339,7 +332,7 @@
             </a>
             <p aria-label="адрес">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-              <a class="footer-phone" href="tel:+7(812)5550555" aria-label="Телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>
+              <a class="footer-phone" href="tel:+7(812)5550555" aria-label="Телефон">+7 (812) 555-05-55</a>
             </p>
           </div>
           <div class="footer-navigation">
