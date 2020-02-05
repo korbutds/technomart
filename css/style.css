@@ -135,7 +135,8 @@ a {
 }
 
 .header-content,
-.service-section {
+.service-section,
+.catalog-info     {
   background-color: #f3f7f8;
 }
 
@@ -167,5 +168,9 @@ a {
   line-height: 21px;
   color: #000000;
 
+  background-color: #ffffff;
+}
+
+.user-name {
   background-color: #ffffff;
 }
