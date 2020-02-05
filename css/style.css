@@ -1,19 +1,60 @@
+/* .declaration-order {
+  Позиционирование
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  Блочная модель
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+
+  Типографика
+  font: normal 13px/1.5 "Arial", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: #333333;
+
+  Оформление
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  opacity: 1;
+
+  Анимация
+  transition: color 1s;
+
+  Разное
+  will-change: auto;
+} */
+
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 
   font-family: "cuprum", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
   font-weight: normal;
+
+  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
 
-.visually-hidden{
+/* .visually-hidden{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -22,4 +63,109 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+} */
+
+/* Header */
+.header-order {
+  background-color: #293449;
+}
+
+.header-order input[type="search"]{
+  background-color: transparent;
+  border-width: 0;
+}
+
+.header-order input::placeholder {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.header-order a{
+  font: inherit;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.header-order .logo {
+  background-color: #ee3643;
+}
+
+.header-order .logo:hover {
+  background-color: #ca2c37;
+}
+
+.header-order .logo:active {
+  background-color: #ba2732;
+}
+
+.header-btn {
+  vertical-align: middle;
+
+  background-color: inherit;
+}
+
+.header-btn:hover {
+  background-color: #212a3a;
+}
+
+.header-btn:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+.order-btn {
+  vertical-align: middle;
+  text-align: center;
+
+  background-color: #63a63e;
+}
+
+.order-btn:hover {
+  background-color: #5fbb2d;
+}
+
+.order-btn:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
+.header-content,
+.service-section {
+  background-color: #f3f7f8;
+}
+
+.header-content p:first-child {
+  color: #ee3643;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+}
+
+.header-content li {
+  list-style: none;
+}
+
+.header-phone {
+  color: #ee3643;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.header-contacts p {
+  color: #32425c;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.log-btn {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+
+  background-color: #ffffff;
 }

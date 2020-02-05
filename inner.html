@@ -14,11 +14,13 @@
       <div class="header-order">
         <div class="container">
           <a class="logo" href="index.html" aria-label="Техномарт">
-            <svg class="icon">
+            <svg class="icon icon-logo" width="110px" height="20px">
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
-          <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+          <div class="search-field">
+            <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+          </div>
           <div class="order-container">
             <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
             <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
@@ -38,12 +40,12 @@
             </p>
             <div class="header-contacts">
               <a class="header-phone" href="tel:+7(812)5550555" aria-label="Телефон">+7 (812) 555-05-55</a>
-              <p aria-label="адрес" aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <p aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="user-login">
               <ul class="login-btn">
-                <li><a class="btn" href="#">Войти</a></li>
-                <li><a class="btn" href="#">Регистрация</a></li>
+                <li><a class="log-btn" href="#">Войти</a></li>
+                <li><a class="log-btn" href="#">Регистрация</a></li>
               </ul>
             </div>
             <div class="user-menu">
@@ -126,11 +128,11 @@
               <legend class="form-title">Питание</legend>
               <ul aria-label="Выбор типа питания инструмента">
                 <li class="power-list">
-                  <input type="radio" name="power-type" value="battery" checked>
+                  <input type="radio" name="power-type" id="power-type" value="battery" checked>
                   <label for="power-type">Аккумуляторные</label>
                 </li>
                 <li class="power-list">
-                  <input type="radio" name="power-type" value="mains">
+                  <input type="radio" name="power-type" id="power-type" value="mains">
                   <label for="power-type">Сетевые</label>
                 </li>
               </ul>
