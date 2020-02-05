@@ -43,24 +43,40 @@
               <p aria-label="адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <ul class="user-login">
-              <li><a class="log-btn" href="#">Войти</a></li>
+              <li>
+                <a class="log-btn" href="#">
+                  <svg width="20px" height="17px">
+                    <use xlink:href="#icon-login"></use>
+                  </svg>
+                  Войти
+                </a>
+              </li>
               <li><a class="log-btn" href="#">Регистрация</a></li>
             </ul>
             <div class="user-menu">
               <div class="user-name">
-                <a class="log-btn profile-btn" href="#">Равшан Джамшутович</a>
-                <button class="loggout-btn" type="button" aria-label="Кнопка 'выйти из системы'"></button>
+                <a class="profile-btn" href="#">
+                  <svg width="20px" height="18px">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  Равшан Джамшутович
+                </a>
+                <button class="logout-btn" type="button" aria-label="Кнопка 'выйти из системы'">
+                  <svg width="20px" height="17px">
+                    <use xlink:href="#icon-logout"></use>
+                  </svg>
+                </button>
               </div>
               <ul>
-                <li><a href="#">Мои заказы</a></li>
-                <li><a href="#">Личный кабинет</a></li>
+                <li><a href="#" class="user-link">Мои заказы</a></li>
+                <li><a href="#" class="user-link">Личный кабинет</a></li>
               </ul>
             </div>
           </div>
           <!-- Блок навигации -->
           <nav class="header-navigation">
             <ul>
-              <li class="current"><a>Главная</a></li>
+              <li><a class="current-nav">Главная</a></li>
               <li><a href="#">Компания</a></li>
               <li><a href="#">Каталог</a></li>
               <li><a href="#">Новости</a></li>
@@ -111,14 +127,19 @@
       <section class="popular-section container">
         <div class="title-container">
           <h2 class="section-title">Популярные товары:</h2>
-          <a class="btn" href="#">Все популярные товары</a>
+          <a class="btn popular-btn" href="#">Все популярные товары</a>
         </div>
         <ul class="popular-list">
           <!-- 1 товар -->
           <li class="catalog-item">
             <img src="img/bfg-9000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 9000">
             <div class="item-hover">
-              <a class="basket-btn" href="#">Купить</a>
+              <a class="basket-btn" href="#">
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
               <button class="bookmark-btn" type="button">В закладки</button>
             </div>
             <h3 class="item-name">
@@ -134,7 +155,12 @@
           <li class="catalog-item">
             <img src="img/bfg-3000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 3000">
             <div class="item-hover">
-              <a class="basket-btn" href="#">Купить</a>
+              <a class="basket-btn" href="#">
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
               <button class="bookmark-btn" type="button">В закладки</button>
             </div>
             <h3 class="item-name">
@@ -150,7 +176,12 @@
           <li class="catalog-item">
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 6000">
             <div class="item-hover">
-              <a class="basket-btn" href="#">Купить</a>
+              <a class="basket-btn" href="#">
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
               <button class="bookmark-btn" type="button">В закладки</button>
             </div>
             <h3 class="item-name">
@@ -166,7 +197,12 @@
           <li class="catalog-item new-item">
             <img src="img/bfg-2000.jpg" width="218" height="170" alt="Изображение перфоратора BOSCH BFG 2000">
             <div class="item-hover">
-              <a class="basket-btn" href="#">Купить</a>
+              <a class="basket-btn" href="#">
+                <svg width="15" height="15">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+                Купить
+              </a>
               <button class="bookmark-btn" type="button">В закладки</button>
             </div>
             <h3 class="item-name">
@@ -184,7 +220,7 @@
       <section class="popular-section popular-manufacturer container">
         <div class="title-container">
           <h2 class="section-title">Популярные производители:</h2>
-          <a class="btn" href="#">Все производители</a>
+          <a class="btn manufacturer-btn" href="#">Все производители</a>
         </div>
         <ul>
           <!-- 1 производитель -->
@@ -286,7 +322,7 @@
                   Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
-                <a class="btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
+                <a class="btn credit-btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
               </li>
             </ul>
           </li>
@@ -312,7 +348,7 @@
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="btn">Подробнее о компании</a>
+            <a class="btn about-btn" href="#">Подробнее о компании</a>
           </section>
           <!-- Секция контакты -->
           <section class="contacts-section">
@@ -322,7 +358,7 @@
               заехав в наш офис:
             </p>
             <button type="button"><img src="img/map.jpg" alt="Карта проезда"></button>
-            <a class="btn" href="#">Заблудились? Напишите нам!</a>
+            <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
       </section>
@@ -332,9 +368,9 @@
       <div class="footer-links">
         <div class="container">
           <div class="footer-about">
-            <a class="logo" href="index.html" aria-label="Техномарт">
-              <svg class="icon">
-                <use xlink:href="#logo-tecnomart"></use>
+            <a class="logo logo-footer" href="index.html" aria-label="Техномарт">
+              <svg class="icon" width="140" height="25">
+                <use xlink:href="#logo-technomart"></use>
               </svg>
             </a>
             <p aria-label="адрес">
@@ -366,9 +402,27 @@
             Все права защищены
           </p>
           <ul class="footer-social">
-            <li><a class="social-btn" href="#" aria-label="Мы вконтакте"></a></li>
-            <li><a class="social-btn" href="#" aria-label="Мы в facebook"></a></li>
-            <li><a class="social-btn" href="#" aria-label="Мы в instagram"></a></li>
+            <li>
+              <a class="social-btn" href="#" aria-label="Мы вконтакте">
+                <svg width="26px" height="15px">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="#" aria-label="Мы в facebook">
+                <svg width="21px" height="21px">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="#" aria-label="Мы в instagram">
+                <svg width="23px" height="23px">
+                  <use xlink:href="#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
           <p class="footer-feedback">
             Обратная связь:
