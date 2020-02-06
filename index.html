@@ -14,12 +14,19 @@
       <div class="header-order">
         <div class="container">
           <a class="logo" aria-label="Техномарт">
-            <svg class="icon icon-logo" width="110px" height="20px">
+            <svg class="icon icon-logo" width="110" height="20">
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
           <div class="search-field">
-            <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+            <form class="search-form" method="GET" action="https://echo.htmlacademy.ru">
+              <button type="submit">
+                <svg class="icon" width="17" height="17">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+              <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+            </form>
           </div>
           <div class="order-container">
             <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
@@ -45,7 +52,7 @@
             <ul class="user-login">
               <li>
                 <a class="log-btn" href="#">
-                  <svg width="20px" height="17px">
+                  <svg width="20" height="17">
                     <use xlink:href="#icon-login"></use>
                   </svg>
                   Войти
@@ -56,13 +63,13 @@
             <div class="user-menu">
               <div class="user-name">
                 <a class="profile-btn" href="#">
-                  <svg width="20px" height="18px">
+                  <svg width="20" height="18">
                     <use xlink:href="#icon-user"></use>
                   </svg>
                   Равшан Джамшутович
                 </a>
                 <button class="logout-btn" type="button" aria-label="Кнопка 'выйти из системы'">
-                  <svg width="20px" height="17px">
+                  <svg width="20" height="17">
                     <use xlink:href="#icon-logout"></use>
                   </svg>
                 </button>
@@ -404,21 +411,21 @@
           <ul class="footer-social">
             <li>
               <a class="social-btn" href="#" aria-label="Мы вконтакте">
-                <svg width="26px" height="15px">
+                <svg width="26" height="15">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="social-btn" href="#" aria-label="Мы в facebook">
-                <svg width="21px" height="21px">
+                <svg width="21" height="21">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="social-btn" href="#" aria-label="Мы в instagram">
-                <svg width="23px" height="23px">
+                <svg width="23" height="23">
                   <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
@@ -436,12 +443,12 @@
       </div>
     </footer>
     <!-- Pop-up's block -->
-    <section class="map-pop-up">
+    <section class="pop-up map-pop-up">
       <h2 class="visually-hidden">Карта проезда.</h2>
       <button class="close-btn" type="button" aria-label="закрыть"></button>
       <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
     </section>
-    <section class="write-pop-up">
+    <section class="pop-up write-pop-up">
       <h2 class="visually-hidden">Напишите нам.</h2>
       <form action="https://echo.htmlacademy.ru" method="POST">
         <div class="form-area">

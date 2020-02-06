@@ -41,7 +41,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -52,6 +52,27 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 55px;
+
+  color: #ffffff;
+
+  background-color: #ee3643;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
 }
 
 .visually-hidden{
@@ -69,21 +90,75 @@ a {
 .header-order,
 .footer-contact {
   background-color: #293449;
+  font-family: "Cuprum", "Arial", sans-serif;
 }
 
-.header-order input[type="search"]{
+
+.search-field {
+  padding: 0;
+  margin: 0;
+}
+
+.search-field form {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.search-field button,
+.search-field input {
   background-color: transparent;
-  border-width: 0;
 }
 
-.header-order input::placeholder {
-  vertical-align: middle;
+.search-field input::placeholder {
   color: #ffffff;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
 
-.header-order a{
+.search-field input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100%;
+  padding-left: 45px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.search-field button {
+  position: absolute;
+  padding-left: 15px;
+  border: none;
+  height: 17px;
+  width: 17px;
+  top: 13px;
+  left: 0;
+  color: #666d7c;
+
+  cursor: pointer;
+}
+
+.search-field:hover{
+  background-color: #212a3a;
+}
+
+.search-field:hover button {
+  color: #ffffff;
+}
+
+.search-field input:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.search-field:focus button {
+  color: #ee3643;
+}
+
+.order-container a{
   font: inherit;
   color: #ffffff;
   font-size: 17px;
@@ -143,7 +218,11 @@ a {
   background-color: #f3f7f8;
 }
 
-.header-content p:first-child {
+.header-content {
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.header-info > p {
   color: #ee3643;
   font-size: 16px;
   line-height: 23px;
@@ -271,18 +350,32 @@ a {
 
 }
 
+.form-area input,
+.form-area textarea {
+  border: solid 2px #d7dcde;
+}
+
+.form-area input::placeholder,
+.form-area textarea::placeholder {
+  font-family: "PT sans", "Arial", sans-serif;
+  color: #999999;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.form-area input:hover,
+.form-area textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.form-area input:focus,
+.form-area textarea:focus {
+  border-color: #ee3643;
+}
+
 .about-partners li::before {
   content: "▬";
   color: #ee3643;
-}
-
-.btn {
-  padding: 10px 55px;
-
-  color: #ffffff;
-
-  background-color: #ee3643;
-  border-radius: 2px;
 }
 
 .footer-links {
@@ -460,3 +553,6 @@ a {
   background-color: #ee3643;
 }
 
+.pop-up {
+  display: none;
+}
