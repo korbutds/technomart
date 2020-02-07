@@ -14,23 +14,31 @@
       <div class="header-order">
         <div class="container">
           <a class="logo" aria-label="Техномарт">
-            <svg class="icon icon-logo" width="110" height="20">
+            <svg class="icon icon-logo" width="109" height="19">
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
           <div class="search-field">
             <form class="search-form" method="GET" action="https://echo.htmlacademy.ru">
-              <button type="submit">
-                <svg class="icon" width="17" height="17">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
               <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+              <svg class="icon" width="17" height="17">
+                <use xlink:href="#icon-search"></use>
+              </svg>
             </form>
           </div>
           <div class="order-container">
-            <a class="header-btn header-bookmark active" href="#">Закладки: <span class="bookmark-counter">0</span></a>
-            <a class="header-btn header-basket active" href="#">Корзина <span class="basket-counter">10</span></a>
+            <a class="header-btn header-bookmark active" href="#">
+              <svg class="icon" width="14" height="16">
+                <use xlink:href="#icon-bookmark"></use>
+              </svg>
+              Закладки: <span class="bookmark-counter">0</span>
+            </a>
+            <a class="header-btn header-basket active" href="#">
+              <svg class="icon" width="15" height="15">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+              Корзина <span class="basket-counter">10</span>
+            </a>
             <a class="order-btn" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -75,8 +83,8 @@
                 </button>
               </div>
               <ul>
-                <li><a href="#" class="user-link">Мои заказы</a></li>
-                <li><a href="#" class="user-link">Личный кабинет</a></li>
+                <li><a class="user-link" href="#">Мои заказы</a></li>
+                <li><a class="user-link" href="#">Личный кабинет</a></li>
               </ul>
             </div>
           </div>
@@ -376,7 +384,7 @@
         <div class="container">
           <div class="footer-about">
             <a class="logo logo-footer" href="index.html" aria-label="Техномарт">
-              <svg class="icon" width="140" height="25">
+              <svg class="icon" width="138" height="23">
                 <use xlink:href="#logo-technomart"></use>
               </svg>
             </a>
