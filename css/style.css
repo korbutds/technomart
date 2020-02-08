@@ -16,11 +16,11 @@
   padding: 10px;
 
   Типографика
-  font: normal 13px/1.5 "Arial", sans-serif;
+  font: normal 13px/1.5 Arial, sans-serif;
   font-style: normal;
   font-size: 13px;
   line-height: 1.5;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   text-align: center;
   color: #333333;
 
@@ -58,14 +58,19 @@ img {
   max-width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
   padding: 10px 55px;
 
   color: #ffffff;
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
 
   background-color: #ee3643;
   border-radius: 2px;
@@ -77,6 +82,10 @@ img {
 
 .btn:active {
   background-color: #ba2732;
+}
+
+.btn:focus {
+  background-color: #ca2c37;
 }
 
 .visually-hidden{
@@ -91,7 +100,7 @@ img {
 }
 
 .section-title {
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
   font-size: 30px;
@@ -102,7 +111,7 @@ img {
 .header-order,
 .footer-contact {
   background-color: #293449;
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 
@@ -224,7 +233,7 @@ img {
 }
 
 .header-content {
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .header-info > p {
@@ -336,15 +345,13 @@ img {
 }
 
 .about-contacts p {
-  font-family: "PT Sans", "Arial", sans-serif;
-
   font-size: 13px;
   line-height: 24px;
   color: #000000;
 }
 
 .about-partners li {
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
 
@@ -359,7 +366,7 @@ img {
 }
 
 .form-area label {
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
 }
@@ -371,7 +378,7 @@ img {
 
 .form-area input::placeholder,
 .form-area textarea::placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: #999999;
   font-size: 13px;
   line-height: 18px;
@@ -395,10 +402,13 @@ img {
   background-color: #32425c;
 }
 
-.footer-about p,
-.footer-phone {
+.footer-about p {
   font-size: 18px;
   line-height: 24px;
+  color: #ffffff;
+}
+
+.footer-phone {
   color: #ffffff;
 }
 
@@ -424,6 +434,9 @@ img {
 
 .footer-contact {
   font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
 
 }
 
@@ -446,13 +459,6 @@ img {
 .social-btn:active {
   color: #ffffff;
   background-color: #ee3643;
-}
-
-.footer-copyright,
-.footer-contact p {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 18px;
 }
 
 .footer-feedback a,
@@ -558,6 +564,7 @@ img {
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .old-price {
