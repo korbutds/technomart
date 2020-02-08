@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: "Техномарт"</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -81,11 +81,11 @@
                   </svg>
                   Равшан Джамшутович
                 </a>
-                <button class="logout-btn" type="button" aria-label="Кнопка 'выйти из системы'">
-                  <svg width="20" height="17">
+                <a class="profile-btn" href="#" aria-label="Кнопка 'выйти из системы'">
+                  <svg width="20" height="18">
                     <use xlink:href="#icon-logout"></use>
                   </svg>
-                </button>
+                </a>
               </div>
               <ul>
                 <li><a class="user-link" href="#">Мои заказы</a></li>
@@ -119,29 +119,66 @@
           <li class="features-item new-item">
             <h3 class="features-name">Материалы</h3>
             <a class="features-description" href="#" aria-label="Посмотреть материалы">На любой вкус</a>
+            <svg class="icon" width="44" height="65">
+              <use xlink:href="#icon-materials"></use>
+            </svg>
           </li>
           <!-- 2 фича -->
-          <li class="features-item new-item">
+          <li class="features-item">
             <h3 class="features-name">Инструмент</h3>
             <a class="features-description" href="#" aria-label="Выбрать инструмент">На все случаи</a>
+            <svg class="icon" width="75" height="61">
+              <use xlink:href="#icon-instrument"></use>
+            </svg>
           </li>
           <!-- 3 фича -->
-          <li class="features-item new-item">
+          <li class="features-item">
             <h3 class="features-name">Техника</h3>
             <a class="features-description" href="#" aria-label="Выбрать технику">Для стройки</a>
+            <svg class="icon" width="78" height="62">
+              <use xlink:href="#icon-technic"></use>
+            </svg>
           </li>
           <!-- 4 фича -->
-          <li class="features-item new-item">
+          <li class="features-item">
             <h3 class="features-name">Скидка 50%</h3>
             <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
+            <svg class="icon" width="59" height="72">
+              <use xlink:href="#icon-sale"></use>
+            </svg>
           </li>
           <!-- 5 фича -->
-          <li class="features-item new-item">
+          <li class="features-item">
             <h3 class="features-name">Доставка</h3>
             <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
+            <svg class="icon" width="78" height="63">
+              <use xlink:href="#icon-deliver"></use>
+            </svg>
           </li>
         </ul>
         <!-- Slider будет тут-->
+        <div class="slider">
+          <div class="first-slider">
+            <figure class="slider-image">
+              <figcaption>
+                <h2 class="slider-title">Дрели</h2>
+                <p>Соседям на радость!</p>
+              </figcaption>
+              <img src="img/drill.jpg" width="620" height="266" alt="Дрели BOSCH">
+            </figure>
+            <a class="btn" href="#">Открыть каталог</a>
+          </div>
+          <div class="second-slider">
+            <figure class="slider-image">
+              <figcaption>
+                <h2 class="slider-title">Перфораторы</h2>
+                <p>Настоящие мужские игрушки</p>
+              </figcaption>
+              <img src="img/hammer-drill.jpg" width="620" height="266" alt="Перфораторы BOSCH">
+            </figure>
+            <a class="btn" href="inner.html">Открыть каталог</a>
+          </div>
+        </div>
       </section>
       <!-- Секция с популярными товарами -->
       <section class="popular-section container">
@@ -302,8 +339,8 @@
         </p>
         <ul class="service-list">
           <!-- 1 сервис -->
-          <li>
-            Доставка
+          <li class="service-block">
+            <span class="service-item">Доставка</span>
             <ul class="service-submenu">
               <li>
                 <h3>Доставка</h3>
@@ -317,8 +354,8 @@
             </ul>
           </li>
           <!-- 2 сервис -->
-          <li>
-            Гарантия
+          <li class="service-block">
+            <span class="service-item">Гарантия</span>
             <ul class="service-submenu">
               <li>
                 <h3>Гарантия</h3>
@@ -333,8 +370,8 @@
             </ul>
           </li>
           <!-- 3 сервис -->
-          <li>
-            Кредит
+          <li class="service-block">
+            <span class="service-item">Кредит</span>
             <ul class="service-submenu">
               <li>
                 <h3>Кредит</h3>

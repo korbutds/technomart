@@ -79,11 +79,11 @@
                   </svg>
                   Равшан Джамшутович
                 </a>
-                <button class="logout-btn" type="button" aria-label="Кнопка 'выйти из системы'">
+                <a class="profile-btn" href="#" aria-label="Кнопка 'выйти из системы'">
                   <svg width="20" height="18">
                     <use xlink:href="#icon-logout"></use>
                   </svg>
-                </button>
+                </a>
               </div>
               <ul>
                 <li><a href="#" class="user-link">Мои заказы</a></li>
@@ -118,7 +118,7 @@
             </a>
           </li>
           <li><a href="catalog.html" aria-label="Вернуться в раздел каталог">Каталог</a></li>
-          <li><a href="catalog.html" aria-label="Вернуться в раздел интсрумент">Инструмент</a></li>
+          <li><a href="catalog.html" aria-label="Вернуться в раздел инструмент">Инструмент</a></li>
           <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
         <div class="page-name">
@@ -130,7 +130,7 @@
           <p class="filter-title">Фильтр:</p>
           <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="range-field">
-              <legend class="form-title">Цена</legend>
+              <legend class="form-title">Цена:</legend>
               <div class="range-section">
                 <input type="range" id="price" name="price" min="0" max="100000" step="100" aria-label="Укажите диапозон цен">
               </div>
@@ -141,7 +141,7 @@
               </div>
             </fieldset>
             <fieldset class="manufacturer-field">
-              <legend class="form-title">Производители</legend>
+              <legend class="form-title">Производители:</legend>
               <ul aria-label="Выбор производителя">
                 <li class="manufacturer-choise">
                   <input type="checkbox" name="manufacturer" id="filter-bosch" value="bosch">
@@ -166,7 +166,7 @@
               </ul>
             </fieldset>
             <fieldset class="power-field">
-              <legend class="form-title">Питание</legend>
+              <legend class="form-title">Питание:</legend>
               <ul aria-label="Выбор типа питания инструмента">
                 <li class="power-list">
                   <input type="radio" name="power-type" id="battery-type" value="battery" checked>
@@ -185,8 +185,8 @@
         <section class="catalog-container">
           <section class="sorter-section">
             <h2 class="visually-hidden">Сортировка товара</h2>
-            <p class="filter-title">Сортировка:</p>
-            <button type="button">По цене</button>
+            <p class="sorter-title">Сортировка:</p>
+            <button class="sorter-choised" type="button">По цене</button>
             <button type="button">По типу</button>
             <button type="button">По фунционалу</button>
             <button type="button">▲</button>
