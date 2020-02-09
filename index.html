@@ -98,7 +98,7 @@
             <ul>
               <li><a class="current-nav">Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a href="inner.html">Каталог</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Спецпредложения</a></li>
               <li><a href="#">Доставка</a></li>
@@ -283,49 +283,49 @@
           <!-- 1 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="BOSCH" aria-label="Выбрать инструмент компании bosch">
-              <img src="img/bosch-logo.png" alt="Инструмент компании BOSCH">
+              <img src="img/bosch-logo.png" width="126" height="37" alt="Инструмент компании BOSCH">
             </a>
           </li>
           <!-- 2 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="Makita" aria-label="Выбрать инструмент компании makita">
-              <img src="img/makita-logo.png" alt="Инструмент компании Makita">
+              <img src="img/makita-logo.png" width="123" height="40" alt="Инструмент компании Makita">
             </a>
           </li>
           <!-- 3 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="DeWalt" aria-label="Выбрать инструмент компании dewalt">
-              <img src="img/dewalt-logo.png" alt="Инструмент компании DeWalt">
+              <img src="img/dewalt-logo.png" width="146" height="44" alt="Инструмент компании DeWalt">
             </a>
           </li>
           <!-- 4 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="Интерскол" aria-label="Выбрать инструмент компании интерскол">
-              <img src="img/interscol-logo.png" alt="Инструмент компании Интерскол">
+              <img src="img/interscol-logo.png" width="200" height="88" alt="Инструмент компании Интерскол">
             </a>
           </li>
           <!-- 5 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="HITACHI" aria-label="Выбрать инструмент компании hitachi">
-              <img src="img/hitachi-logo.png" alt="Инструмент компании HITACHI">
+              <img src="img/hitachi-logo.png" width="169" height="31" alt="Инструмент компании HITACHI">
             </a>
           </li>
           <!-- 6 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="LG"  aria-label="Выбрать инструмент компании lg">
-              <img src="img/lg-logo.png" alt="Инструмент компании LG">
+              <img src="img/lg-logo.png" width="121" height="73" alt="Инструмент компании LG">
             </a>
           </li>
           <!-- 7 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="AEG" aria-label="Выбрать инструмент компании aeg">
-              <img src="img/aeg-logo.png" alt="Инструмент компании AEG">
+              <img src="img/aeg-logo.png" width="151" height="96" alt="Инструмент компании AEG">
             </a>
           </li>
           <!-- 8 производитель -->
           <li class="manufacturer-item">
             <a href="#" title="metabo" aria-label="Выбрать инструмент компании metabo">
-              <img src="img/metabo-logo.png" alt="Инструмент компании metabo">
+              <img src="img/metabo-logo.png" width="204" height="69" alt="Инструмент компании metabo">
             </a>
           </li>
         </ul>
@@ -414,7 +414,7 @@
               Вы можете забрать товар сами
               заехав в наш офис:
             </p>
-            <button type="button"><img src="img/map.jpg" alt="Карта проезда"></button>
+            <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
             <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
@@ -445,7 +445,7 @@
             <ul class="gold">
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a href="inner.html">Каталог</a></li>
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
@@ -495,14 +495,22 @@
     <!-- Pop-up's block -->
     <section class="map-pop-up">
       <h2 class="visually-hidden">Карта проезда.</h2>
-      <button class="close-btn" type="button" aria-label="закрыть"></button>
+      <button class="close-btn" type="button" aria-label="закрыть">
+        <svg width="21" height="21">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
       <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
     </section>
     <section class="pop-up write-pop-up">
       <h2 class="visually-hidden">Напишите нам.</h2>
       <form action="https://echo.htmlacademy.ru" method="POST">
         <div class="form-area">
-          <button class="close-btn" type="button" aria-label="закрыть"></button>
+          <button class="close-btn" type="button" aria-label="закрыть">
+            <svg width="21" height="21">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
           <p>
             <label for="write-name">Ваше имя:</label>
             <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">

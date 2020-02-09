@@ -78,7 +78,7 @@ button {
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-
+  border: none;
   background-color: #ee3643;
   border-radius: 2px;
 }
@@ -109,6 +109,7 @@ button {
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
 }
 
 /* Header */
@@ -117,7 +118,6 @@ button {
   background-color: #293449;
   font-family: "Cuprum", Arial, sans-serif;
 }
-
 
 .search-field {
   padding: 0;
@@ -339,13 +339,12 @@ button {
   opacity: 0.5;
   background-color: #293449;
 
-  pointer-events: none;
   cursor: default;
 }
 
 /* Main */
 .features-section {
-  font-family: "Cuprum", Aria, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .features-item {
@@ -412,10 +411,6 @@ button {
   font-weight: bold;
 }
 
-.slider-image figcaption {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .slider p {
   font-size: 18px;
   line-height: 24px;
@@ -438,8 +433,6 @@ button {
 .manufacturer-item:hover {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
-
-
 
 /* Популярные производители */
 
@@ -468,6 +461,7 @@ button {
   line-height: 36px;
   text-transform: uppercase;
   color: #32425c;
+  font-weight: 400;
 }
 
 .service-submenu{
@@ -496,25 +490,20 @@ button {
   background-color: #f4f7f9;
 }
 
-.about-contacts p {
-  font-size: 13px;
-  line-height: 24px;
-  color: #000000;
-}
-
 .about-partners li {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
 
   list-style: none;
-
-  pointer-events: none;
 }
 
 .about-partners li::before {
-  content: "▬";
-  color: #ee3643;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
 }
 
 /* footer */
@@ -560,7 +549,6 @@ button {
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
-
 }
 
 .footer-social li {
@@ -603,6 +591,7 @@ button {
 
 /* inner-page */
 /* Хлебные крошки */
+
 .breadcrumbs li {
   font-size: 13px;
   line-height: 18px;
@@ -658,6 +647,9 @@ fieldset {
 .output-area input {
   background-color: #f7f3ec;
   border: none;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
 }
 
 .manufacturer-choise,
@@ -668,30 +660,23 @@ fieldset {
   text-transform: uppercase;
 }
 
-.filter button {
-  font-size: 13px;
-  line-height: 18px;
-  border: solid 1px #e5e5e5;
-  background-color: transparent;
-}
-
 .sorter-section button {
   background-color: transparent;
   border: none;
   color: rgba(0, 0, 0, 0.18)
 }
+
 .sorter-section button:hover {
   color: #000000;
   text-decoration: underline;
   text-decoration-color: #ee3643;
 }
+
 .sorter-section button:active,
 button.sorter-choised {
   color: #ee3643;
   text-decoration: none;
 }
-
-
 
 .page-title {
   font-family: "Cuprum", Arial, sans-serif;
@@ -708,7 +693,7 @@ button.sorter-choised {
 
 .basket-btn {
   color: #ffffff;
-
+  text-transform: uppercase;
   background-color: #63a63e;
   border-bottom: solid 3px #367315;
   border-radius: 2px;
@@ -733,7 +718,7 @@ button.sorter-choised {
 
 .bookmark-btn {
   color: #32425c;
-
+  text-transform: uppercase;
   background-color: #ffffff;
   border: solid 3px #63a63e;
   border-radius: 2px;
@@ -750,7 +735,6 @@ button.sorter-choised {
 .item-name {
   font-size: 18px;
   line-height: 20px;
-  font-weight: bold;
 }
 
 .item-name a {
@@ -775,19 +759,20 @@ button.sorter-choised {
   background-color: #ee3643;
 }
 
-.page-btn {
+.transparent-btn {
   font-size: 13px;
   line-height: 18px;
-  background-color: transparent;
   border: solid 1px #e5e5e5;
+  background-color: transparent;
   color: #000000;
+  text-transform: uppercase;
 }
 
-.page-btn:hover {
+.transparent-btn:hover {
   border: solid 1px #bdc6ca;
 }
 
-.page-btn:active,
+.transparent-btn:active,
 .catalog-pagination .current {
   border: solid 1px #ee3643;
 }
@@ -795,19 +780,13 @@ button.sorter-choised {
 /* Поп-ап */
 
 .pop-up {
-  /* display: none; */
+  display: none;
   border-top: solid 7px #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.close-btn::before {
-  content: "×";
-  color: #ee3643;
-}
-
 .close-btn {
-  text-transform: uppercase;
-  font-size: 21px;
+  color: #ee3643;
   background-color: transparent;
   border: none;
 }
@@ -849,10 +828,6 @@ button.sorter-choised {
   border-color: #ee3643;
 }
 
-button.btn {
-  border: none;
-}
-
 .white-btn {
   background-color: #ffffff;
   color: #000000;
@@ -869,8 +844,9 @@ button.btn {
   opacity: 0.3;
 }
 
-.cart-section h2 {
+.cart-info h2 {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
 }

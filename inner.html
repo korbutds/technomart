@@ -94,9 +94,9 @@
           <!-- Блок с навигацией -->
           <nav class="header-navigation">
             <ul>
-              <li><a href="#">Главная</a></li>
+              <li><a href="index.html">Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a href="inner.html">Каталог</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Спецпредложения</a></li>
               <li><a href="#">Доставка</a></li>
@@ -178,7 +178,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="transparent-btn" type="submit">Показать</button>
           </form>
         </section>
 
@@ -388,10 +388,10 @@
               </li>
             </ul>
             <div class="catalog-pagination" aria-label="Выбор страницы">
-              <a class="current page-btn" href="#" aria-label="Текущая страница">1</a>
-              <a class="page-btn" href="#">2</a>
-              <a class="page-btn" href="#">3</a>
-              <a class="page-btn" href="#">Следующая</a>
+              <a class="current transparent-btn" href="#" aria-label="Текущая страница">1</a>
+              <a class="transparent-btn" href="#">2</a>
+              <a class="transparent-btn" href="#">3</a>
+              <a class="transparent-btn" href="#">Следующая</a>
             </div>
           </section>
         </section>
@@ -433,7 +433,7 @@
             <ul class="gold">
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a>Каталог</a></li>
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
@@ -483,7 +483,14 @@
     <!-- Pop-up's block -->
     <section class="pop-up cart-section">
       <div class="cart-info">
-        <button class="close-btn" type="button" aria-label="закрыть"></button>
+        <button class="close-btn" type="button" aria-label="закрыть">
+          <svg width="21" height="21">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <svg width="66" height="66">
+          <use xlink:href="#icon-mark"></use>
+        </svg>
         <h2>Товар добавлен в корзину!</h2>
       </div>
       <div class="btn-area">
