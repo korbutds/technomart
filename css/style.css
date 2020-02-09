@@ -83,10 +83,7 @@ button {
   border-radius: 2px;
 }
 
-.btn:hover {
-  background-color: #ca2c37;
-}
-
+.btn:hover,
 .btn:focus {
   background-color: #ca2c37;
 }
@@ -176,7 +173,6 @@ button {
 }
 
 .order-container a{
-  font: inherit;
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
@@ -219,7 +215,6 @@ button {
 
 .order-btn {
   text-align: center;
-  font: inherit;
   background-color: #63a63e;
 }
 
