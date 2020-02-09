@@ -87,12 +87,12 @@ button {
   background-color: #ca2c37;
 }
 
-.btn:active {
-  background-color: #ba2732;
-}
-
 .btn:focus {
   background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
 }
 
 .visually-hidden{
@@ -522,35 +522,6 @@ button {
   color: #ee3643;
 }
 
-.form-area label {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-}
-
-.form-area input,
-.form-area textarea {
-  border: solid 2px #d7dcde;
-}
-
-.form-area input::placeholder,
-.form-area textarea::placeholder {
-  font-family: "PT Sans", Arial, sans-serif;
-  color: #999999;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-.form-area input:hover,
-.form-area textarea:hover {
-  border-color: #b5b5b5;
-}
-
-.form-area input:focus,
-.form-area textarea:focus {
-  border-color: #ee3643;
-}
-
 /* footer */
 
 .footer-links {
@@ -826,8 +797,85 @@ button.sorter-choised {
   border: solid 1px #ee3643;
 }
 
-
+/* Поп-ап */
 
 .pop-up {
-  display: none;
+  /* display: none; */
+  border-top: solid 7px #ee3643;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.close-btn::before {
+  content: "×";
+  color: #ee3643;
+}
+
+.close-btn {
+  text-transform: uppercase;
+  font-size: 21px;
+  background-color: transparent;
+  border: none;
+}
+
+.form-area {
+  background-color: #ffffff;
+}
+
+.btn-area {
+  background-color: #f4f4f4;
+}
+
+.form-area label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.form-area input,
+.form-area textarea {
+  border: solid 2px #d7dcde;
+}
+
+.form-area input::placeholder,
+.form-area textarea::placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #999999;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.form-area input:hover,
+.form-area textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.form-area input:focus,
+.form-area textarea:focus {
+  border-color: #ee3643;
+}
+
+button.btn {
+  border: none;
+}
+
+.white-btn {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.white-btn:hover {
+  background-color: #ffffff;
+  color: #ee3643;
+}
+
+.white-btn:active {
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.cart-section h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
 }
