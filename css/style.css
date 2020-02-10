@@ -112,34 +112,7 @@ button {
   font-weight: 400;
 }
 
-.container {
-  width: 940px;
-  margin: 0 auto;
-}
-
 /* Header */
-
-header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #f4f7f9;
-}
-
-.header-order > .container,
-.header-info,
-.header-navigation ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.header-navigation ul {
-  flex-grow: 1;
-}
-
-
 .header-order,
 .footer-contact {
   background-color: #293449;
@@ -171,6 +144,7 @@ header {
 .search-field input {
   padding: 0;
   margin: 0;
+  width: 100%;
   padding-left: 45px;
 
   font: inherit;
@@ -237,10 +211,6 @@ header {
 .header-btn:active {
   opacity: 0.3;
   background-color: #161d29;
-}
-
-.header-basket.active {
-  background-color: #ee3643;
 }
 
 .order-btn {
