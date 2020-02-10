@@ -112,7 +112,34 @@ button {
   font-weight: 400;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
 /* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f4f7f9;
+}
+
+.header-order > .container,
+.header-info,
+.header-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.header-navigation ul {
+  flex-grow: 1;
+}
+
+
 .header-order,
 .footer-contact {
   background-color: #293449;
@@ -144,7 +171,6 @@ button {
 .search-field input {
   padding: 0;
   margin: 0;
-  width: 100%;
   padding-left: 45px;
 
   font: inherit;
@@ -211,6 +237,10 @@ button {
 .header-btn:active {
   opacity: 0.3;
   background-color: #161d29;
+}
+
+.header-basket.active {
+  background-color: #ee3643;
 }
 
 .order-btn {
@@ -409,6 +439,10 @@ button {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
+}
+
+.slider-image {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .slider p {
@@ -683,6 +717,7 @@ button.sorter-choised {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .item-hover {
