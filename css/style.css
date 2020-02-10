@@ -40,7 +40,7 @@
 body {
   margin: 0;
   padding: 0;
-
+  min-width: 1200px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -112,7 +112,21 @@ button {
   font-weight: 400;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
 /* Header */
+
+.header-order .container {
+  display: flex;
+}
+
+.header-order .logo {
+  width: 220px;
+}
+
 .header-order,
 .footer-contact {
   background-color: #293449;
@@ -122,16 +136,14 @@ button {
 .search-field {
   padding: 0;
   margin: 0;
+  min-width: 270px;
 }
 
 .search-field form {
+  display: flex;
   padding: 0;
   margin: 0;
   position: relative;
-}
-
-.search-field input {
-  background-color: transparent;
 }
 
 .search-field input::placeholder {
@@ -146,7 +158,7 @@ button {
   margin: 0;
   width: 100%;
   padding-left: 45px;
-
+  background-color: transparent;
   font: inherit;
   border: none;
 }
@@ -172,7 +184,13 @@ button {
   color: #ee3643;
 }
 
+.order-container {
+  display: flex;
+  min-width: 450px;
+}
+
 .order-container a{
+  flex-grow: 1;
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
@@ -180,8 +198,14 @@ button {
 
 .logo {
   color: #ffffff;
-
+  text-align: center;
   background-color: #ee3643;
+}
+
+.logo svg {
+  height: 19px;
+  width: 109px;
+  margin-top: 13px;
 }
 
 .logo:hover {
@@ -211,6 +235,10 @@ button {
 .header-btn:active {
   opacity: 0.3;
   background-color: #161d29;
+}
+
+.header-basket.active {
+  background-color: #ee3643;
 }
 
 .order-btn {
