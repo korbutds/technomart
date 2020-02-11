@@ -40,11 +40,12 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 1200px;
+  width: 1200px;
+
+  color: #000000;
+  line-height: 24px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
-  line-height: 24px;
-  color: #000000;
   font-weight: normal;
 
   background-color: #ffffff;
@@ -64,9 +65,9 @@ button {
 
 .new-item {
   background-image: url(../img/new-flag.png);
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: 60px 59px;
-  background-position: top right;
 }
 
 .btn {
@@ -78,6 +79,7 @@ button {
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+
   border: none;
   background-color: #ee3643;
   border-radius: 2px;
@@ -94,22 +96,25 @@ button {
 
 .visually-hidden{
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+
+  border: 0;
+
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 .section-title {
-  font-family: "Cuprum", Arial, sans-serif;
   color: #000000;
-  text-transform: uppercase;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
-  line-height: 30px;
   font-weight: 400;
+  text-transform: uppercase;
+  line-height: 30px;
 }
 
 .container {
@@ -120,50 +125,74 @@ button {
 /* Header */
 
 .header-order .container {
+  position: relative;
+
   display: flex;
+  height: 42px;
+  justify-content: flex-end;
 }
 
-.header-order .logo {
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 220px;
+  height: 47px;
+
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.logo-header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header-order,
 .footer-contact {
-  background-color: #293449;
   font-family: "Cuprum", Arial, sans-serif;
+
+  background-color: #293449;
 }
 
 .search-field {
   padding: 0;
   margin: 0;
-  min-width: 270px;
+  width: 270px;
 }
 
-.search-field form {
+.search-form {
+  position: relative;
+
   display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
-  position: relative;
 }
 
-.search-field input::placeholder {
+.search-form input::placeholder {
   color: #ffffff;
+  line-height: 18px;
   font-family: inherit;
   font-size: 17px;
-  line-height: 18px;
 }
 
-.search-field input {
-  padding: 0;
+.search-form input {
   margin: 0;
-  width: 100%;
   padding-left: 45px;
-  background-color: transparent;
+  padding-top: 8px;
+  padding-bottom: 10px;
   font: inherit;
+
+  background-color: transparent;
   border: none;
 }
 
 .search-field svg {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+
   color: #666d7c;
 }
 
@@ -176,8 +205,9 @@ button {
 }
 
 .search-field input:focus {
-  background-color: #ffffff;
   color: #000000;
+
+  background-color: #ffffff;
 }
 
 .search-field input:focus + svg {
@@ -186,29 +216,31 @@ button {
 
 .order-container {
   display: flex;
-  min-width: 450px;
+  width: 450px;
 }
 
 .order-container a{
   flex-grow: 1;
+
   color: #ffffff;
-  font-size: 17px;
   line-height: 18px;
+  font-size: 17px;
 }
 
 .logo {
   color: #ffffff;
   text-align: center;
+
   background-color: #ee3643;
 }
 
 .logo svg {
   height: 19px;
   width: 109px;
-  margin-top: 13px;
 }
 
-.logo:hover {
+.logo:hover,
+.header-btn.active:hover {
   background-color: #ca2c37;
 }
 
@@ -237,7 +269,7 @@ button {
   background-color: #161d29;
 }
 
-.header-basket.active {
+.header-btn.active {
   background-color: #ee3643;
 }
 
@@ -264,13 +296,27 @@ button {
 
 .header-content {
   font-family: "Cuprum", Arial, sans-serif;
+  padding-bottom: 60px;
+}
+
+.header-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 158px;
+}
+
+.user-menu {
+  width: 299px;
+  margin-left: auto;
 }
 
 .header-info > p {
   color: #ee3643;
-  font-size: 16px;
   line-height: 23px;
+  font-size: 16px;
   font-style: italic;
+  width: 275px;
 }
 
 .header-content li {
@@ -278,9 +324,15 @@ button {
 }
 
 .header-phone {
+  display: inline-block;
+  height: 45px;
+  width: 300px;
+
   color: #ee3643;
   font-size: 21px;
   line-height: 21px;
+
+  border: solid 3px #ffffff;
 }
 
 .header-phone svg {
@@ -289,17 +341,25 @@ button {
 
 .header-contacts p {
   color: #32425c;
-  font-size: 14px;
   line-height: 24px;
+  font-size: 14px;
 }
 
-.log-btn,
-.profile-btn {
+.log-btn {
+  margin-left: 10px;
+
+  color: #000000;
   font-size: 21px;
   line-height: 21px;
-  color: #000000;
+  padding: 10px 25px;
 
   background-color: #ffffff;
+}
+
+.user-login {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 300px;
 }
 
 .user-login svg {
@@ -324,13 +384,41 @@ button {
 }
 
 .user-name {
+  display: flex;
+  width: 299px;
+  height: 45px;
+  justify-content: space-between;
+
   background-color: #ffffff;
+}
+
+.profile-btn {
+  display: block;
+
+  color: #000000;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  padding: 12px;
+}
+
+.info-links {
+  display: flex;
+  padding-left: 17px;
+}
+
+.info-links li:last-child {
+  margin-left: 26px;
+  padding-left: 0px;
+
+  list-style: disc;
 }
 
 .user-link {
   color: #32425c;
-  font-size: 16px;
   line-height: 18px;
+  font-size: 16px;
   text-decoration: underline;
 }
 
@@ -345,9 +433,28 @@ button {
 
 .header-navigation {
   background-color: #32425c;
+  box-shadow: inset 0px -5px 0 0 #293449;
+}
+
+.header-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  padding: 0;
+}
+
+.header-navigation li {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  text-align: center;
 }
 
 .header-navigation a {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 17px;
@@ -364,9 +471,6 @@ button {
 }
 
 .current-nav {
-  opacity: 0.5;
-  background-color: #293449;
-
   cursor: default;
 }
 
@@ -405,16 +509,17 @@ button {
 
 .features-name {
   color: #ffffff;
+  font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
 }
 
 .features-description {
   display: block;
+
   color: #ffffff;
-  font-size: 14px;
   line-height: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   text-align: center;
 
@@ -432,11 +537,11 @@ button {
 /* slider */
 
 .slider-title {
+  color: #ffffff;
+  font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 .slider-image {
@@ -444,9 +549,9 @@ button {
 }
 
 .slider p {
-  font-size: 18px;
-  line-height: 24px;
   color: #ffffff;
+  line-height: 24px;
+  font-size: 18px;
 }
 
 /* Популярные товары */
@@ -457,8 +562,8 @@ button {
 
 .catalog-item,
 .manufacturer-item {
-  list-style: none;
   border: solid 1px #eaeaea;
+  list-style: none;
 }
 
 .catalog-item:hover,
@@ -480,20 +585,20 @@ button {
 }
 
 .service-item {
+  color: #ffffff;
+  font-weight: bold;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
-  font-weight: bold;
-  color: #ffffff;
 }
 
 .service-submenu h3{
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 36px;
-  line-height: 36px;
-  text-transform: uppercase;
   color: #32425c;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
+  line-height: 36px;
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
 .service-submenu{
@@ -501,21 +606,21 @@ button {
 }
 
 .service-block:first-of-type li {
-  background-image: url(../img/delivery-feature.png);
+  background-image: url("../img/delivery-feature.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
   background-position: center;
   background-color: #f4f7f9;
 }
 .service-block:nth-of-type(2) li {
-  background-image: url(../img/warranty-feature.png);
+  background-image: url("../img/warranty-feature.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
   background-position: center;
   background-color: #f4f7f9;
 }
 .service-block:last-of-type li {
-  background-image: url(../img/credit-feature.png);
+  background-image: url("../img/credit-feature.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
   background-position: center;
@@ -535,10 +640,51 @@ button {
   display: block;
   width: 25px;
   height: 2px;
+
   background-color: #ee3643;
 }
 
+.about-contacts {
+  display: flex;
+  justify-content: space-between;
+  min-height: 377px;
+  padding-top: 75px;
+  padding-bottom: 86px;
+}
+
+.about-section,
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-section {
+  width: 540px;
+}
+
+.contacts-section {
+  width: 330px;
+}
+
+.about-section .btn {
+  align-self: flex-start;
+}
+
+.contacts-section .btn {
+  align-self: stretch;
+}
+
 /* footer */
+
+.logo-footer {
+  width: 220px;
+  height: 68px;
+}
+
+.footer-links .container {
+  display: flex;
+}
 
 .footer-links {
   font-family: "Cuprum", Arial, sans-serif;
@@ -546,21 +692,42 @@ button {
   background-color: #32425c;
 }
 
+.footer-about {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-about p {
+  color: #ffffff;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
 }
 
 .footer-phone {
   color: #ffffff;
 }
 
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-navigation ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .footer-navigation li{
+  display: flex;
   list-style: none;
 }
+
 .footer-navigation a {
   color: #ffffff;
+  margin-left: 60px;
 }
 
 .footer-navigation a:hover {
@@ -576,32 +743,64 @@ button {
   color: #ffd180;
 }
 
+.footer-contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-contact {
-  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copyright {
+  width: 240px;
 }
 
 .footer-social li {
   list-style: none;
   width: 42px;
   height: 42px;
+
+  border-radius: 50%;
 }
 
 .social-btn {
   color: #ffffff;
+
   background-color: #212a3a;
 }
 
 .social-btn:hover {
   color: #ffffff;
+
   background-color: #ee3643;
 }
 
 .social-btn:active {
   color: #ffffff;
+
   background-color: #ee3643;
+}
+
+.feedback-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 380px;
+}
+
+.footer-feedback,
+.footer-note {
+  display: flex;
+  flex-direction: column;
+  margin-left: 53px;
 }
 
 .footer-feedback a,
@@ -624,7 +823,18 @@ button {
 /* inner-page */
 /* Хлебные крошки */
 
+.breadcrumbs {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  height: 59px;
+}
+
 .breadcrumbs li {
+  margin-right: 41px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   font-size: 13px;
   line-height: 18px;
   list-style: none;
@@ -647,6 +857,8 @@ button {
 }
 
 .page-name {
+  height: 89px;
+
   background-color: #f2f6f8;
 }
 
@@ -658,6 +870,7 @@ button {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+
   background-color: #f7f3ec;
 }
 
@@ -666,9 +879,9 @@ fieldset {
 }
 
 .form-title {
+  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -693,9 +906,10 @@ fieldset {
 }
 
 .sorter-section button {
+  color: rgba(156, 154, 154, 0.18);
+
   background-color: transparent;
   border: none;
-  color: rgba(0, 0, 0, 0.18)
 }
 
 .sorter-section button:hover {
@@ -711,11 +925,14 @@ button.sorter-choised {
 }
 
 .page-title {
+  margin: 0;
+  padding: 30px;
+
   font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .item-hover {
@@ -727,6 +944,7 @@ button.sorter-choised {
 .basket-btn {
   color: #ffffff;
   text-transform: uppercase;
+
   background-color: #63a63e;
   border-bottom: solid 3px #367315;
   border-radius: 2px;
@@ -752,6 +970,7 @@ button.sorter-choised {
 .bookmark-btn {
   color: #32425c;
   text-transform: uppercase;
+
   background-color: #ffffff;
   border: solid 3px #63a63e;
   border-radius: 2px;
@@ -776,10 +995,10 @@ button.sorter-choised {
 
 .old-price,
 .item-cost {
+  font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .old-price {
@@ -793,12 +1012,13 @@ button.sorter-choised {
 }
 
 .transparent-btn {
+  color: #000000;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
+
   border: solid 1px #e5e5e5;
   background-color: transparent;
-  color: #000000;
-  text-transform: uppercase;
 }
 
 .transparent-btn:hover {
@@ -814,12 +1034,14 @@ button.sorter-choised {
 
 .pop-up {
   display: none;
+
   border-top: solid 7px #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .close-btn {
   color: #ee3643;
+
   background-color: transparent;
   border: none;
 }
@@ -845,8 +1067,8 @@ button.sorter-choised {
 
 .form-area input::placeholder,
 .form-area textarea::placeholder {
-  font-family: "PT Sans", Arial, sans-serif;
   color: #999999;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }

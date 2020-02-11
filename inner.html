@@ -13,19 +13,21 @@
       <!-- Блок верхней части header -->
       <div class="header-order">
         <div class="container">
-          <a class="logo" href="index.html" aria-label="Техномарт">
-            <svg class="icon icon-logo" width="110" height="20">
+          <a class="logo logo-header" href="index.html" aria-label="Техномарт">
+            <svg class="icon icon-logo" width="109" height="19">
               <use xlink:href="#logo-technomart"></use>
             </svg>
           </a>
-          <form class="search-field" method="GET" action="https://echo.htmlacademy.ru">
-            <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
-            <svg class="icon" width="17" height="17">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </form>
+          <div class="search-field">
+            <form class="search-form" method="GET" action="https://echo.htmlacademy.ru">
+              <input type="search" name="header-search" placeholder="Поиск:" aria-label="Поле поиска">
+              <svg class="icon" width="17" height="17">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </form>
+          </div>
           <div class="order-container">
-            <a class="header-btn header-bookmark active" href="#">
+            <a class="header-btn header-bookmark" href="#">
               <svg class="icon" width="14" height="16">
                 <use xlink:href="#icon-bookmark"></use>
               </svg>
@@ -85,7 +87,7 @@
                   </svg>
                 </a>
               </div>
-              <ul>
+              <ul class="info-links">
                 <li><a href="#" class="user-link">Мои заказы</a></li>
                 <li><a href="#" class="user-link">Личный кабинет</a></li>
               </ul>
@@ -96,7 +98,7 @@
             <ul>
               <li><a href="index.html">Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a class="current-nav">Каталог</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Спецпредложения</a></li>
               <li><a href="#">Доставка</a></li>

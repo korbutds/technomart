@@ -13,7 +13,7 @@
       <!-- Блок верхней части header -->
       <div class="header-order">
         <div class="container">
-          <a class="logo" aria-label="Техномарт">
+          <a class="logo logo-header" aria-label="Техномарт">
             <svg class="icon icon-logo" width="109" height="19">
               <use xlink:href="#logo-technomart"></use>
             </svg>
@@ -27,7 +27,7 @@
             </form>
           </div>
           <div class="order-container">
-            <a class="header-btn header-bookmark active" href="#">
+            <a class="header-btn header-bookmark" href="#">
               <svg class="icon" width="14" height="16">
                 <use xlink:href="#icon-bookmark"></use>
               </svg>
@@ -73,7 +73,7 @@
               </li>
               <li><a class="log-btn" href="#">Регистрация</a></li>
             </ul>
-            <div class="user-menu">
+            <div class="user-menu visually-hidden">
               <div class="user-name">
                 <a class="profile-btn" href="#">
                   <svg width="20" height="18">
@@ -386,38 +386,36 @@
         </ul>
       </section>
       <!-- Секция о компании и контакты -->
-      <section class="about-contacts">
+      <section class="about-contacts container">
         <h2 class="visually-hidden">О компании.</h2>
-        <div class="container">
-          <!-- Секция about -->
-          <section class="about-section">
-            <h2 class="section-title">Компания "Техномарт"</h2>
-            <p>
-              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и
-              строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-            </p>
-            <p>
-              Мы можем доставить ваш товар в самые отдаленные точки России!
-              Техномарт работает со многими транспортными компаниями:
-            </p>
-            <ul class="about-partners">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
-            <a class="btn about-btn" href="#">Подробнее о компании</a>
-          </section>
-          <!-- Секция контакты -->
-          <section class="contacts-section">
-            <h2 class="section-title">Контакты</h2>
-            <p>
-              Вы можете забрать товар сами
-              заехав в наш офис:
-            </p>
-            <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
-            <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
-          </section>
-        </div>
+        <!-- Секция about -->
+        <section class="about-section">
+          <h2 class="section-title">Компания "Техномарт"</h2>
+          <p>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и
+            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="about-partners">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="btn about-btn" href="#">Подробнее о компании</a>
+        </section>
+        <!-- Секция контакты -->
+        <section class="contacts-section">
+          <h2 class="section-title">Контакты</h2>
+          <p>
+            Вы можете забрать товар сами
+            заехав в наш офис:
+          </p>
+          <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
+          <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
+        </section>
       </section>
     </main>
     <!-- Секция footer -->
@@ -481,19 +479,21 @@
               </a>
             </li>
           </ul>
-          <p class="footer-feedback">
-            Обратная связь:
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p class="footer-note">
-            Разработано —
-            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-          </p>
+          <div class="feedback-section">
+            <p class="footer-feedback">
+              Обратная связь:
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="footer-note">
+              Разработано —
+              <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
     <!-- Pop-up's block -->
-    <section class="map-pop-up">
+    <section class="map-pop-up pop-up">
       <h2 class="visually-hidden">Карта проезда.</h2>
       <button class="close-btn" type="button" aria-label="закрыть">
         <svg width="21" height="21">
