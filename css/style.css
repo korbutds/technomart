@@ -40,7 +40,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 1200px;
+  min-width: 1200px;
 
   color: #000000;
   line-height: 24px;
@@ -124,11 +124,14 @@ button {
 
 /* Header */
 
+.header-order {
+  min-height: 42px;
+}
+
 .header-order .container {
   position: relative;
 
   display: flex;
-  height: 42px;
   justify-content: flex-end;
 }
 
@@ -178,9 +181,11 @@ button {
 }
 
 .search-form input {
+  box-sizing: border-box;
+  height: 42px;
   margin: 0;
   padding-left: 45px;
-  padding-top: 8px;
+  padding-top: 10px;
   padding-bottom: 10px;
   font: inherit;
 
@@ -216,12 +221,11 @@ button {
 
 .order-container {
   display: flex;
+  justify-content: flex-end;
   width: 450px;
 }
 
 .order-container a{
-  flex-grow: 1;
-
   color: #ffffff;
   line-height: 18px;
   font-size: 17px;
@@ -234,7 +238,7 @@ button {
   background-color: #ee3643;
 }
 
-.logo svg {
+.logo-header svg {
   height: 19px;
   width: 109px;
 }
@@ -248,11 +252,11 @@ button {
   background-color: #ba2732;
 }
 
-.header-btn {
-  background-color: inherit;
-}
-
 .header-btn svg {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+
   opacity: 0.3;
 }
 
@@ -273,8 +277,25 @@ button {
   background-color: #ee3643;
 }
 
+.header-btn,
 .order-btn {
+  position: relative;
+
+  box-sizing: border-box;
+  height: 42px;
+  flex-basis: 150px;
+  padding: 12px 20px;
+
   text-align: center;
+}
+
+.header-btn {
+  padding-left: 50px;
+
+  background-color: inherit;
+}
+
+.order-btn {
   background-color: #63a63e;
 }
 
@@ -295,28 +316,33 @@ button {
 }
 
 .header-content {
-  font-family: "Cuprum", Arial, sans-serif;
+  height: 220px;
   padding-bottom: 60px;
+
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .header-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 158px;
-}
-
-.user-menu {
-  width: 299px;
-  margin-left: auto;
+  min-height: 110px;
+  padding-top: 46px;
 }
 
 .header-info > p {
+  width: 196px;
+  margin: 0;
+  padding-left: 53px;
+
   color: #ee3643;
   line-height: 23px;
   font-size: 16px;
   font-style: italic;
-  width: 275px;
+}
+
+.header-contacts {
+width: 270px;
 }
 
 .header-content li {
@@ -324,9 +350,10 @@ button {
 }
 
 .header-phone {
+  position: relative;
+
   display: inline-block;
-  height: 45px;
-  width: 300px;
+  padding: 0px 50px 10px 70px;
 
   color: #ee3643;
   font-size: 21px;
@@ -336,6 +363,10 @@ button {
 }
 
 .header-phone svg {
+  position: absolute;
+  top: 10px;
+  left:13px;
+
   color: #b7bfc8;
 }
 
@@ -346,7 +377,7 @@ button {
 }
 
 .log-btn {
-  margin-left: 10px;
+  display: block;
 
   color: #000000;
   font-size: 21px;
@@ -356,10 +387,16 @@ button {
   background-color: #ffffff;
 }
 
+.users-btn:last-child .log-btn {
+  margin-left: 10px;
+  }
+
 .user-login {
-  display: inline-flex;
+  display: flex;
   justify-content: flex-end;
   width: 300px;
+  margin: 0;
+  padding: 0;
 }
 
 .user-login svg {
@@ -432,6 +469,8 @@ button {
 }
 
 .header-navigation {
+  margin-bottom: 60px;
+
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
 }
@@ -439,7 +478,8 @@ button {
 .header-navigation ul {
   display: flex;
   justify-content: space-around;
-  height: 60px;
+  flex-wrap: wrap;
+  min-height: 60px;
   padding: 0;
 }
 
@@ -468,10 +508,6 @@ button {
   opacity: 0.5;
 
   background-color: #293449;
-}
-
-.current-nav {
-  cursor: default;
 }
 
 /* Main */
@@ -682,8 +718,14 @@ button {
   height: 68px;
 }
 
+.logo-footer svg {
+  width: 138px;
+  height: 23px;
+}
+
 .footer-links .container {
   display: flex;
+  min-height: 193px;
 }
 
 .footer-links {
@@ -707,9 +749,11 @@ button {
   color: #ffffff;
 }
 
+
 .footer-navigation {
   display: flex;
   flex-direction: column;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -718,6 +762,9 @@ button {
 .footer-navigation ul {
   display: flex;
   justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
 }
 
 .footer-navigation li{
@@ -749,33 +796,70 @@ button {
 }
 
 .footer-contact {
+  padding-top: 35px;
+
   color: #ffffff;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
+  min-height: 70px;
+}
+
+.footer-contact ul {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social {
   display: flex;
   justify-content: space-between;
+  margin-left: 150px;
 }
 
 .footer-copyright {
   width: 240px;
+  margin: 0;
 }
 
 .footer-social li {
-  list-style: none;
-  width: 42px;
   height: 42px;
+  width: 42px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 
   border-radius: 50%;
 }
 
+.footer-social li:not(:first-child) {
+  margin-left: 2px;
+}
+
 .social-btn {
+  position: absolute;
+
+  display: block;
+  width: 42px;
+  height: 42px;
+
   color: #ffffff;
+  text-align: center;
 
   background-color: #212a3a;
+  border-radius: 50%;
+}
+
+.social-btn svg {
+  position: relative;
+  left: auto;
+  top: 10px;
+
+  color: #ffffff;
+}
+
+.vk-btn svg{
+  top: 14px;
 }
 
 .social-btn:hover {
@@ -792,15 +876,22 @@ button {
 
 .feedback-section {
   display: flex;
-  justify-content: flex-end;
-  width: 380px;
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.feedback-section p {
+  margin-top: 0;
 }
 
 .footer-feedback,
 .footer-note {
   display: flex;
   flex-direction: column;
-  margin-left: 53px;
+}
+
+.footer-note {
+  margin-left: 50px;
 }
 
 .footer-feedback a,
