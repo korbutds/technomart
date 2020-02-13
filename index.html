@@ -96,7 +96,7 @@
           <!-- Блок навигации -->
           <nav class="header-navigation">
             <ul>
-              <li><a>Главная</a></li>
+              <li><a class="current-page">Главная</a></li>
               <li><a href="#">Компания</a></li>
               <li><a href="inner.html">Каталог</a></li>
               <li><a href="#">Новости</a></li>
@@ -115,46 +115,50 @@
       <section class="features-section container">
         <h2 class="visually-hidden">Наши преимущества.</h2>
         <ul class="features-list">
-          <!-- 1 фича -->
-          <li class="features-item new-item">
-            <h3 class="features-name">Материалы</h3>
-            <a class="features-description" href="#" aria-label="Посмотреть материалы">На любой вкус</a>
-            <svg class="icon" width="44" height="65">
-              <use xlink:href="#icon-materials"></use>
-            </svg>
-          </li>
-          <!-- 2 фича -->
-          <li class="features-item">
-            <h3 class="features-name">Инструмент</h3>
-            <a class="features-description" href="#" aria-label="Выбрать инструмент">На все случаи</a>
-            <svg class="icon" width="75" height="61">
-              <use xlink:href="#icon-instrument"></use>
-            </svg>
-          </li>
-          <!-- 3 фича -->
-          <li class="features-item">
-            <h3 class="features-name">Техника</h3>
-            <a class="features-description" href="#" aria-label="Выбрать технику">Для стройки</a>
-            <svg class="icon" width="78" height="62">
-              <use xlink:href="#icon-technic"></use>
-            </svg>
-          </li>
-          <!-- 4 фича -->
-          <li class="features-item">
-            <h3 class="features-name">Скидка 50%</h3>
-            <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
-            <svg class="icon" width="59" height="72">
-              <use xlink:href="#icon-sale"></use>
-            </svg>
-          </li>
-          <!-- 5 фича -->
-          <li class="features-item">
-            <h3 class="features-name">Доставка</h3>
-            <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
-            <svg class="icon" width="78" height="63">
-              <use xlink:href="#icon-deliver"></use>
-            </svg>
-          </li>
+          <div class="features-line">
+            <!-- 1 фича -->
+            <li class="features-item new-item">
+              <h3 class="features-name">Материалы</h3>
+              <a class="features-description" href="#" aria-label="Посмотреть материалы">На любой вкус</a>
+              <svg class="icon" width="44" height="65">
+                <use xlink:href="#icon-materials"></use>
+              </svg>
+            </li>
+            <!-- 2 фича -->
+            <li class="features-item">
+              <h3 class="features-name">Инструмент</h3>
+              <a class="features-description" href="#" aria-label="Выбрать инструмент">На все случаи</a>
+              <svg class="icon" width="75" height="61">
+                <use xlink:href="#icon-instrument"></use>
+              </svg>
+            </li>
+            <!-- 3 фича -->
+            <li class="features-item">
+              <h3 class="features-name">Техника</h3>
+              <a class="features-description" href="#" aria-label="Выбрать технику">Для стройки</a>
+              <svg class="icon" width="78" height="62">
+                <use xlink:href="#icon-technic"></use>
+              </svg>
+            </li>
+          </div>
+          <div class="features-line">
+            <!-- 4 фича -->
+            <li class="features-item">
+              <h3 class="features-name">Скидка 50%</h3>
+              <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
+              <svg class="icon" width="59" height="72">
+                <use xlink:href="#icon-sale"></use>
+              </svg>
+            </li>
+            <!-- 5 фича -->
+            <li class="features-item">
+              <h3 class="features-name">Доставка</h3>
+              <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
+              <svg class="icon" width="78" height="63">
+                <use xlink:href="#icon-deliver"></use>
+              </svg>
+            </li>
+          </div>
         </ul>
         <!-- Slider будет тут-->
         <div class="slider">
@@ -168,7 +172,7 @@
             </figure>
             <a class="btn" href="#">Открыть каталог</a>
           </div>
-          <div class="second-slider">
+          <div class="second-slider visually-hidden">
             <figure class="slider-image">
               <figcaption>
                 <h2 class="slider-title">Перфораторы</h2>
@@ -277,7 +281,7 @@
       <section class="popular-section popular-manufacturer container">
         <div class="title-container">
           <h2 class="section-title">Популярные производители:</h2>
-          <a class="btn manufacturer-btn" href="#">Все производители</a>
+          <a class="btn popular-btn" href="#">Все производители</a>
         </div>
         <ul>
           <!-- 1 производитель -->
@@ -331,18 +335,30 @@
         </ul>
       </section>
       <!--  Секция о сервисе -->
-      <section class="service-section container">
-        <h2 class="section-title">Сервисы</h2>
-        <p>
-          Хороший интернет-магазин отличается от плохого не только ценами!
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <ul class="service-list">
-          <!-- 1 сервис -->
-          <li class="service-block">
-            <span class="service-item">Доставка</span>
-            <ul class="service-submenu">
-              <li>
+      <section class="service-section">
+        <div class="container">
+          <h2 class="section-title">Сервисы</h2>
+          <p class="service-manifest">
+            Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          </p>
+          <div class="div1">
+            <ul class="service-list">
+              <!-- 1 сервис -->
+              <li class="service-block">
+                <span class="service-item">Доставка</span>
+              </li>
+              <!-- 2 сервис -->
+              <li class="service-block">
+                <span class="service-item">Гарантия</span>
+              </li>
+              <!-- 3 сервис -->
+              <li class="service-block">
+                <span class="service-item">Кредит</span>
+              </li>
+            </ul>
+            <div class="div2">
+              <div class="service-submenu delivery-description">
                 <h3>Доставка</h3>
                 <p>
                   Мы с удовольствием доставим ваш товар прямо
@@ -350,14 +366,8 @@
                   Ведь мы неплохо заработаем,
                   поднимая его на ваш этаж!
                 </p>
-              </li>
-            </ul>
-          </li>
-          <!-- 2 сервис -->
-          <li class="service-block">
-            <span class="service-item">Гарантия</span>
-            <ul class="service-submenu">
-              <li>
+              </div>
+              <div class="service-submenu warranty-description">
                 <h3>Гарантия</h3>
                 <p>
                   Если купленный у нас товар поломается или заискрит,
@@ -366,24 +376,18 @@
                   сгоревший товар на новый.
                   Дом уж восстановите как-нибудь сами.
                 </p>
-              </li>
-            </ul>
-          </li>
-          <!-- 3 сервис -->
-          <li class="service-block">
-            <span class="service-item">Кредит</span>
-            <ul class="service-submenu">
-              <li>
+              </div>
+              <div class="service-submenu credit-description">
                 <h3>Кредит</h3>
-                <p>
+                <p class="credit-description">
                   Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a class="btn credit-btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Секция о компании и контакты -->
       <section class="about-contacts container">
