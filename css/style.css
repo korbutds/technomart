@@ -331,14 +331,15 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-height: 110px;
   padding-top: 46px;
+  padding-bottom: 35px;
 }
 
 .header-info > p {
-  width: 196px;
+  box-sizing: border-box;
+  width: 320px;
   margin: 0;
-  padding-left: 53px;
+  padding: 5px 50px;
 
   color: #ee3643;
   line-height: 23px;
@@ -347,7 +348,8 @@ button {
 }
 
 .header-contacts {
-  width: 270px;
+  box-sizing: border-box;
+  width: 300px;
 }
 
 .header-content li {
@@ -358,7 +360,11 @@ button {
   position: relative;
 
   display: inline-block;
+  box-sizing: border-box;
+  width: 270px;
+  height: 45px;
   padding: 9px 50px 9px 70px;
+  margin-bottom: 5px;
 
   color: #ee3643;
   font-size: 21px;
@@ -379,6 +385,8 @@ button {
   color: #32425c;
   line-height: 24px;
   font-size: 14px;
+  margin: 0;
+  padding: 0 10px;
 }
 
 .log-btn {
@@ -399,7 +407,8 @@ button {
 .user-login {
   display: flex;
   justify-content: flex-end;
-  width: 300px;
+  box-sizing: border-box;
+  width: 320px;
   margin: 0;
   padding: 0;
 }
@@ -485,9 +494,9 @@ button {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  min-height: 60px;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
+
 }
 
 .header-navigation li {
@@ -499,8 +508,7 @@ button {
 }
 
 .header-navigation a {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 21px 5px;
 
   color: #ffffff;
   font-size: 17px;
@@ -523,29 +531,28 @@ button {
 
 /* Main */
 
-ul.features-list {
+.features-section {
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
-
-.features-section {
-  position: relative;
-  margin-bottom: 33px;
-  margin-top: 59px;
+  padding-bottom: 30px;
+  padding-top: 60px;
 
   font-family: "Cuprum", Arial, sans-serif;
 }
 
-.features-line:first-of-type {
+.features-line ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list {
   display: flex;
   justify-content: space-between;
 }
 
-.features-line:nth-child(2) {
-  display: flex;
+.column-line {
   flex-direction: column;
   margin-left: auto;
 }
@@ -572,23 +579,23 @@ ul.features-list {
   color: #ffffff;
 }
 
-.features-line:first-of-type .features-item:first-child {
+.features-line .features-item:first-child {
   background-color: #ffbf47;
 }
 
-.features-line:first-of-type .features-item:nth-child(2) {
+.features-line .features-item:nth-child(2) {
   background-color: #3bbce3;
 }
 
-.features-line:first-of-type .features-item:nth-child(3) {
+.features-line .features-item:nth-child(3) {
   background-color: #dc91d8;
 }
 
-.features-line:nth-child(2) .features-item:first-child {
+.features-list .features-item:first-child {
   background-color: #8ed78f;
 }
 
-.features-line:nth-child(2) .features-item:last-child {
+.features-list .features-item:last-child {
   background-color: #ffc047;
 }
 
@@ -635,12 +642,6 @@ ul.features-list {
 .slider figure {
   margin: 0;
   padding: 0;
-}
-
-.slider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .slider > div {
@@ -735,12 +736,12 @@ ul.features-list {
 
 /* Популярные производители */
 
-.popular-section ul {
+.popular-manufacturer ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 85px;
+  padding-bottom: 85px;
 }
 
 .manufacturer-item {
@@ -762,7 +763,6 @@ ul.features-list {
 }
 
 .service-section .container {
-  min-height: 522px;
   padding-top: 65px;
 }
 
@@ -775,9 +775,6 @@ ul.features-list {
 
 .div1 {
   display: flex;
-}
-
-div.2 {
 }
 
 .service-list {
@@ -890,9 +887,21 @@ div.2 {
 .about-contacts {
   display: flex;
   justify-content: space-between;
-  min-height: 377px;
   padding-top: 75px;
   padding-bottom: 86px;
+}
+
+.about-contacts h2 {
+  margin-top: 0;
+}
+
+.about-section p:first-of-type{
+  margin-top: 0;
+}
+
+.contacts-section p {
+  margin: 0;
+  padding-right: 110px;
 }
 
 .about-section,
@@ -907,15 +916,30 @@ div.2 {
 }
 
 .contacts-section {
-  width: 330px;
+  width: 300px;
 }
 
 .about-section .btn {
   align-self: flex-start;
 }
 
-.contacts-section .btn {
+.about-btn {
+  box-sizing: border-box;
+  width: 220px;
+  height: 38px;
+  padding: 10px;
+}
+
+.map-btn {
   align-self: stretch;
+}
+
+.contacts-section button {
+  padding: 0;
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  border: none;
 }
 
 /* footer */
@@ -941,15 +965,13 @@ div.2 {
   background-color: #32425c;
 }
 
-.footer-about {
-  display: flex;
-  flex-direction: column;
-}
-
 .footer-about p {
+  margin-top: 30px;
+
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
+
 }
 
 .footer-phone {
@@ -1004,13 +1026,12 @@ div.2 {
 }
 
 .footer-contact {
-  padding-top: 35px;
+  padding: 35px 0;
 
   color: #ffffff;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
-  min-height: 70px;
 }
 
 .footer-contact ul {
@@ -1018,15 +1039,14 @@ div.2 {
   padding: 0;
 }
 
-.footer-social {
+ul.footer-social {
   display: flex;
   justify-content: space-between;
-  margin-left: 150px;
+  padding-left: 30px;
 }
 
 .footer-copyright {
   width: 240px;
-  margin: 0;
 }
 
 .footer-social li {
@@ -1121,6 +1141,10 @@ div.2 {
 
 /* inner-page */
 /* Хлебные крошки */
+
+.products-info {
+  padding-bottom: 60px;
+}
 
 .breadcrumbs {
   display: flex;
@@ -1439,20 +1463,51 @@ button.sorter-choised {
   border: solid 1px #bdc6ca;
 }
 
-.transparent-btn:active,
-.catalog-pagination .current {
+.transparent-btn:active {
   border: solid 1px #ee3643;
 }
 
-.catalog-info {
-  box-sizing: border-box;
+.catalog-info .container{
   padding-top: 65px;
-  min-height: 261px;
+  padding-bottom: 55px;
 }
 
 .catalog-info .section-title {
   margin-top: 0;
 }
+
+.catalog-info p {
+  padding-right: 30px;
+}
+
+.catalog-pagination {
+  display: flex;
+}
+
+.catalog-pagination a {
+  box-sizing: border-box;
+  min-width: 38px;
+  padding: 10px 5px;
+
+  text-align: center;
+
+  border-radius: 4px;
+}
+
+.catalog-pagination a:last-child {
+  width: 140px;
+}
+
+.catalog-pagination a:not(:first-child) {
+  margin-left: 10px;
+}
+
+.catalog-pagination .current {
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
 
 /* Поп-ап */
 

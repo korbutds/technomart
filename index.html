@@ -50,7 +50,7 @@
           <div class="header-info">
             <p>
               Интернет-магазин
-              строительных материалов
+              строительных материалов<br>
               и инструментов для ремонта
             </p>
             <div class="header-contacts">
@@ -114,9 +114,8 @@
       <!-- Секция с преимуществами -->
       <section class="features-section container">
         <h2 class="visually-hidden">Наши преимущества.</h2>
-        <ul class="features-list">
-          <div class="features-line">
-            <!-- 1 фича -->
+        <div class="features-line">
+          <ul>
             <li class="features-item new-item">
               <h3 class="features-name">Материалы</h3>
               <a class="features-description" href="#" aria-label="Посмотреть материалы">На любой вкус</a>
@@ -140,47 +139,51 @@
                 <use xlink:href="#icon-technic"></use>
               </svg>
             </li>
+          </ul>
+          <!-- 1 фича -->
+        </div>
+        <div class="features-list">
+          <div class="slider">
+            <div class="first-slider">
+              <figure class="slider-image">
+                <figcaption>
+                  <h2 class="slider-title">Дрели</h2>
+                  <p>Соседям на радость!</p>
+                </figcaption>
+                <img src="img/drill.jpg" width="620" height="266" alt="Дрели BOSCH">
+              </figure>
+              <a class="btn" href="#">Открыть каталог</a>
+            </div>
+            <div class="second-slider visually-hidden">
+              <figure class="slider-image">
+                <figcaption>
+                  <h2 class="slider-title">Перфораторы</h2>
+                  <p>Настоящие мужские игрушки</p>
+                </figcaption>
+                <img src="img/hammer-drill.jpg" width="620" height="266" alt="Перфораторы BOSCH">
+              </figure>
+              <a class="btn" href="inner.html">Открыть каталог</a>
+            </div>
           </div>
           <div class="features-line">
             <!-- 4 фича -->
-            <li class="features-item">
-              <h3 class="features-name">Скидка 50%</h3>
-              <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
-              <svg class="icon" width="59" height="72">
-                <use xlink:href="#icon-sale"></use>
-              </svg>
-            </li>
-            <!-- 5 фича -->
-            <li class="features-item">
-              <h3 class="features-name">Доставка</h3>
-              <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
-              <svg class="icon" width="78" height="63">
-                <use xlink:href="#icon-deliver"></use>
-              </svg>
-            </li>
-          </div>
-        </ul>
-        <!-- Slider будет тут-->
-        <div class="slider">
-          <div class="first-slider">
-            <figure class="slider-image">
-              <figcaption>
-                <h2 class="slider-title">Дрели</h2>
-                <p>Соседям на радость!</p>
-              </figcaption>
-              <img src="img/drill.jpg" width="620" height="266" alt="Дрели BOSCH">
-            </figure>
-            <a class="btn" href="#">Открыть каталог</a>
-          </div>
-          <div class="second-slider visually-hidden">
-            <figure class="slider-image">
-              <figcaption>
-                <h2 class="slider-title">Перфораторы</h2>
-                <p>Настоящие мужские игрушки</p>
-              </figcaption>
-              <img src="img/hammer-drill.jpg" width="620" height="266" alt="Перфораторы BOSCH">
-            </figure>
-            <a class="btn" href="inner.html">Открыть каталог</a>
+            <ul class="column-line">
+              <li class="features-item">
+                <h3 class="features-name">Скидка 50%</h3>
+                <a class="features-description" href="#" aria-label="Выбрать товары со скидкой">На 350 товаров</a>
+                <svg class="icon" width="59" height="72">
+                  <use xlink:href="#icon-sale"></use>
+                </svg>
+              </li>
+              <!-- 5 фича -->
+              <li class="features-item">
+                <h3 class="features-name">Доставка</h3>
+                <a class="features-description" href="#" aria-label="Подробнее о бесплатной доставке">Бесплатно</a>
+                <svg class="icon" width="78" height="63">
+                  <use xlink:href="#icon-deliver"></use>
+                </svg>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
