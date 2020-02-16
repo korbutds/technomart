@@ -37,6 +37,8 @@
   will-change: auto;
 } */
 
+/* Общие стили */
+
 body {
   margin: 0;
   padding: 0;
@@ -67,7 +69,7 @@ button {
   content: "";
   position: absolute;
   z-index: 2;
-  right: -1px;
+  right: 0;
   top: 0;
   background: url("../img/new-flag.png");
   width: 60px;
@@ -137,7 +139,8 @@ button {
   position: relative;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -147,6 +150,9 @@ button {
   width: 220px;
   height: 47px;
 
+  color: #ffffff;
+
+  background-color: #ee3643;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -154,6 +160,24 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header .icon-logo {
+  width: 110px;
+  height: 19px;
+}
+
+.logo:hover,
+.header-btn.active:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
 }
 
 .header-order,
@@ -163,10 +187,13 @@ button {
   background-color: #293449;
 }
 
+/* Блок поиска */
+
 .search-field {
+  flex-grow: 1;
   padding: 0;
   margin: 0;
-  width: 270px;
+  margin-left: 220px;
 }
 
 .search-form {
@@ -174,6 +201,7 @@ button {
 
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   padding: 0;
   margin: 0;
 }
@@ -187,11 +215,10 @@ button {
 
 .search-form input {
   box-sizing: border-box;
-  height: 42px;
   margin: 0;
-  padding-left: 45px;
+  padding-left: 49px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 
   font: inherit;
 
@@ -225,6 +252,8 @@ button {
   color: #ee3643;
 }
 
+/* Блок заказа */
+
 .order-container {
   display: flex;
   justify-content: flex-end;
@@ -232,55 +261,11 @@ button {
 }
 
 .order-container a{
+  display: block;
+
   color: #ffffff;
   line-height: 18px;
   font-size: 17px;
-}
-
-.logo {
-  color: #ffffff;
-  text-align: center;
-
-  background-color: #ee3643;
-}
-
-.logo-header svg {
-  height: 19px;
-  width: 109px;
-}
-
-.logo:hover,
-.header-btn.active:hover {
-  background-color: #ca2c37;
-}
-
-.logo:active {
-  background-color: #ba2732;
-}
-
-.header-btn svg {
-  position: absolute;
-  left: 15px;
-  top: 12px;
-
-  opacity: 0.3;
-}
-
-.header-btn:hover {
-  background-color: #212a3a;
-}
-
-.header-btn:hover svg {
-  opacity: 1;
-}
-
-.header-btn:active {
-  opacity: 0.3;
-  background-color: #161d29;
-}
-
-.header-btn.active {
-  background-color: #ee3643;
 }
 
 .header-btn,
@@ -290,13 +275,13 @@ button {
   box-sizing: border-box;
   height: 42px;
   flex-basis: 150px;
-  padding: 12px 20px;
+  padding-top: 12px;
 
   text-align: center;
 }
 
 .header-btn {
-  padding-left: 50px;
+  padding-left: 20px;
 
   background-color: inherit;
 }
@@ -321,25 +306,54 @@ button {
   background-color: #f3f7f8;
 }
 
+.header-btn svg {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+
+  opacity: 0.3;
+}
+
+.header-btn:hover {
+  background-color: #212a3a;
+}
+
+.header-btn:hover svg {
+  opacity: 1;
+}
+
+.header-btn:active {
+  opacity: 0.3;
+  background-color: #161d29;
+}
+
+.header-btn.active {
+  background-color: #ee3643;
+}
+
+/* Средний блок с авторизацией и навигацией*/
+
 .header-content {
   padding-bottom: 60px;
 
   font-family: "Cuprum", Arial, sans-serif;
 }
 
+/* Блок с информацией и данными логина */
+
 .header-info {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-top: 46px;
-  padding-bottom: 35px;
+  padding-bottom: 38px;
 }
 
 .header-info > p {
   box-sizing: border-box;
   width: 320px;
   margin: 0;
-  padding: 5px 50px;
+  padding: 2px 52px;
 
   color: #ee3643;
   line-height: 23px;
@@ -364,7 +378,6 @@ button {
   width: 270px;
   height: 45px;
   padding: 9px 50px 9px 70px;
-  margin-bottom: 5px;
 
   color: #ee3643;
   font-size: 21px;
@@ -376,7 +389,7 @@ button {
 .header-phone svg {
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 12px;
 
   color: #b7bfc8;
 }
@@ -386,22 +399,32 @@ button {
   line-height: 24px;
   font-size: 14px;
   margin: 0;
-  padding: 0 10px;
+  padding: 2px 10px;
 }
 
 .log-btn {
+  position: relative;
+
   display: block;
 
   color: #000000;
   font-size: 21px;
   line-height: 21px;
-  padding: 10px 25px;
+  padding: 12px 25px;
+  padding-bottom: 12px;
 
   background-color: #ffffff;
 }
 
+.log-btn svg {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+
 .users-btn:first-child .log-btn {
   margin-right: 10px;
+  padding-left: 45px;
   }
 
 .user-login {
@@ -456,6 +479,8 @@ button {
 
 .info-links {
   display: flex;
+  margin: 0;
+  padding: 0;
   padding-left: 17px;
 }
 
@@ -492,23 +517,25 @@ button {
 
 .header-navigation ul {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0 20px;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 23px;
   margin: 0;
 
 }
 
 .header-navigation li {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
 
   text-align: center;
 }
 
 .header-navigation a {
-  padding: 21px 5px;
+  display: flex;
+  justify-content: center;
+  padding: 21.5px 30px;
 
   color: #ffffff;
   font-size: 17px;
@@ -523,7 +550,8 @@ button {
   background-color: #293449;
 }
 
-.header-navigation a:not(.current-page):active {
+.header-navigation a:not(.current-page):active,
+.current-page {
   opacity: 0.5;
 
   background-color: #293449;
@@ -531,10 +559,12 @@ button {
 
 /* Main */
 
+/* Секуция с преимуществами */
+
 .features-section {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
   padding-top: 60px;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -554,7 +584,6 @@ button {
 
 .column-line {
   flex-direction: column;
-  margin-left: auto;
 }
 
 .features-item {
@@ -571,12 +600,45 @@ button {
 
 .features-item svg {
   position: absolute;
-  top: 30px;
-  left: 213px;
-  text-align: center;
-  vertical-align: middle;
+  top: 50%;
+  left: 235px;
 
   color: #ffffff;
+}
+
+.material-icon {
+  width: 44px;
+  height: 65px;
+  margin-left: -22px;
+  margin-top: -30px;
+}
+
+.instrument-icon {
+  width: 75px;
+  height: 63px;
+  margin-left: -38px;
+  margin-top: -29px;
+}
+
+.technic-icon {
+  width: 78px;
+  height: 62px;
+  margin-left: -44px;
+  margin-top: -30px;
+}
+
+.sale-icon {
+  width: 59px;
+  height: 72px;
+  margin-left: -39px;
+  margin-top: -35px;
+}
+
+.deliver-icon {
+  width: 78px;
+  height: 72px;
+  margin-left: -44px;
+  margin-top: -35px;
 }
 
 .features-line .features-item:first-child {
@@ -616,6 +678,7 @@ button {
   height: 38px;
   padding: 10px 20px;
   margin-top: 15px;
+  margin-left: 5px;
 
   color: #ffffff;
   line-height: 18px;
@@ -624,6 +687,7 @@ button {
   text-align: center;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .features-description:hover {
@@ -668,8 +732,8 @@ button {
 
 .slider-image figcaption {
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 22px;
+  left: 22px;
 }
 
 .slider p {
@@ -692,7 +756,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 30px;
+  padding: 24px 27px;
   padding-right: 24px;
   margin-bottom: 21px;
 
@@ -1065,14 +1129,14 @@ ul.footer-social {
 }
 
 .social-btn {
-  position: absolute;
 
-  display: block;
+  display: flex;
   width: 42px;
   height: 42px;
+  justify-content: center;
+  align-items: top;
 
   color: #ffffff;
-  text-align: center;
 
   background-color: #212a3a;
   border-radius: 50%;
