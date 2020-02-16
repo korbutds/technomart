@@ -397,30 +397,73 @@
         <h2 class="visually-hidden">О компании.</h2>
         <!-- Секция about -->
         <section class="about-section">
-          <h2 class="section-title">Компания "Техномарт"</h2>
-          <p>
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и
-            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-          </p>
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!
-            Техномарт работает со многими транспортными компаниями:
-          </p>
-          <ul class="about-partners">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
+          <div class="about-technomart">
+            <h2 class="section-title">Компания &laquo;Техномарт&raquo;</h2>
+            <p>
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаровдля ремонта и
+              строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            </p>
+            <div class="partners">
+              <p>
+                Мы можем доставить ваш товар в самые отдаленные точки России!
+                Техномарт работает со многими транспортными компаниями:
+              </p>
+              <ul class="about-partners">
+                <li>Деловые линии</li>
+                <li>Автотрейдинг</li>
+                <li>ЖелДорЭкспедиция</li>
+              </ul>
+            </div>
+          </div>
           <a class="btn about-btn" href="#">Подробнее о компании</a>
         </section>
         <!-- Секция контакты -->
         <section class="contacts-section">
-          <h2 class="section-title">Контакты</h2>
-          <p>
-            Вы можете забрать товар сами
-            заехав в наш офис:
-          </p>
-          <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
+          <div class="map-pop-up pop-up">
+            <h2 class="visually-hidden">Карта проезда.</h2>
+            <button class="close-btn" type="button" aria-label="закрыть">
+              <svg width="21" height="21">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+            <img src="img/pop-up-map.jpg" width="940" height="446" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
+          </div>
+          <div class="pop-up write-pop-up">
+            <h2 class="visually-hidden">Напишите нам.</h2>
+            <form class="write-form" action="https://echo.htmlacademy.ru" method="POST">
+              <div class="form-area">
+                <button class="close-btn" type="button" aria-label="закрыть">
+                  <svg width="21" height="21">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+                </button>
+                <p>
+                  <label for="write-name">Ваше имя:</label>
+                  <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                  <label for="write-email">Ваш e-mail:</label>
+                  <input id="write-email" type="email" name="e-mail" value="" placeholder="email@example.com">
+                </p>
+                <p>
+                  <label for="letter-us">Текст письма:</label>
+                  <textarea id="letter-us" placeholder="В свободной форме" name="text-letter" rows="6"></textarea>
+                </p>
+              </div>
+              <div class="btn-area">
+                <button class="btn" type="submit">Отправить</button>
+              </div>
+            </form>
+            <div class="pop-up-btns"></div>
+          </div>
+          <div class="map-section">
+            <h2 class="section-title">Контакты</h2>
+            <p>
+              Вы можете забрать товар сами
+              заехав в наш офис:
+            </p>
+            <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
+          </div>
           <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
@@ -500,43 +543,6 @@
       </div>
     </footer>
     <!-- Pop-up's block -->
-    <section class="map-pop-up pop-up">
-      <h2 class="visually-hidden">Карта проезда.</h2>
-      <button class="close-btn" type="button" aria-label="закрыть">
-        <svg width="21" height="21">
-          <use xlink:href="#icon-close"></use>
-        </svg>
-      </button>
-      <img src="img/pop-up-map.png" width="970" height="476" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
-    </section>
-    <section class="pop-up write-pop-up">
-      <h2 class="visually-hidden">Напишите нам.</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <div class="form-area">
-          <button class="close-btn" type="button" aria-label="закрыть">
-            <svg width="21" height="21">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-          <p>
-            <label for="write-name">Ваше имя:</label>
-            <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label for="write-email">Ваш e-mail:</label>
-            <input id="write-email" type="email" name="e-mail" value="" placeholder="Ваш e-mail">
-          </p>
-          <p>
-            <label for="letter-us">Текст письма:</label>
-            <textarea id="letter-us" placeholder="В свободной форме"></textarea>
-          </p>
-        </div>
-        <div class="btn-area">
-          <button class="btn" type="submit">Отправить</button>
-        </div>
-      </form>
-      <div class="pop-up-btns"></div>
-    </section>
     <!-- svg-sprite -->
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">

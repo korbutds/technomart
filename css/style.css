@@ -148,19 +148,15 @@ button {
   justify-content: center;
   align-items: center;
   width: 220px;
-  height: 47px;
+  min-height: 42px;
 
   color: #ffffff;
 
   background-color: #ee3643;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 5px 0 0 #b52933;
 }
 
 .logo-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,8 +172,13 @@ button {
   background-color: #ca2c37;
 }
 
+.logo:hover {
+  box-shadow: 0px 5px 0 0 #9a212a; /*Сделал так, для того, чтобы если вдруг header бужет вынужден увеличиться, то лого расстянется*/
+}
+
 .logo:active {
   background-color: #ba2732;
+  box-shadow: 0px 5px 0 0 #8e1e26;
 }
 
 .header-order,
@@ -193,7 +194,7 @@ button {
   flex-grow: 1;
   padding: 0;
   margin: 0;
-  margin-left: 220px;
+  /* margin-left: 220px; */
 }
 
 .search-form {
@@ -256,7 +257,7 @@ button {
 
 .order-container {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
   width: 450px;
 }
 
@@ -273,15 +274,18 @@ button {
   position: relative;
 
   box-sizing: border-box;
-  height: 42px;
+  min-height: 42px;
   flex-basis: 150px;
   padding-top: 12px;
+  padding-bottom: 12px;
 
   text-align: center;
 }
 
 .header-btn {
-  padding-left: 20px;
+  padding-left: 45px;
+  padding-right: 10px;
+  text-align: left;
 
   background-color: inherit;
 }
@@ -445,7 +449,8 @@ button {
 }
 
 .log-btn:hover svg,
-.profile-btn:hover svg {
+.profile-btn:hover svg,
+.logout-btn:hover svg {
   color: #32425c;
 }
 
@@ -453,15 +458,22 @@ button {
 .log-btn:active svg,
 .profile-btn svg,
 .profile-btn:active,
-.profile-btn:active svg {
+.profile-btn:active svg,
+.logout-btn:active svg {
   color: #c5c5c5;
+}
+
+.user-menu {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-name {
   display: flex;
-  width: 299px;
-  height: 45px;
-  justify-content: space-between;
+  min-width: 280px;
+  min-height: 45px;
+  align-self: flex-end;
 
   background-color: #ffffff;
 }
@@ -473,25 +485,53 @@ button {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
-  text-align: center;
   padding: 12px;
+  padding-left: 14px;
 }
+
+.profile-btn svg {
+  width: 20px;
+  height: 18px;
+}
+
+.log-name {
+  padding-left: 8px;
+  padding-right: 15px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  color: #c5c5c5;
+  }
 
 .info-links {
   display: flex;
+  align-self: flex-start;
   margin: 0;
   padding: 0;
-  padding-left: 17px;
+  padding-top: 4px;
+  padding-left: 40px;
+}
+
+.info-links li:not(:last-child) {
+  margin-right: 32px;
 }
 
 .info-links li {
-  margin-right: 26px;
+  position: relative;
 }
 
-.info-links li:last-child {
-  padding-left: 0px;
-
-  list-style: disc;
+.info-links li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -17px;
+  border: solid 2px #000000;
+  border-radius: 50%;
 }
 
 .user-link {
@@ -550,8 +590,7 @@ button {
   background-color: #293449;
 }
 
-.header-navigation a:not(.current-page):active,
-.current-page {
+.header-navigation a:not(.current-page):active {
   opacity: 0.5;
 
   background-color: #293449;
@@ -931,27 +970,14 @@ button {
   background-color: #f4f7f9;
 }
 
-.about-partners li {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-
-  list-style: none;
-}
-
-.about-partners li::before {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 2px;
-
-  background-color: #ee3643;
-}
+/* .about-section */
 
 .about-contacts {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
-  padding-top: 75px;
+  padding-top: 80px;
   padding-bottom: 86px;
 }
 
@@ -959,13 +985,13 @@ button {
   margin-top: 0;
 }
 
-.about-section p:first-of-type{
-  margin-top: 0;
+.about-section {
+  width: 540px;
 }
 
-.contacts-section p {
+.about-section p {
   margin: 0;
-  padding-right: 110px;
+  margin-bottom: 25px;
 }
 
 .about-section,
@@ -975,16 +1001,48 @@ button {
   justify-content: space-between;
 }
 
-.about-section {
-  width: 540px;
+.partners {
+  padding-right: 150px;
 }
 
-.contacts-section {
-  width: 300px;
+.partners p {
+  margin-bottom: 20px;
 }
 
 .about-section .btn {
   align-self: flex-start;
+}
+
+.about-partners {
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  margin-bottom: 35px;
+}
+
+.about-partners li {
+  position: relative;
+
+  margin-bottom: 19px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+
+  list-style: none;
+}
+
+.about-partners li::before {
+  position: absolute;
+  top: 10px;
+  left: -35px;
+
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+
+  background-color: #ee3643;
 }
 
 .about-btn {
@@ -994,11 +1052,22 @@ button {
   padding: 10px;
 }
 
+/* Contact-section */
+
+.contacts-section {
+  width: 300px;
+}
+
+.map-section p {
+  margin: 0;
+  padding-right: 110px;
+}
+
 .map-btn {
   align-self: stretch;
 }
 
-.contacts-section button {
+.map-section button {
   padding: 0;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -1007,20 +1076,11 @@ button {
 }
 
 /* footer */
-
-.logo-footer {
-  width: 220px;
-  height: 68px;
-}
-
-.logo-footer svg {
-  width: 138px;
-  height: 23px;
-}
+/* footer-links */
 
 .footer-links .container {
   display: flex;
-  min-height: 193px;
+  justify-content: space-between;
 }
 
 .footer-links {
@@ -1029,19 +1089,32 @@ button {
   background-color: #32425c;
 }
 
+.footer-about {
+  padding-bottom: 30px;
+}
+
+.logo-footer {
+  width: 220px;
+  height: 63px;
+}
+
+.logo-footer svg {
+  width: 138px;
+  height: 23px;
+}
+
 .footer-about p {
-  margin-top: 30px;
+  margin-top: 33px;
+  padding-left: 2px;
 
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
-
 }
 
 .footer-phone {
   color: #ffffff;
 }
-
 
 .footer-navigation {
   display: flex;
@@ -1057,17 +1130,17 @@ button {
   justify-content: flex-end;
   padding: 0;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 37px;
 }
 
 .footer-navigation li{
   display: flex;
   list-style: none;
+  margin-left: 58px;
 }
 
 .footer-navigation a {
   color: #ffffff;
-  margin-left: 60px;
 }
 
 .footer-navigation a:hover {
@@ -1084,18 +1157,26 @@ button {
   color: #ffd180;
 }
 
+/* footer-contact */
+
 .footer-contact .container {
   display: flex;
   justify-content: space-between;
 }
 
 .footer-contact {
-  padding: 35px 0;
+  padding: 38px 0;
 
   color: #ffffff;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
+}
+
+.footer-copyright {
+  width: 240px;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-contact ul {
@@ -1109,9 +1190,6 @@ ul.footer-social {
   padding-left: 30px;
 }
 
-.footer-copyright {
-  width: 240px;
-}
 
 .footer-social li {
   height: 42px;
@@ -1576,35 +1654,113 @@ button.sorter-choised {
 /* Поп-ап */
 
 .pop-up {
-  display: none;
+  /* display: none; */
 
   border-top: solid 7px #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
+.map-pop-up {
+  position: absolute;
+  top: -256px;
+  left: 0;
+
+  width: 940px;
+  height: 446px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+
+}
+
 .close-btn {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  margin: 0;
+  padding: 0;
+
   color: #ee3643;
 
   background-color: transparent;
   border: none;
 }
 
-.form-area {
+.write-pop-up {
+  position: absolute;
+  top: 208px;
+  right: 160px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 620px;
+  min-height: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+
+  background-color: #ffffff;
+
+}
+
+.write-form .form-area{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 32px 80px;
+  padding-bottom: 0;
+
   background-color: #ffffff;
 }
 
-.btn-area {
+.btn-area .btn {
+  position: absolute;
+  bottom: 37px;
+  right: 80px;
+
+  width: 460px;
+}
+
+.pop-up-btns {
+  width: 100%;
+  height: 112px;
+
   background-color: #f4f4f4;
+}
+
+.form-area p {
+  width: 220px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form-area p:last-child {
+  width: 460px;
 }
 
 .form-area label {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
+  padding: 0;
+  margin: 0;
 }
 
 .form-area input,
 .form-area textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  margin-top: 5px;
+
   border: solid 2px #d7dcde;
 }
 
