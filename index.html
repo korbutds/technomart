@@ -415,41 +415,6 @@
         </section>
         <!-- Секция контакты -->
         <section class="contacts-section">
-          <div class="map-pop-up pop-up">
-            <h2 class="visually-hidden">Карта проезда.</h2>
-            <button class="close-btn" type="button" aria-label="закрыть">
-              <svg width="21" height="21">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-            <img src="img/pop-up-map.jpg" width="940" height="446" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
-          </div>
-          <div class="pop-up write-pop-up">
-            <h2 class="visually-hidden">Напишите нам.</h2>
-            <form class="write-form" action="https://echo.htmlacademy.ru" method="POST">
-              <div class="form-area">
-                <button class="close-btn" type="button" aria-label="закрыть">
-                  <svg width="21" height="21">
-                    <use xlink:href="#icon-close"></use>
-                  </svg>
-                </button>
-                <p>
-                  <label for="write-name">Ваше имя:</label>
-                  <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-                </p>
-                <p>
-                  <label for="write-email">Ваш e-mail:</label>
-                  <input id="write-email" type="email" name="e-mail" value="" placeholder="email@example.com">
-                </p>
-                <p>
-                  <label for="letter-us">Текст письма:</label>
-                  <textarea id="letter-us" placeholder="В свободной форме" name="text-letter" rows="6"></textarea>
-                </p>
-              </div>
-              <button class="btn" type="submit">Отправить</button>
-            </form>
-            <div class="pop-up-btns"></div>
-          </div>
           <div class="map-section">
             <h2 class="section-title">Контакты</h2>
             <p>
@@ -537,6 +502,41 @@
       </div>
     </footer>
     <!-- Pop-up's block -->
+    <div class="map-pop-up pop-up">
+      <h2 class="visually-hidden">Карта проезда.</h2>
+      <button class="close-btn" type="button" aria-label="закрыть">
+        <svg width="21" height="21">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+      <img src="img/pop-up-map.jpg" width="940" height="446" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
+    </div>
+    <div class="pop-up write-pop-up">
+      <h2 class="visually-hidden">Напишите нам.</h2>
+      <form class="write-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form-area">
+          <button class="close-btn" type="button" aria-label="закрыть">
+            <svg width="21" height="21">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+          <p>
+            <label for="write-name">Ваше имя:</label>
+            <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="write-email">Ваш e-mail:</label>
+            <input id="write-email" type="email" name="e-mail" value="" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="letter-us">Текст письма:</label>
+            <textarea id="letter-us" placeholder="В свободной форме" name="text-letter" rows="6"></textarea>
+          </p>
+        </div>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      <div class="pop-up-btns"></div>
+    </div>
     <!-- svg-sprite -->
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">
