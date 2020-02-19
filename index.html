@@ -142,7 +142,9 @@
           </ul>
         <div class="features-list">
           <div class="slider">
-            <div class="first-slider">
+            <input class="visually-hidden" type="radio" id="drill" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="hammer-drill" name="toggle">
+            <div class="first-slider slider-item" id="slide-1">
               <figure class="slider-image">
                 <figcaption>
                   <h2 class="slider-title">Дрели</h2>
@@ -152,7 +154,7 @@
               </figure>
               <a class="btn" href="#">Открыть каталог</a>
             </div>
-            <div class="second-slider visually-hidden">
+            <div class="second-slider slider-item" id="slide-2">
               <figure class="slider-image">
                 <figcaption>
                   <h2 class="slider-title">Перфораторы</h2>
@@ -162,8 +164,16 @@
               </figure>
               <a class="btn" href="inner.html">Открыть каталог</a>
             </div>
+            <div class="slider-control">
+              <label for="drill"></label>
+              <label for="hammer-drill"></label>
+            </div>
+            <div class="slider-arrows">
+              <label for="drill"></label>
+              <label for="hammer-drill"></label>
+            </div>
           </div>
-            <!-- 4 фича -->
+          <!-- 4 фича -->
           <ul class="column-line">
             <li class="features-item">
               <h3 class="features-name">Скидка 50%</h3>
@@ -341,50 +351,45 @@
             Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="div1">
-            <ul class="service-list">
-              <!-- 1 сервис -->
-              <li class="service-block">
-                <span class="service-item">Доставка</span>
-              </li>
-              <!-- 2 сервис -->
-              <li class="service-block">
-                <span class="service-item">Гарантия</span>
-              </li>
-              <!-- 3 сервис -->
-              <li class="service-block">
-                <span class="service-item">Кредит</span>
-              </li>
-            </ul>
-            <div class="div2">
-              <div class="service-submenu delivery-description">
-                <h3>Доставка</h3>
-                <p>
-                  Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,
-                  поднимая его на ваш этаж!
-                </p>
-              </div>
-              <div class="service-submenu warranty-description">
-                <h3>Гарантия</h3>
-                <p>
-                  Если купленный у нас товар поломается или заискрит,
-                  а также в случае пожара, спровоцированного его возгоранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.
-                  Дом уж восстановите как-нибудь сами.
-                </p>
-              </div>
-              <div class="service-submenu credit-description">
-                <h3>Кредит</h3>
-                <p class="credit-description">
-                  Залезть в долговую яму стало проще!
-                  Кредитные консультанты придут вам на помощь.
-                </p>
-                <a class="btn credit-btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
-              </div>
+          <input class="visually-hidden" type="radio" id="deliver" name="service" checked>
+          <input class="visually-hidden" type="radio" id="warranty" name="service">
+          <input class="visually-hidden" type="radio" id="credit" name="service">
+          <div class="service-toogle">
+            <div class="service-controls">
+              <label for="deliver" class="service-item">Доставка</label>
+              <label for="warranty" class="service-item">Гарантия</label>
+              <label for="credit" class="service-item">Кредит</label>
             </div>
+            <div class="submenu-section">
+                <div class="service-submenu delivery-description" id="toogle-1">
+                  <h3>Доставка</h3>
+                  <p>
+                    Мы с удовольствием доставим ваш товар прямо
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем,<br>
+                    поднимая его на ваш этаж!
+                  </p>
+                </div>
+                <div class="service-submenu warranty-description" id="toogle-2">
+                  <h3>Гарантия</h3>
+                  <p>
+                    Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровоцированного его возгоранием,
+                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                    сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+                </div>
+                <div class="service-submenu credit-description" id="toogle-3">
+                  <h3>Кредит</h3>
+                  <p class="credit-description">
+                    Залезть в долговую яму стало проще!
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <a class="btn credit-btn" href="#" aria-label="Отправить заявку на кредит">Отправить заявку</a>
+                </div>
+              </div>
+          </div>
           </div>
         </div>
       </section>

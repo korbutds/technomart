@@ -750,8 +750,16 @@ button {
   padding: 0;
 }
 
-.slider > div {
+.slider {
   position: relative;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-item {
+  position: absolute;
+
+  display: none;
 
   margin-bottom: 10px;
 }
@@ -792,6 +800,62 @@ button {
   padding: 10px 50px;
 }
 
+.slider-control label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  vertical-align: top;
+
+  background-color: #ffffff;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.slider-control {
+  position: absolute;
+  top: 220px;
+  left: 295px;
+}
+
+#drill:checked ~ #slide-1,
+#hammer-drill:checked ~ #slide-2 {
+  display: block;
+}
+
+#drill:checked ~ .slider-control label[for="drill"],
+#hammer-drill:checked ~ .slider-control label[for="hammer-drill"] {
+  background-color: #ee3643;
+}
+
+.slider-arrows label {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: solid 3px #ffffff;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+
+  cursor: pointer;
+}
+
+.slider-arrows label:first-child {
+  position: absolute;
+  top: 118px;
+  left: 28px;
+  transform: rotate(-45deg);
+}
+
+.slider-arrows label:last-child {
+  position: absolute;
+  top: 118px;
+  right: 28px;
+  transform: rotate(135deg);
+}
+
 /* Популярные товары */
 
 .title-container {
@@ -808,6 +872,8 @@ button {
 .title-container .section-title {
   display: inline-block;
   margin: 0;
+
+  vertical-align: middle;
 }
 
 .catalog-item,
@@ -862,6 +928,14 @@ button {
 
 /* Секция о сервисе */
 
+.service-toogle {
+  position: relative;
+  display: flex;
+}
+.submenu-section {
+  flex-grow: 1;
+}
+
 .service-section .section-title {
   margin: 0;
   padding: 0;
@@ -879,39 +953,6 @@ button {
   margin-bottom: 70px;
 }
 
-.div1 {
-  display: flex;
-}
-
-.service-list {
-  margin: 0;
-  padding: 0;
-}
-
-.service-list li {
-  margin: 0;
-
-  list-style: none;
-}
-
-.service-block {
-  box-sizing: border-box;
-  width: 240px;
-  min-height: 61px;
-  padding: 21px;
-
-  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
-  background-color: #32425c;
-}
-
-.service-block:hover {
-  box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
-  background-color: #ffffff;
-}
-
-.service-block:hover span {
-  color: #32425c;
-}
 
 .service-item {
   color: #ffffff;
@@ -921,9 +962,71 @@ button {
   line-height: 30px;
 }
 
+.service-submenu{
+  display: none;
+  padding-left: 80px;
+  box-sizing: border-box;
+  height: 100%;
+
+  background-color: #f4f7f9;
+}
+
+.service-controls {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding-bottom: 99px;
+}
+
+.service-controls::after {
+  content: "";
+  width: 10px;
+  height: 279px;
+  position: absolute;
+  bottom: 50px;
+  left: 230px;
+  z-index: 1;
+
+  background-image: url("../img/shadow.png");
+  background-repeat: no-repeat;
+}
+
+.service-controls label {
+  box-sizing: border-box;
+  width: 240px;
+  min-height: 61px;
+  padding: 15px;
+  padding-left: 20px;
+
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  background-color: #32425c;
+
+  cursor: pointer;
+}
+
+#deliver:checked ~ .service-toogle #toogle-1,
+#warranty:checked ~ .service-toogle #toogle-2,
+#credit:checked ~ .service-toogle #toogle-3 {
+  display: block;
+}
+
+#deliver:checked ~ .service-toogle label[for="deliver"],
+#warranty:checked ~ .service-toogle label[for="warranty"],
+#credit:checked ~ .service-toogle label[for="credit"] {
+  color: #32425c;
+
+  box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+  background-color: #ffffff;
+}
+
+.service-block:hover {
+  box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+  background-color: #ffffff;
+}
+
 .service-submenu h3{
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   color: #32425c;
   font-family: "Cuprum", Arial, sans-serif;
@@ -933,44 +1036,43 @@ button {
   text-transform: uppercase;
 }
 
-.service-submenu{
-  padding-left: 80px;
-
-  background-color: #f4f7f9;
-}
-
 .delivery-description p {
   width: 275px;
 }
 
 .warranty-description p {
-  width: 380px;
+  width: 375px;
 }
 
 .credit-description p {
   width: 280px;
+  margin-bottom: 25px;
 }
 
-.service-block:first-of-type li {
+.delivery-description {
   background-image: url("../img/delivery-feature.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
-  background-position: center;
+  background-position: bottom right;
   background-color: #f4f7f9;
 }
-.service-block:nth-of-type(2) li {
+.warranty-description{
   background-image: url("../img/warranty-feature.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
-  background-position: center;
+  background-position: bottom right;
   background-color: #f4f7f9;
 }
-.service-block:last-of-type li {
+.credit-description {
   background-image: url("../img/credit-feature.png");
   background-repeat: no-repeat;
-  background-size: 468px 261px;
-  background-position: center;
+  background-size: 465px 285px;
+  background-position: bottom right;
   background-color: #f4f7f9;
+}
+
+.btn.credit-btn {
+  padding: 10px 45px;
 }
 
 /* .about-section */
@@ -1513,15 +1615,18 @@ button.sorter-choised {
 .item-cost {
   position: relative;
 
+  align-self: flex-start;
   box-sizing: border-box;
   width: 121px;
   padding: 10px;
-  padding-left: 30px;
+  padding-left: 36px;
   margin-top: 10px;
+  margin-left: 43px;
 
   color: #ffffff;
 
   background-color: #ee3643;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .item-cost::after {
