@@ -149,7 +149,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 220px;
-  min-height: 42px;
+  height: 42px;
 
   color: #ffffff;
 
@@ -309,7 +309,7 @@ button {
 .header-content,
 .service-section,
 .catalog-info     {
-  background-color: #f3f7f8;
+  background-color: #f4f7f9;
 }
 
 .header-btn svg {
@@ -928,7 +928,7 @@ button {
 
 /* Секция о сервисе */
 
-.service-toogle {
+.service-toggle {
   position: relative;
   display: flex;
 }
@@ -1004,19 +1004,21 @@ button {
   cursor: pointer;
 }
 
-#deliver:checked ~ .service-toogle #toogle-1,
-#warranty:checked ~ .service-toogle #toogle-2,
-#credit:checked ~ .service-toogle #toogle-3 {
+#deliver:checked ~ .service-toggle #toggle-1,
+#warranty:checked ~ .service-toggle #toggle-2,
+#credit:checked ~ .service-toggle #toggle-3 {
   display: block;
 }
 
-#deliver:checked ~ .service-toogle label[for="deliver"],
-#warranty:checked ~ .service-toogle label[for="warranty"],
-#credit:checked ~ .service-toogle label[for="credit"] {
+#deliver:checked ~ .service-toggle label[for="deliver"],
+#warranty:checked ~ .service-toggle label[for="warranty"],
+#credit:checked ~ .service-toggle label[for="credit"] {
   color: #32425c;
 
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
   background-color: #ffffff;
+
+  cursor: default;
 }
 
 .service-block:hover {
@@ -1054,21 +1056,18 @@ button {
   background-repeat: no-repeat;
   background-size: 468px 261px;
   background-position: bottom right;
-  background-color: #f4f7f9;
 }
 .warranty-description{
   background-image: url("../img/warranty-feature.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
   background-position: bottom right;
-  background-color: #f4f7f9;
 }
 .credit-description {
   background-image: url("../img/credit-feature.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
   background-position: bottom right;
-  background-color: #f4f7f9;
 }
 
 .btn.credit-btn {
@@ -1318,7 +1317,6 @@ ul.footer-social {
   width: 42px;
   height: 42px;
   justify-content: center;
-  align-items: top;
 
   color: #ffffff;
 
@@ -1460,15 +1458,315 @@ ul.footer-social {
 
 .item-list {
   display: flex;
+  justify-content: space-between;
 }
 
 /* Фильтр */
 
-.filter-section {
-  display: flex;
-  flex-direction: column;
-  width: 220px;
+section.filter-section {
+  width: 220px; /* почему контейнеру не задается ширина???*/
 }
+
+.filter-title,
+.sorter-section {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  padding-left: 20px;
+  width: 220px;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  border-radius: 2px;
+  background-color: #f7f3ec;
+}
+
+.filter fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form-title {
+  margin: 0;
+  padding: 12px 0;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.range-section,
+.output-area input {
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 2px;
+}
+
+fieldset.range-field {
+  width: 220px;
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 25px;
+}
+
+.range-section {
+  position: relative;
+  box-sizing: border-box;
+  height: 80px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.scale {
+  width: 180px;
+  height: 2px;
+
+
+  background-color: #d7dcde;
+}
+
+.scale .bar {
+  height: 2px;
+  width: 150px;
+
+  background-color: #00ca74;
+}
+
+.range-toggle {
+  position: absolute;
+  top:50%;
+  left: 10px;
+
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+
+  background-color: #ababab;
+  border: solid 8px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.range-toggle-max {
+  left:150px;
+}
+
+.output-area {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-area::after {
+  content: "";
+
+  position: absolute;
+  transform: translateX(-5px);
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 1px;
+
+  background-color: #444444;
+}
+
+.output-area input {
+  box-sizing: border-box;
+  width: 95px;
+  padding: 10px;
+
+  text-align: center;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+fieldset.manufacturer-field {
+  margin-top: 5px;
+
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.filter-section ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  line-height: 20px;
+}
+
+.manufacturer-choise,
+.power-list {
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.manufacturer-choise label,
+.power-list label {
+  position: relative;
+
+  display: block;
+
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.manufacturer-choise label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -32px;
+
+  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+  border: solid 2px #c5c5c5;
+  box-shadow: 0px 0px 1px 0px #c5c5c5;
+  border-radius: 3px;
+}
+
+.manufacturer-choise svg {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: -32px;
+  color: #c5c5c5;
+}
+
+.filter-input-checkbox:checked + label::before {
+  display: none;
+}
+
+.filter-input-checkbox:checked + label svg {
+  display: block;
+}
+
+.power-list label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -32px;
+
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+
+  border: solid 4px #c5c5c5;
+  border-radius: 50%;
+}
+
+.power-list label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -24px;
+
+  display: none;
+  width: 9px;
+  height: 9px;
+
+  background-color: #c5c5c5;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  display: block;
+}
+
+fieldset.power-field {
+  padding-top: 10px;
+  margin-bottom: 55px;
+}
+
+.power-field legend.form-title {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.filter-btn {
+  box-sizing: border-box;
+  width: 140px;
+  padding: 10px;
+
+
+  color: #000000;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+  border-radius: 4px;
+}
+
+.filter-btn:hover {
+  border-color: #bdc6ca;
+}
+
+.filter-btn:active,
+.filter-btn:focus {
+  border-color: #ee3643;
+}
+
+/* Сортировка */
+.sorter-section {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sorter-title {
+  margin: 0;
+}
+
+.sorter-btn {
+  display: flex;
+  min-width: 460px;
+  justify-content: space-between;
+}
+
+.sorter-btn button{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  padding-left: 0;
+  padding-right: 0;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: dotted 1px #ee3643;
+}
+
+.sorter-btn button:hover {
+  color: #000000;
+  border-bottom-style: solid;
+}
+
+.sorter-btn button:active {
+  color: #ee3643;
+  border: none;
+}
+
+.min-max button:first-child {
+  margin-right: 20px;
+}
+
+/* карточка товара */
 
 .catalog-container {
   display: flex;
@@ -1489,70 +1787,8 @@ ul.footer-social {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-left: 0;
+  margin-bottom: 40px;
 }
-
-.filter-title,
-.sorter-section,
-.sorter-section button {
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  background-color: #f7f3ec;
-}
-
-fieldset {
-  border: none;
-}
-
-.form-title {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-}
-
-.range-section {
-  background-color: #f7f3ec;
-}
-
-.output-area input {
-  font-size: 17px;
-  line-height: 18px;
-  text-align: center;
-
-  background-color: #f7f3ec;
-  border: none;
-  }
-
-.manufacturer-choise,
-.power-list {
-  list-style: none;
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.sorter-section button {
-  color: rgba(156, 154, 154, 0.18);
-
-  background-color: transparent;
-  border: none;
-}
-
-.sorter-section button:hover {
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #ee3643;
-}
-
-.sorter-section button:active,
-button.sorter-choised {
-  color: #ee3643;
-  text-decoration: none;
-}
-
-/* карточка товара */
 
 .catalog-list .catalog-item {
   margin: 10px 0;
@@ -1942,7 +2178,7 @@ button.sorter-choised {
   top: 48px;
   left: 81px;
   height: 66px;
-  widows: 66px;
+  width: 66px;
 }
 
 .cart-section .btn-area {

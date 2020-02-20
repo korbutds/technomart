@@ -133,36 +133,64 @@
               <fieldset class="range-field">
                 <legend class="form-title">Цена:</legend>
                 <div class="range-section">
-                  <input type="range" id="price" name="price" min="0" max="100000" step="100" aria-label="Укажите диапозон цен">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
                 </div>
                 <div class="output-area">
-                  <input type="text" name="min-price" aria-label="Минимальная цена">
-                  -
-                  <input type="text" name="max-price" aria-label="Максимальная цена">
+                  <input type="text" name="min-price" aria-label="Минимальная цена" value="0">
+                  <input type="text" name="max-price" aria-label="Максимальная цена" value="30000">
                 </div>
               </fieldset>
               <fieldset class="manufacturer-field">
                 <legend class="form-title">Производители:</legend>
                 <ul aria-label="Выбор производителя">
                   <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-bosch" value="bosch">
-                    <label for="filter-bosch">Bosch</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-bosch" value="bosch" checked>
+                    <label for="filter-bosch">
+                      Bosch
+                      <svg width="27" height="23">
+                        <use xlink:href="#checkbox-on"></use>
+                      </svg>
+                    </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
-                    <label for="filter-interscol">Интерскол</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
+                    <label for="filter-interscol">
+                      Интерскол
+                      <svg width="27" height="23">
+                        <use xlink:href="#checkbox-on"></use>
+                      </svg>
+                    </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-makita" value="makita">
-                    <label for="filter-makita">Makita</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-makita" value="makita" checked>
+                    <label for="filter-makita">
+                      Makita
+                      <svg width="27" height="23">
+                        <use xlink:href="#checkbox-on"></use>
+                      </svg>
+                    </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
-                    <label for="filter-dewalt">Dewalt</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
+                    <label for="filter-dewalt">
+                      Dewalt
+                      <svg width="27" height="23">
+                        <use xlink:href="#checkbox-on"></use>
+                      </svg>
+                    </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
-                    <label for="filter-hitachi">Hitachi</label>
+                    <input class="visually-hidden  filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
+                    <label for="filter-hitachi">
+                      Hitachi
+                      <svg width="27" height="23">
+                        <use xlink:href="#checkbox-on"></use>
+                      </svg>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -170,16 +198,16 @@
                 <legend class="form-title">Питание:</legend>
                 <ul aria-label="Выбор типа питания инструмента">
                   <li class="power-list">
-                    <input type="radio" name="power-type" id="battery-type" value="battery" checked>
+                    <input class="visually-hidden filter-input-radio" type="radio" name="power-type" id="battery-type" value="battery" checked>
                     <label for="battery-type">Аккумуляторные</label>
                   </li>
                   <li class="power-list">
-                    <input type="radio" name="power-type" id="main-type" value="mains">
+                    <input class="visually-hidden filter-input-radio" type="radio" name="power-type" id="main-type" value="mains">
                     <label for="main-type">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
-              <button class="transparent-btn" type="submit">Показать</button>
+              <button class="filter-btn" type="submit">Показать</button>
             </form>
           </section>
 
@@ -187,11 +215,15 @@
             <section class="sorter-section">
               <h2 class="visually-hidden">Сортировка товара</h2>
               <p class="sorter-title">Сортировка:</p>
-              <button class="sorter-choised" type="button">По цене</button>
-              <button type="button">По типу</button>
-              <button type="button">По фунционалу</button>
-              <button type="button">▲</button>
-              <button type="button">▼</button>
+              <div class="sorter-btn">
+                <button type="reset">По цене</button>
+                <button type="button">По типу</button>
+                <button type="button">По фунционалу</button>
+                <div class="min-max">
+                  <button type="button">▲</button>
+                  <button type="button">▼</button>
+                </div>
+              </div>
             </section>
 
             <section class="catalog-section">
@@ -425,7 +457,7 @@
             </p>
           </div>
           <div class="footer-navigation">
-            <ul class="gold">
+            <ul>
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
               <li><a class="current-page">Каталог</a></li>
