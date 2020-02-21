@@ -140,7 +140,6 @@ button {
   position: relative;
 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -154,7 +153,7 @@ button {
   color: #ffffff;
 
   background-color: #ee3643;
-  box-shadow: 0px 5px 0 0 #b52933;
+  box-shadow:0px 5px 0 0 #b52933;
 }
 
 .logo-header {
@@ -168,16 +167,16 @@ button {
   height: 19px;
 }
 
-.logo:hover,
+.logo:not(.index-logo):hover,
 .header-btn.active:hover {
   background-color: #ca2c37;
 }
 
-.logo:hover {
+.logo:not(.index-logo):hover {
   box-shadow: 0px 5px 0 0 #9a212a; /*Сделал так, для того, чтобы если вдруг header бужет вынужден увеличиться, то лого расстянется*/
 }
 
-.logo:active {
+.logo:not(.index-logo):active {
   background-color: #ba2732;
   box-shadow: 0px 5px 0 0 #8e1e26;
 }
@@ -195,15 +194,12 @@ button {
   flex-grow: 1;
   padding: 0;
   margin: 0;
-  /* margin-left: 220px; */
 }
 
 .search-form {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+
   padding: 0;
   margin: 0;
 }
@@ -219,10 +215,13 @@ button {
   box-sizing: border-box;
   margin: 0;
   padding-left: 49px;
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
 
-  font: inherit;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 18px;
 
   background-color: transparent;
   border: none;
@@ -260,12 +259,9 @@ button {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  flex-grow: 1;
 }
 
 .order-container a{
-  display: block;
-
   color: #ffffff;
   line-height: 18px;
   font-size: 17px;
@@ -276,10 +272,9 @@ button {
   position: relative;
 
   box-sizing: border-box;
-  min-height: 42px;
-  flex-basis: 150px;
   padding-top: 12px;
   padding-bottom: 12px;
+  width: 150px;
 
   text-align: center;
 }
@@ -912,8 +907,9 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
-  padding-bottom: 85px;
+  padding-bottom: 65px;
 }
 
 .manufacturer-item {
@@ -1004,6 +1000,10 @@ button {
   cursor: pointer;
 }
 
+.service-controls label:hover {
+  background-color: #293449;
+}
+
 #deliver:checked ~ .service-toggle #toggle-1,
 #warranty:checked ~ .service-toggle #toggle-2,
 #credit:checked ~ .service-toggle #toggle-3 {
@@ -1020,6 +1020,14 @@ button {
 
   cursor: default;
 }
+
+#deliver:disabled ~ .service-toggle label[for="deliver"],
+#warranty:disabled ~ .service-toggle label[for="warranty"],
+#credit:disabled ~ .service-toggle label[for="credit"] {
+  opacity: 0.3;
+}
+
+
 
 .service-block:hover {
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
@@ -1464,7 +1472,7 @@ ul.footer-social {
 /* Фильтр */
 
 section.filter-section {
-  width: 220px; /* почему контейнеру не задается ширина???*/
+  width: 220px;
 }
 
 .filter-title,
@@ -1625,6 +1633,7 @@ fieldset.manufacturer-field {
   cursor: pointer;
 }
 
+
 .manufacturer-choise label::before {
   content: "";
   display: block;
@@ -1636,7 +1645,6 @@ fieldset.manufacturer-field {
   width: 23px;
   height: 23px;
   border: solid 2px #c5c5c5;
-  box-shadow: 0px 0px 1px 0px #c5c5c5;
   border-radius: 3px;
 }
 
@@ -1696,6 +1704,28 @@ fieldset.power-field {
 .power-field legend.form-title {
   padding-top: 20px;
   padding-bottom: 5px;
+}
+
+.manufacturer-choise:hover > .filter-input-checkbox:not(:disabled) + label::before,
+.manufacturer-choise:hover > .filter-input-checkbox:not(:disabled) + label svg,
+.power-list:hover > .filter-input-radio:not(:disabled) + label::before {
+  border-color: #b5b5b5;
+  color: #b5b5b5;
+}
+
+.power-list:hover > .filter-input-radio:not(:disabled) label::after {
+  background-color: #b5b5b5;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.filter-input-checkbox:disabled + label::before,
+.filter-input-radio:disabled + label::before,
+.filter-input-checkbox:disabled + label svg {
+  opacity: 0.3;
 }
 
 .filter-btn {
@@ -1771,7 +1801,7 @@ fieldset.power-field {
 .catalog-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 700px;
   margin-left: 20px;
 }
 
@@ -1804,6 +1834,8 @@ fieldset.power-field {
   box-sizing: border-box;
   width: 220px;
   padding-bottom: 21px;
+
+  background-color: #ffffff;
 }
 
 .catalog-item img {
@@ -1879,6 +1911,8 @@ fieldset.power-field {
 .item-hover {
   position: absolute;
   z-index: -1;
+  top: 0;
+  left: 0;
 
   display: flex;
   flex-direction: column;
@@ -2169,7 +2203,7 @@ fieldset.power-field {
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
-  min-height: 275px;
+  height: 275px;
   background-color: #ffffff;
 }
 
