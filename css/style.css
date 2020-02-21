@@ -1524,11 +1524,13 @@ fieldset.range-field {
 .range-section {
   position: relative;
   box-sizing: border-box;
-  height: 80px;
   margin-bottom: 9px;
   padding-top: 39px;
+  padding-bottom: 39px;
   padding-left: 20px;
   padding-right: 20px;
+
+  border-radius: 3px;
 }
 
 .scale {
@@ -1598,6 +1600,8 @@ fieldset.range-field {
   text-align: center;
   font-size: 17px;
   line-height: 18px;
+
+  border-radius: 3px;
 }
 
 fieldset.manufacturer-field {
@@ -1639,7 +1643,7 @@ fieldset.manufacturer-field {
   display: block;
   position: absolute;
   top: -2px;
-  left: -32px;
+  left: -35px;
 
   box-sizing: border-box;
   width: 23px;
@@ -1652,7 +1656,7 @@ fieldset.manufacturer-field {
   display: none;
   position: absolute;
   top: -2px;
-  left: -32px;
+  left: -35px;
   color: #c5c5c5;
 }
 
@@ -1668,7 +1672,7 @@ fieldset.manufacturer-field {
   content: "";
   position: absolute;
   top: -2px;
-  left: -32px;
+  left: -35px;
 
   box-sizing: border-box;
   width: 25px;
@@ -1682,7 +1686,7 @@ fieldset.manufacturer-field {
   content: "";
   position: absolute;
   top: 6px;
-  left: -24px;
+  left: -27px;
 
   display: none;
   width: 9px;
@@ -1794,6 +1798,10 @@ fieldset.power-field {
 
 .min-max button:first-child {
   margin-right: 20px;
+}
+
+.min-max button {
+  border: none;
 }
 
 /* карточка товара */
@@ -1995,6 +2003,9 @@ fieldset.power-field {
 
 
 .transparent-btn {
+  box-sizing: border-box;
+  min-width: 38px;
+
   color: #000000;
   font-size: 13px;
   line-height: 18px;
