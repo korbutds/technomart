@@ -102,6 +102,10 @@ button {
   background-color: #ba2732;
 }
 
+.hidden {
+  display: none;
+}
+
 .visually-hidden{
   position: absolute;
 
@@ -206,9 +210,6 @@ button {
 
 .search-form input::placeholder {
   color: #ffffff;
-  line-height: 18px;
-  font-family: inherit;
-  font-size: 17px;
 }
 
 .search-form input {
@@ -219,7 +220,6 @@ button {
   padding-bottom: 12px;
   width: 100%;
 
-  font-family: inherit;
   font-size: 17px;
   line-height: 18px;
 
@@ -460,7 +460,7 @@ button {
   color: #c5c5c5;
 }
 
-.user-menu {
+.logged-in {
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -807,6 +807,7 @@ button {
   width: 6px;
   height: 6px;
   margin-right: 6px;
+
   vertical-align: top;
 
   background-color: #ffffff;
@@ -837,6 +838,9 @@ button {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
+
+  vertical-align: middle;
+
   border: solid 3px #ffffff;
   border-right-color: transparent;
   border-bottom-color: transparent;
@@ -889,6 +893,8 @@ button {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+
+  background-color: #ffffff;
 }
 
 .catalog-item:hover,
@@ -923,13 +929,18 @@ button {
 /* Популярные производители */
 
 .manufacturer-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   width: 220px;
   height: 145px;
   margin-bottom: 20px;
+}
+
+.manufacturer-item a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Секция о сервисе */
@@ -1258,10 +1269,11 @@ button {
   padding: 0;
   margin: 0;
   padding-top: 37px;
+  padding-bottom: 10px;
 }
 
 ul.gold {
-  padding-top: 35px;
+  padding-top: 25px;
 }
 
 .footer-navigation li{
@@ -1354,7 +1366,7 @@ ul.footer-social {
 
 .social-btn svg {
   position: relative;
-  left: auto;
+  left: 0;
   top: 10px;
 
   color: #ffffff;
@@ -1362,6 +1374,18 @@ ul.footer-social {
 
 .vk-btn svg{
   top: 14px;
+  width: 26px;
+  height: 15px;
+}
+
+.fb-btn svg {
+  width: 12px;
+  height: 22px;
+}
+
+.insta-btn svg {
+  height: 21px;
+  width: 21px;
 }
 
 .social-btn:hover {
@@ -1820,12 +1844,12 @@ fieldset.power-field {
   border-bottom: dotted 1px #ee3643;
 }
 
-.sorter-btn button:hover {
+.sorter-btn button:not(.sorted):hover {
   color: #000000;
   border-bottom: solid 1px #ee3643;
 }
 
-.sorter-btn button:active {
+.sorter-btn button:not(.sorted):active {
   color: #ee3643;
   border: none;
 }
@@ -1846,6 +1870,8 @@ fieldset.power-field {
 .sorter-parameters .sorted {
   color: #ee3643;
   border: none;
+
+  cursor: default;
 }
 
 .min-max {
@@ -1983,7 +2009,7 @@ fieldset.power-field {
 
 .old-price {
   margin-top: 15px;
-  min-height: 18px;
+  margin-bottom: 10px;
   color: #999999;
   text-decoration: line-through;
 }
@@ -1998,6 +2024,7 @@ fieldset.power-field {
   padding-left: 36px;
   margin-top: 10px;
   margin-left: 43px;
+  margin-top: auto;
 
   color: #ffffff;
 
@@ -2126,7 +2153,7 @@ fieldset.power-field {
 
 .catalog-info .container{
   padding-top: 65px;
-  padding-bottom: 57px;
+  padding-bottom: 58px;
 }
 
 .catalog-info .section-title {
