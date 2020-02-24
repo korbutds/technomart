@@ -69,8 +69,8 @@ button {
   content: "";
   position: absolute;
   z-index: 2;
-  right: 0;
-  top: 0;
+  right: -1px;
+  top: -1px;
   background: url("../img/new-flag.png");
   width: 60px;
   height: 59px;
@@ -274,14 +274,14 @@ button {
   box-sizing: border-box;
   padding-top: 12px;
   padding-bottom: 12px;
-  width: 150px;
+  padding: 12px 10px;
+  min-width: 150px;
 
   text-align: center;
 }
 
 .header-btn {
   padding-left: 45px;
-  padding-right: 10px;
   text-align: left;
 
   background-color: inherit;
@@ -377,7 +377,7 @@ button {
   display: block;
   box-sizing: border-box;
   width: 270px;
-  height: 45px;
+  min-height: 45px;
   padding: 9px 10px 9px 70px;
 
   color: #ee3643;
@@ -709,10 +709,9 @@ button {
 }
 
 .features-description {
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
-  width: 135px;
-  height: 38px;
+  min-width: 135px;
   padding: 10px 20px;
   margin-top: 15px;
   margin-left: 5px;
@@ -722,9 +721,15 @@ button {
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
 
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 2px;
+}
+
+.features-item.new-item::after {
+  top: 0;
+  right: 0;
 }
 
 .features-description:hover {
@@ -777,8 +782,8 @@ button {
 
 .slider-image figcaption {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 24px;
+  left: 24px;
 }
 
 .slider p {
@@ -789,10 +794,12 @@ button {
 
 .slider .btn {
   position: absolute;
+  box-sizing: border-box;
   bottom: 22px;
-  left: 25px;
+  left: 26px;
+  min-width: 195px;
 
-  padding: 10px 50px;
+  padding: 10px 5px;
 }
 
 .slider-control label {
@@ -840,7 +847,7 @@ button {
 .slider-arrows label:first-child {
   position: absolute;
   top: 118px;
-  left: 28px;
+  left: 30px;
   transform: rotate(-45deg);
 }
 
@@ -853,11 +860,15 @@ button {
 
 /* Популярные товары */
 
+.popular-manufacturer {
+  padding-bottom: 65px;
+}
+
 .title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 27px;
+  padding: 25px 27px;
   padding-right: 24px;
   margin-bottom: 21px;
 
@@ -877,6 +888,7 @@ button {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .catalog-item:hover,
@@ -895,22 +907,20 @@ button {
 
 .popular-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+}
+
+.popular-list li {
+  margin-right: 20px;
+}
+
+.popular-list li:nth-child(4n) {
+  margin-right: 0;
 }
 
 /* Популярные производители */
-
-.popular-manufacturer ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 65px;
-}
 
 .manufacturer-item {
   display: flex;
@@ -935,7 +945,7 @@ button {
 .service-section .section-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .service-section .container {
@@ -946,7 +956,7 @@ button {
   margin: 0;
   padding: 0;
   width: 400px;
-  margin-bottom: 70px;
+  margin-bottom: 66px;
 }
 
 
@@ -961,6 +971,7 @@ button {
 .service-submenu{
   display: none;
   padding-left: 80px;
+  padding-top: 4px;
   box-sizing: border-box;
   height: 100%;
 
@@ -971,6 +982,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 240px;
+  padding-top: 5px;
   padding-bottom: 99px;
 }
 
@@ -990,9 +1002,8 @@ button {
 .service-controls label {
   box-sizing: border-box;
   width: 240px;
-  min-height: 61px;
-  padding: 15px;
-  padding-left: 20px;
+  padding: 16px;
+  padding-left: 22px;
 
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   background-color: #32425c;
@@ -1036,7 +1047,7 @@ button {
 
 .service-submenu h3{
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   color: #32425c;
   font-family: "Cuprum", Arial, sans-serif;
@@ -1090,7 +1101,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding-top: 80px;
-  padding-bottom: 86px;
+  padding-bottom: 87px;
 }
 
 .about-contacts h2 {
@@ -1135,7 +1146,7 @@ button {
 .about-partners li {
   position: relative;
 
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -1146,7 +1157,7 @@ button {
 
 .about-partners li::before {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: -35px;
 
   content: "";
@@ -1160,8 +1171,9 @@ button {
 .about-btn {
   box-sizing: border-box;
   width: 220px;
-  height: 38px;
-  padding: 10px;
+  padding: 10px 5px;
+
+  text-align: center;
 }
 
 /* Contact-section */
@@ -1181,7 +1193,7 @@ button {
 
 .map-section button {
   padding: 0;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-bottom: 35px;
 
   border: none;
@@ -1239,16 +1251,21 @@ button {
 
 .footer-navigation ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   padding: 0;
   margin: 0;
   padding-top: 37px;
 }
 
+ul.gold {
+  padding-top: 35px;
+}
+
 .footer-navigation li{
   display: flex;
   list-style: none;
-  margin-left: 58px;
+  margin-left: 60px;
 }
 
 .footer-navigation a {
@@ -1289,6 +1306,7 @@ button {
 .footer-copyright {
   width: 240px;
   padding: 0;
+  padding-top: 5px;
   margin: 0;
 }
 
@@ -1300,9 +1318,9 @@ button {
 ul.footer-social {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 30px;
 }
-
 
 .footer-social li {
   height: 42px;
@@ -1359,11 +1377,13 @@ ul.footer-social {
 .feedback-section {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   width: 300px;
 }
 
 .feedback-section p {
   margin-top: 0;
+  padding-top: 5px;
 }
 
 .footer-feedback,
@@ -1402,6 +1422,7 @@ ul.footer-social {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
   margin: 0;
 }
@@ -1501,6 +1522,7 @@ section.filter-section {
 .form-title {
   margin: 0;
   padding: 12px 0;
+  padding-bottom: 15px;
 
   font-weight: bold;
   font-size: 17px;
@@ -1530,7 +1552,7 @@ fieldset.range-field {
   padding-left: 20px;
   padding-right: 20px;
 
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .scale {
@@ -1551,7 +1573,7 @@ fieldset.range-field {
 .range-toggle {
   position: absolute;
   top:50%;
-  left: 10px;
+  left: 20px;
 
   box-sizing: border-box;
   width: 20px;
@@ -1567,7 +1589,7 @@ fieldset.range-field {
 }
 
 .range-toggle-max {
-  left:150px;
+  left: 160px;
 }
 
 .output-area {
@@ -1601,7 +1623,7 @@ fieldset.range-field {
   font-size: 17px;
   line-height: 18px;
 
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 fieldset.manufacturer-field {
@@ -1636,7 +1658,6 @@ fieldset.manufacturer-field {
 
   cursor: pointer;
 }
-
 
 .manufacturer-choise label::before {
   content: "";
@@ -1710,33 +1731,42 @@ fieldset.power-field {
   padding-bottom: 5px;
 }
 
-.manufacturer-choise:hover > .filter-input-checkbox:not(:disabled) + label::before,
-.manufacturer-choise:hover > .filter-input-checkbox:not(:disabled) + label svg,
-.power-list:hover > .filter-input-radio:not(:disabled) + label::before {
+.manufacturer-choise:hover label::before,
+.power-list:hover label::before {
   border-color: #b5b5b5;
+}
+
+.manufacturer-choise:hover label svg {
   color: #b5b5b5;
 }
 
-.power-list:hover > .filter-input-radio:not(:disabled) label::after {
+.power-list:hover label::after {
   background-color: #b5b5b5;
 }
 
-.filter-input-checkbox:disabled + label,
-.filter-input-radio:disabled + label {
+.filter-input:disabled + label {
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
-.filter-input-checkbox:disabled + label::before,
-.filter-input-radio:disabled + label::before,
-.filter-input-checkbox:disabled + label svg {
+.filter-input:disabled + label::before,
+.filter-input:disabled + label svg,
+.filter-input-radio:disabled + label::after {
   opacity: 0.3;
+}
+
+.filter-input:disabled + label::before {
+  border-color: #c5c5c5;
+}
+
+.filter-input:disabled + label svg {
+  color: #c5c5c5;
 }
 
 .filter-btn {
   box-sizing: border-box;
   width: 140px;
   padding: 10px;
-
 
   color: #000000;
   line-height: 18px;
@@ -1761,8 +1791,10 @@ fieldset.power-field {
 .sorter-section {
   display: flex;
   width: auto;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding-right: 17px;
 }
 
 .sorter-title {
@@ -1771,7 +1803,7 @@ fieldset.power-field {
 
 .sorter-btn {
   display: flex;
-  min-width: 460px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1788,7 +1820,7 @@ fieldset.power-field {
 
 .sorter-btn button:hover {
   color: #000000;
-  border-bottom-style: solid;
+  border-bottom: solid 1px #ee3643;
 }
 
 .sorter-btn button:active {
@@ -1796,12 +1828,72 @@ fieldset.power-field {
   border: none;
 }
 
-.min-max button:first-child {
-  margin-right: 20px;
+.sorter-parameters {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 375px;
+  justify-content: space-between;
+}
+
+.sorter-parameters button {
+  margin-left: 10px;
+  margin-right: 10px;
+  right: 10px;
+}
+
+.sorter-parameters .sorted {
+  color: #ee3643;
+  border: none;
+}
+
+.min-max {
+  margin-left: 35px;
 }
 
 .min-max button {
+  position: relative;
+
+  width: 10px;
+  height: 10px;
+  margin-left: 19px;
+
   border: none;
+}
+
+.min-max button:first-child {
+  margin: 0;
+}
+
+.min-max button::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+
+  display: block;
+  width: 0px;
+
+  border: 5px solid transparent;
+  border-bottom-width: 10px;
+  border-bottom-color: #c5c5c5;
+}
+
+.min-max button:last-child::before {
+  top: 0;
+
+  transform: rotate(180deg);
+}
+
+.min-max button:hover {
+  border: none;
+}
+
+.min-max button:not(.sorted):hover::before {
+  border-bottom-color: #000000;
+}
+
+.min-max .sorted::before {
+  border-bottom-color: #ee3643;
 }
 
 /* карточка товара */
@@ -1823,13 +1915,20 @@ fieldset.power-field {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0;
   padding-left: 0;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 42px;
 }
 
 .catalog-list .catalog-item {
   margin: 10px 0;
+  margin-right: 20px;
+}
+
+.catalog-list .catalog-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .catalog-item {
@@ -1841,7 +1940,7 @@ fieldset.power-field {
   align-items: center;
   box-sizing: border-box;
   width: 220px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 
   background-color: #ffffff;
 }
@@ -1873,7 +1972,6 @@ fieldset.power-field {
 .item-cost {
   display: block;
   box-sizing: border-box;
-  height: 38px;
 
   font-weight: bold;
   font-size: 17px;
@@ -1883,7 +1981,7 @@ fieldset.power-field {
 
 .old-price {
   margin-top: 15px;
-  height: 18px;
+  min-height: 18px;
   color: #999999;
   text-decoration: line-through;
 }
@@ -1946,9 +2044,8 @@ fieldset.power-field {
   display: block;
   box-sizing: border-box;
   width: 135px;
-  height: 38px;
-  padding: 10px;
-  margin-bottom: 7px;
+  padding: 10px 5px 8px;
+  margin-bottom: 8px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -1962,7 +2059,7 @@ fieldset.power-field {
 .basket-btn svg {
   position: absolute;
   left: 12px;
-  top: 11.5px;
+  top: 12px;
 
   opacity: 0.3;
 }
@@ -1983,7 +2080,7 @@ fieldset.power-field {
 .bookmark-btn {
   box-sizing: border-box;
   width: 135px;
-  height: 38px;
+  padding: 8px 5px;
 
   color: #32425c;
   text-transform: uppercase;
@@ -2001,18 +2098,20 @@ fieldset.power-field {
   opacity: 0.3;
 }
 
-
 .transparent-btn {
   box-sizing: border-box;
+  padding: 9px 5px;
   min-width: 38px;
 
   color: #000000;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
 
   border: solid 1px #e5e5e5;
   background-color: transparent;
+  border-radius: 4px;
 }
 
 .transparent-btn:hover {
@@ -2025,7 +2124,7 @@ fieldset.power-field {
 
 .catalog-info .container{
   padding-top: 65px;
-  padding-bottom: 55px;
+  padding-bottom: 57px;
 }
 
 .catalog-info .section-title {
@@ -2038,16 +2137,6 @@ fieldset.power-field {
 
 .catalog-pagination {
   display: flex;
-}
-
-.catalog-pagination a {
-  box-sizing: border-box;
-  min-width: 38px;
-  padding: 10px 5px;
-
-  text-align: center;
-
-  border-radius: 4px;
 }
 
 .catalog-pagination a:last-child {
@@ -2068,20 +2157,22 @@ fieldset.power-field {
 /* Поп-ап */
 
 .pop-up {
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-
-  /* display: none; */
+  position: fixed;
+  z-index: 2;
 
   border-top: solid 7px #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .map-pop-up {
+  top: 50%;
+  left: 50%;
+
+  display: none;
   width: 940px;
   height: 446px;
+  margin-top: -223px;
+  margin-left: -470px;
 
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
   border: none;
@@ -2092,7 +2183,6 @@ fieldset.power-field {
   position: absolute;
   top: 9px;
   right: 9px;
-  z-index: 2;
 
   margin: 0;
   padding: 0;
@@ -2104,13 +2194,18 @@ fieldset.power-field {
 }
 
 .write-pop-up {
-  display: flex;
+  top: 50%;
+  left: 50%;
+
+  display: none;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: space-between;
   width: 620px;
-  min-height: 430px;
+  height: 430px;
   padding-top: 13px;
+  margin-top: -215px;
+  margin-left: -310px;
 
   font-family: "Cuprum", Arial, sans-serif;
 
@@ -2137,7 +2232,6 @@ fieldset.power-field {
 }
 
 .pop-up-btns {
-  width: 100%;
   height: 112px;
 
   background-color: #f4f4f4;
@@ -2210,12 +2304,17 @@ fieldset.power-field {
 }
 
 .cart-section {
-  display: flex;
+  top: 50%;
+  left: 50%;
+
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
   height: 275px;
   background-color: #ffffff;
+  margin-top: -140px;
+  margin-left: -310px;
 }
 
 .cart-info > svg {

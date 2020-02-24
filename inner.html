@@ -148,7 +148,7 @@
                 <legend class="form-title">Производители:</legend>
                 <ul aria-label="Выбор производителя">
                   <li class="manufacturer-choise">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-bosch" value="bosch" checked disabled>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-bosch" value="bosch" checked>
                     <label for="filter-bosch">
                       Bosch
                       <svg width="27" height="23">
@@ -157,7 +157,7 @@
                     </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-interscol" value="interscol" disabled>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-interscol" value="interscol">
                     <label for="filter-interscol">
                       Интерскол
                       <svg width="27" height="23">
@@ -166,7 +166,7 @@
                     </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-makita" value="makita" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-makita" value="makita" checked>
                     <label for="filter-makita">
                       Makita
                       <svg width="27" height="23">
@@ -175,7 +175,7 @@
                     </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-dewalt" value="dewalt">
                     <label for="filter-dewalt">
                       Dewalt
                       <svg width="27" height="23">
@@ -184,7 +184,7 @@
                     </label>
                   </li>
                   <li class="manufacturer-choise">
-                    <input class="visually-hidden  filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
+                    <input class="visually-hidden  filter-input filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-hitachi" value="hitachi">
                     <label for="filter-hitachi">
                       Hitachi
                       <svg width="27" height="23">
@@ -198,11 +198,11 @@
                 <legend class="form-title">Питание:</legend>
                 <ul aria-label="Выбор типа питания инструмента">
                   <li class="power-list">
-                    <input class="visually-hidden filter-input-radio" type="radio" name="power-type" id="battery-type" value="battery" checked>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" id="battery-type" value="battery" checked>
                     <label for="battery-type">Аккумуляторные</label>
                   </li>
                   <li class="power-list">
-                    <input class="visually-hidden filter-input-radio" type="radio" name="power-type" id="main-type" value="mains" disabled>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" id="main-type" value="mains">
                     <label for="main-type">Сетевые</label>
                   </li>
                 </ul>
@@ -216,12 +216,14 @@
               <h2 class="visually-hidden">Сортировка товара</h2>
               <p class="sorter-title">Сортировка:</p>
               <div class="sorter-btn">
-                <button type="button">По цене</button>
-                <button type="button">По типу</button>
-                <button type="button">По фунционалу</button>
+                <div class="sorter-parameters">
+                  <button class="sorted" type="button">По цене</button>
+                  <button type="button">По типу</button>
+                  <button type="button">По функционалу</button>
+                </div>
                 <div class="min-max">
-                  <button type="button">▲</button>
-                  <button type="button">▼</button>
+                  <button class="sorted" type="button"></button>
+                  <button type="button"></button>
                 </div>
               </div>
             </section>
