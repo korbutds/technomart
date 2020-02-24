@@ -1228,6 +1228,8 @@ button {
 }
 
 .footer-about p {
+  display: flex;
+  flex-direction: column;
   margin-top: 33px;
   padding-left: 2px;
 
