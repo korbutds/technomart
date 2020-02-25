@@ -163,6 +163,22 @@ button {
   margin: 0;
 }
 
+.search-form input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.search-form input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.search-form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.search-form input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
 .search-form input::placeholder {
   color: #ffffff;
 }
@@ -175,6 +191,7 @@ button {
   padding-bottom: 12px;
   width: 100%;
 
+  font-family: inherit;
   font-size: 17px;
   line-height: 18px;
 
@@ -375,7 +392,7 @@ button {
 .users-btn:first-child .log-btn {
   margin-right: 10px;
   padding-left: 45px;
-  }
+}
 
 .user-login {
   display: flex;
@@ -460,7 +477,7 @@ button {
   padding: 10px;
 
   color: #c5c5c5;
-  }
+}
 
 .info-links {
   display: flex;
@@ -803,6 +820,7 @@ button {
   position: absolute;
   top: 118px;
   left: 30px;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -810,6 +828,7 @@ button {
   position: absolute;
   top: 118px;
   right: 28px;
+  -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
@@ -894,6 +913,7 @@ button {
   position: relative;
   display: flex;
 }
+
 .submenu-section {
   flex-grow: 1;
 }
@@ -914,7 +934,6 @@ button {
   width: 400px;
   margin-bottom: 66px;
 }
-
 
 .service-item {
   color: #ffffff;
@@ -994,8 +1013,6 @@ button {
   opacity: 0.3;
 }
 
-
-
 .service-block:hover {
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
   background-color: #ffffff;
@@ -1032,12 +1049,14 @@ button {
   background-size: 468px 261px;
   background-position: bottom right;
 }
-.warranty-description{
+
+.warranty-description {
   background-image: url("../img/warranty-feature.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
   background-position: bottom right;
 }
+
 .credit-description {
   background-image: url("../img/credit-feature.png");
   background-repeat: no-repeat;
@@ -1140,6 +1159,7 @@ button {
 }
 
 .map-btn {
+  -ms-grid-row-align: stretch;
   align-self: stretch;
 }
 
@@ -1541,7 +1561,9 @@ fieldset.range-field {
   border-radius: 50%;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
 
+  -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
+
   cursor: pointer;
 }
 
@@ -1561,6 +1583,7 @@ fieldset.range-field {
   content: "";
 
   position: absolute;
+  -webkit-transform: translateX(-5px);
   transform: translateX(-5px);
   top: 50%;
   left: 50%;
@@ -1839,6 +1862,7 @@ fieldset.power-field {
 .min-max button:last-child::before {
   top: 0;
 
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -2217,6 +2241,22 @@ fieldset.power-field {
   margin-top: 5px;
 
   border: solid 2px #d7dcde;
+}
+
+.form-area input::-webkit-input-placeholder, .form-area textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.form-area input::-moz-placeholder, .form-area textarea::-moz-placeholder {
+  color: #999999;
+}
+
+.form-area input:-ms-input-placeholder, .form-area textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+.form-area input::-ms-input-placeholder, .form-area textarea::-ms-input-placeholder {
+  color: #999999;
 }
 
 .form-area input::placeholder,
