@@ -30,7 +30,7 @@ button {
   z-index: 2;
   right: -1px;
   top: -1px;
-  background: url("../img/new-flag.png");
+  background-image: url("../img/new-flag.png");
   width: 60px;
   height: 59px;
 }
@@ -65,7 +65,7 @@ button {
   display: none;
 }
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -114,7 +114,7 @@ button {
   color: #ffffff;
 
   background-color: #ee3643;
-  box-shadow:0px 5px 0 0 #b52933;
+  box-shadow: 0px 5px 0 0 #b52933;
 }
 
 .logo-header {
@@ -158,7 +158,6 @@ button {
 .search-form {
   position: relative;
 
-
   padding: 0;
   margin: 0;
 }
@@ -191,7 +190,7 @@ button {
   padding-bottom: 12px;
   width: 100%;
 
-  font-family: inherit;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 
@@ -207,11 +206,11 @@ button {
   color: #666d7c;
 }
 
-.search-field:hover{
+.search-field:hover {
   background-color: #212a3a;
 }
 
-.search-field:hover svg{
+.search-field:hover svg {
   color: #ffffff;
 }
 
@@ -231,7 +230,7 @@ button {
   flex-wrap: wrap;
 }
 
-.order-container a{
+.order-container a {
   color: #ffffff;
   line-height: 18px;
   font-size: 17px;
@@ -242,8 +241,6 @@ button {
   position: relative;
 
   box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 12px;
   padding: 12px 10px;
   min-width: 150px;
 
@@ -253,8 +250,6 @@ button {
 .header-btn {
   padding-left: 45px;
   text-align: left;
-
-  background-color: inherit;
 }
 
 .order-btn {
@@ -533,7 +528,6 @@ button {
   text-align: center;
   padding: 0 23px;
   margin: 0;
-
 }
 
 .header-navigation li {
@@ -546,7 +540,7 @@ button {
 .header-navigation a {
   display: flex;
   justify-content: center;
-  padding: 21.5px 30px;
+  padding: 21px 29px;
 
   color: #ffffff;
   font-size: 17px;
@@ -809,9 +803,8 @@ button {
 
   vertical-align: middle;
 
-  border: solid 3px #ffffff;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
+  border-top: solid 3px #ffffff;
+  border-left: solid 3px #ffffff;
 
   cursor: pointer;
 }
@@ -943,7 +936,7 @@ button {
   line-height: 30px;
 }
 
-.service-submenu{
+.service-submenu {
   display: none;
   padding-left: 80px;
   padding-top: 4px;
@@ -1018,7 +1011,7 @@ button {
   background-color: #ffffff;
 }
 
-.service-submenu h3{
+.service-submenu h3 {
   margin: 0;
   margin-bottom: 22px;
 
@@ -1113,7 +1106,7 @@ button {
   margin: 0;
   padding: 0;
   padding-left: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 }
 
 .about-partners li {
@@ -1224,17 +1217,15 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding: 0;
   margin: 0;
-  padding-top: 37px;
-  padding-bottom: 10px;
+  padding: 37px 0 10px;
 }
 
 ul.gold {
   padding-top: 25px;
 }
 
-.footer-navigation li{
+.footer-navigation li {
   display: flex;
   list-style: none;
   margin-left: 60px;
@@ -1308,7 +1299,6 @@ ul.footer-social {
 }
 
 .social-btn {
-
   display: flex;
   width: 42px;
   height: 42px;
@@ -1328,7 +1318,7 @@ ul.footer-social {
   color: #ffffff;
 }
 
-.vk-btn svg{
+.vk-btn svg {
   top: 14px;
   width: 26px;
   height: 15px;
@@ -1385,7 +1375,6 @@ ul.footer-social {
 
 .footer-feedback a:hover,
 .footer-note a:hover {
-  color: #ffd180;
   text-decoration: underline;
 }
 
@@ -1449,7 +1438,6 @@ ul.footer-social {
 }
 
 .page-title {
-  box-sizing: border-box;
   margin: 0;
   margin-bottom: 20px;
   padding: 30px;
@@ -1498,8 +1486,7 @@ section.filter-section {
 
 .form-title {
   margin: 0;
-  padding: 12px 0;
-  padding-bottom: 15px;
+  padding: 12px 0 15px;
 
   font-weight: bold;
   font-size: 17px;
@@ -1509,6 +1496,8 @@ section.filter-section {
 
 .range-section,
 .output-area input {
+  font-family: "PT Sans", Arial, sans-serif;
+
   background-color: #f7f3ec;
   border: none;
   border-radius: 2px;
@@ -1524,10 +1513,7 @@ fieldset.range-field {
   position: relative;
   box-sizing: border-box;
   margin-bottom: 9px;
-  padding-top: 39px;
-  padding-bottom: 39px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 39px 20px;
 
   border-radius: 2px;
 }
@@ -1549,7 +1535,7 @@ fieldset.range-field {
 
 .range-toggle {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 20px;
 
   box-sizing: border-box;
@@ -1602,6 +1588,7 @@ fieldset.range-field {
   text-align: center;
   font-size: 17px;
   line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
 
   border-radius: 2px;
 }
@@ -1786,7 +1773,7 @@ fieldset.power-field {
   justify-content: space-between;
 }
 
-.sorter-btn button{
+.sorter-btn button {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
   padding-left: 0;
@@ -1991,7 +1978,6 @@ fieldset.power-field {
 
   border: solid 19px transparent;
   border-left-color: #ee3643;
-
 }
 
 .item-hover {
@@ -2102,7 +2088,7 @@ fieldset.power-field {
   border: solid 1px #ee3643;
 }
 
-.catalog-info .container{
+.catalog-info .container {
   padding-top: 65px;
   padding-bottom: 58px;
 }
@@ -2145,7 +2131,7 @@ fieldset.power-field {
   top: 50%;
   left: 50%;
 
-  display: none;
+  display: block;
   width: 940px;
   height: 446px;
   margin-top: -223px;
@@ -2153,7 +2139,6 @@ fieldset.power-field {
 
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
   border: none;
-
 }
 
 .close-btn {
@@ -2170,11 +2155,51 @@ fieldset.power-field {
   border: none;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .write-pop-up {
   top: 50%;
   left: 50%;
 
-  display: none;
+  display: flex;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: space-between;
@@ -2188,9 +2213,10 @@ fieldset.power-field {
 
   background-color: #ffffff;
 
+  animation: bounce 0.6s;
 }
 
-.write-form .form-area{
+.write-form .form-area {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -2240,22 +2266,28 @@ fieldset.power-field {
   padding-left: 15px;
   margin-top: 5px;
 
+  font-family: "PT Sans", Arial, sans-serif;
+
   border: solid 2px #d7dcde;
 }
 
-.form-area input::-webkit-input-placeholder, .form-area textarea::-webkit-input-placeholder {
+.form-area input::-webkit-input-placeholder,
+.form-area textarea::-webkit-input-placeholder {
   color: #999999;
 }
 
-.form-area input::-moz-placeholder, .form-area textarea::-moz-placeholder {
+.form-area input::-moz-placeholder,
+.form-area textarea::-moz-placeholder {
   color: #999999;
 }
 
-.form-area input:-ms-input-placeholder, .form-area textarea:-ms-input-placeholder {
+.form-area input:-ms-input-placeholder,
+.form-area textarea:-ms-input-placeholder {
   color: #999999;
 }
 
-.form-area input::-ms-input-placeholder, .form-area textarea::-ms-input-placeholder {
+.form-area input::-ms-input-placeholder,
+.form-area textarea::-ms-input-placeholder {
   color: #999999;
 }
 
@@ -2297,7 +2329,7 @@ fieldset.power-field {
   top: 50%;
   left: 50%;
 
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
@@ -2341,4 +2373,12 @@ fieldset.power-field {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
+}
+
+.pop-up-close {
+  display: none;
+}
+
+.pop-up-error {
+  animation: shake 0.6s;
 }

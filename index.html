@@ -505,7 +505,7 @@
       </div>
     </footer>
     <!-- Pop-up's block -->
-    <div class="map-pop-up pop-up">
+    <div class="map-pop-up pop-up pop-up-close">
       <h2 class="visually-hidden">Карта проезда.</h2>
       <button class="close-btn" type="button" aria-label="закрыть">
         <svg width="21" height="21">
@@ -514,7 +514,7 @@
       </button>
       <img src="img/pop-up-map.jpg" width="940" height="446" alt="Адрес htmlacademy Россия, город Санкт-Петербург, улица Большая Конюшенная дом 19">
     </div>
-    <div class="pop-up write-pop-up">
+    <div class="pop-up write-pop-up pop-up-close">
       <h2 class="visually-hidden">Напишите нам.</h2>
       <form class="write-form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="form-area">
@@ -525,15 +525,15 @@
           </button>
           <p>
             <label for="write-name">Ваше имя:</label>
-            <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+            <input id="write-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p>
             <label for="write-email">Ваш e-mail:</label>
-            <input id="write-email" type="email" name="e-mail" value="" placeholder="email@example.com" required>
+            <input id="write-email" type="email" name="e-mail" placeholder="email@example.com">
           </p>
           <p>
             <label for="letter-us">Текст письма:</label>
-            <textarea id="letter-us" placeholder="В свободной форме" name="text-letter" rows="6" required></textarea>
+            <textarea id="letter-us" placeholder="В свободной форме" name="text-letter" rows="6"></textarea>
           </p>
         </div>
         <button class="btn" type="submit">Отправить</button>
@@ -632,5 +632,6 @@
           fill="#fff" fill-rule="evenodd"></path>
       </symbol>
     </svg>
+    <script src="js/write-pop-up-mini.js"></script>
   </body>
 </html>
