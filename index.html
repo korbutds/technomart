@@ -426,7 +426,7 @@
             </p>
             <button type="button"><img src="img/map.jpg" width="300" height="158" alt="Карта проезда"></button>
           </div>
-          <a class="btn map-btn" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn write-btn" href="#">Заблудились? Напишите нам!</a>
         </section>
       </section>
     </main>
@@ -541,6 +541,23 @@
       </form>
       <div class="pop-up-btns"></div>
     </div>
+    <div class="pop-up cart-section pop-up-close">
+      <div class="cart-info">
+        <button class="close-btn" type="button" aria-label="закрыть">
+          <svg width="21" height="21">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <svg width="66" height="66">
+          <use xlink:href="#icon-mark"></use>
+        </svg>
+        <h2>Товар добавлен в корзину!</h2>
+      </div>
+      <div class="btn-area">
+        <a class="btn" href="#">Оформить заказ</a>
+        <a class="btn white-btn" href="#">Продолжить покупки</a>
+      </div>
+    </div>
     <!-- svg-sprite -->
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" id="icon-bookmark">
@@ -633,6 +650,6 @@
           fill="#fff" fill-rule="evenodd"></path>
       </symbol>
     </svg>
-    <script src="js/script-minimize.js"></script>
+    <script src="js/index-minimize.js"></script>
   </body>
 </html>
