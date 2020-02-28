@@ -1,13 +1,13 @@
 var writeBtn = document.querySelector(".write-btn");
 var writePopUp = document.querySelector(".write-pop-up");
-var closeWrite = writePopUp.querySelector(".close-btn");
+var closeWrite = document.querySelector(".write-pop-up .close-btn");
 var popupClose = "pop-up-close";
 var popupError = "pop-up-error";
 
-var form = writePopUp.querySelector("form");
-var userName = writePopUp.querySelector("#write-name");
-var email = writePopUp.querySelector("#write-email");
-var letter = writePopUp.querySelector("#letter-us");
+var form = document.querySelector(".write-form");
+var userName = document.querySelector("#write-name");
+var email = document.querySelector("#write-email");
+var letter = document.querySelector("#letter-us");
 
 var isStorageSupport = true;
 var storageName = localStorage.getItem("");
@@ -15,7 +15,7 @@ var storageEmail = localStorage.getItem("");
 
 var mapButton = document.querySelector(".map-section button");
 var mapPopUp = document.querySelector(".map-pop-up");
-var mapClose = mapPopUp.querySelector(".close-btn");
+var mapClose = document.querySelector(".close-btn");
 
 var basketButton = document.querySelectorAll(".basket-btn");
 var cartPopUp = document.querySelector(".cart-section");
@@ -60,18 +60,6 @@ form.addEventListener("submit", function(evt) {
   }
 })
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (!writePopUp.classList.contains(popupClose) || !mapPopUp.classList.contains(popupClose) || !cartPopUp.classList.contains(popupClose)) {
-      writePopUp.classList.add(popupClose);
-      writePopUp.classList.remove(popupError);
-      mapPopUp.classList.add(popupClose);
-      cartPopUp.classList.add(popupClose);
-    }
-  }
-});
-
 mapButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   mapPopUp.classList.add(popupClose);
@@ -84,14 +72,30 @@ mapClose.addEventListener("click", function(evt) {
 })
 
 for (var i=0; i < basketButton.length; i++) {
-basketButton[i].addEventListener("click", function(evt) {
-  evt.preventDefault();
-  cartPopUp.classList.add(popupClose);
-  cartPopUp.classList.remove(popupClose);
-})
+  basketButton[i].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    cartPopUp.classList.add(popupClose);
+    cartPopUp.classList.remove(popupClose);
+  })
 }
 
 cartClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   cartPopUp.classList.add(popupClose);
 })
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (writePopUp && !writePopUp.classList.contains(popupClose)  || !cartPopUp.classList.contains(popupClose)) {
+      writePopUp.classList.add(popupClose);
+      writePopUp.classList.remove(popupError);
+    }
+    if (mapPopUp && !mapPopUp.classList.contains(popupClose)) {
+      mapPopUp.classList.add(popupClose);
+    }
+    if (!cartPopUp.classList.contains(popupClose)) {
+      cartPopUp.classList.add(popupClose);
+    }
+  }
+});
