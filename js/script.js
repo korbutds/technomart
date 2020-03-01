@@ -1,8 +1,8 @@
 var writeBtn = document.querySelector(".write-btn");
 var writePopUp = document.querySelector(".write-pop-up");
-var closeWrite = document.querySelector(".write-pop-up .close-btn");
-var popupClose = "pop-up-close";
-var popupError = "pop-up-error";
+var writeClose = document.querySelector(".write-pop-up .close-btn");
+var popupCloseClass = "pop-up-close";
+var popupErrorClass = "pop-up-error";
 
 var form = document.querySelector(".write-form");
 var userName = document.querySelector("#write-name");
@@ -31,7 +31,7 @@ try {
 if (writePopUp) {
   writeBtn.addEventListener("click", function(evt) {
   evt.preventDefault();
-  writePopUp.classList.remove(popupClose);
+  writePopUp.classList.remove(popupCloseClass);
     if (storageName) {
       userName.value = storageName;
       email.value = storageEmail;
@@ -39,64 +39,68 @@ if (writePopUp) {
     } else {
       userName.focus();
     }
-  })
-  closeWrite.addEventListener("click", function(evt) {
+  });
+
+  writeClose.addEventListener("click", function(evt) {
     evt.preventDefault();
-    writePopUp.classList.add(popupClose);
-    writePopUp.classList.remove(popupError);
-  })
+    writePopUp.classList.add(popupCloseClass);
+    writePopUp.classList.remove(popupErrorClass);
+  });
+
   form.addEventListener("submit", function(evt) {
     if (!userName.value || !email.value || !letter.value) {
       evt.preventDefault();
-      writePopUp.classList.remove(popupError);
+      writePopUp.classList.remove(popupErrorClass);
       writePopUp.offsetWidth = writePopUp.offsetWidth;
-      writePopUp.classList.add(popupError);
+      writePopUp.classList.add(popupErrorClass);
     } else  {
       if (isStorageSupport) {
         localStorage.setItem("userName", userName.value);
         localStorage.setItem("email", email.value);
-      }
-    }
-  })
-}
+      };
+    };
+  });
+
+};
 
 if (mapPopUp) {
   mapButton.addEventListener("click", function(evt) {
     evt.preventDefault();
-    mapPopUp.classList.add(popupClose);
-    mapPopUp.classList.remove(popupClose);
-  })
+    mapPopUp.classList.add(popupCloseClass);
+    mapPopUp.classList.remove(popupCloseClass);
+  });
 
   mapClose.addEventListener("click", function(evt) {
     evt.preventDefault();
-    mapPopUp.classList.add(popupClose);
-  })
-}
+    mapPopUp.classList.add(popupCloseClass);
+  });
+
+};
 
 for (var i=0; i < basketButton.length; i++) {
   basketButton[i].addEventListener("click", function(evt) {
     evt.preventDefault();
-    cartPopUp.classList.remove(popupClose);
-  })
-}
+    cartPopUp.classList.remove(popupCloseClass);
+  });
+};
 
 cartClose.addEventListener("click", function(evt) {
   evt.preventDefault();
-  cartPopUp.classList.add(popupClose);
-})
+  cartPopUp.classList.add(popupCloseClass);
+});
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (writePopUp && !writePopUp.classList.contains(popupClose)) {
-      writePopUp.classList.add(popupClose);
-      writePopUp.classList.remove(popupError);
-    }
-    if (mapPopUp && !mapPopUp.classList.contains(popupClose)) {
-      mapPopUp.classList.add(popupClose);
-    }
-    if (cartPopUp && !cartPopUp.classList.contains(popupClose)) {
-      cartPopUp.classList.add(popupClose);
-    }
-  }
+    if (writePopUp && !writePopUp.classList.contains(popupCloseClass)) {
+      writePopUp.classList.add(popupCloseClass);
+      writePopUp.classList.remove(popupErrorClass);
+    };
+    if (mapPopUp && !mapPopUp.classList.contains(popupCloseClass)) {
+      mapPopUp.classList.add(popupCloseClass);
+    };
+    if (cartPopUp && !cartPopUp.classList.contains(popupCloseClass)) {
+      cartPopUp.classList.add(popupCloseClass);
+    };
+  };
 });
