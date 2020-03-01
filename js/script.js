@@ -1,3 +1,7 @@
+var userLogin = document.querySelector(".log-btn");
+var loggedMenu = document.querySelector("body");
+var userLogout = document.querySelector(".logout-btn");
+
 var writeBtn = document.querySelector(".write-btn");
 var writePopUp = document.querySelector(".write-pop-up");
 var writeClose = document.querySelector(".write-pop-up .close-btn");
@@ -26,7 +30,17 @@ try {
   storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
-}
+};
+
+userLogin.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  loggedMenu.classList.add("logged-in");
+});
+
+userLogout.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  loggedMenu.classList.remove("logged-in");
+});
 
 if (writePopUp) {
   writeBtn.addEventListener("click", function(evt) {
@@ -38,7 +52,7 @@ if (writePopUp) {
       letter.focus();
     } else {
       userName.focus();
-    }
+    };
   });
 
   writeClose.addEventListener("click", function(evt) {
@@ -60,7 +74,6 @@ if (writePopUp) {
       };
     };
   });
-
 };
 
 if (mapPopUp) {
@@ -74,7 +87,6 @@ if (mapPopUp) {
     evt.preventDefault();
     mapPopUp.classList.add(popupCloseClass);
   });
-
 };
 
 for (var i=0; i < basketButton.length; i++) {
