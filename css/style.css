@@ -1,3 +1,43 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -308,7 +348,7 @@ button {
   align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 46px;
-  padding-bottom: 38px;
+  padding-bottom: 39px;
 }
 
 .header-info > p {
@@ -477,25 +517,25 @@ button {
 .info-links {
   display: flex;
   align-self: flex-start;
-  align-items: flex-start;
   margin: 0;
   padding: 0;
-  padding-top: 4px;
-  padding-left: 40px;
+  padding-top: 7px;
+  padding-left: 38px;
+}
+
+.info-links li {
+  position: relative;
+  line-height: 18px;
 }
 
 .info-links li:not(:last-child) {
   margin-right: 32px;
 }
 
-.info-links li {
-  position: relative;
-}
-
 .info-links li:not(:first-child)::before {
   content: "";
   position: absolute;
-  top: 11px;
+  top: 7px;
   left: -17px;
   border: solid 2px #000000;
   border-radius: 50%;
@@ -2174,46 +2214,6 @@ fieldset.power-field {
   border: none;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
-
 .write-pop-up {
   top: 50%;
   left: 50%;
@@ -2356,6 +2356,8 @@ fieldset.power-field {
   background-color: #ffffff;
   margin-top: -140px;
   margin-left: -310px;
+  animation: bounce 0.6s;
+
 }
 
 .cart-info > svg {
