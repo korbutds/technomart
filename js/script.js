@@ -1,7 +1,3 @@
-var userLogin = document.querySelector(".log-btn");
-var loggedMenu = document.querySelector("body");
-var userLogout = document.querySelector(".logout-btn");
-
 var writeBtn = document.querySelector(".write-btn");
 var writePopUp = document.querySelector(".write-pop-up");
 var writeClose = document.querySelector(".write-pop-up .close-btn");
@@ -31,16 +27,6 @@ try {
 } catch (err) {
   isStorageSupport = false;
 };
-
-userLogin.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  loggedMenu.classList.add("logged-in");
-});
-
-userLogout.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  loggedMenu.classList.remove("logged-in");
-});
 
 if (writePopUp) {
   writeBtn.addEventListener("click", function(evt) {
@@ -107,12 +93,12 @@ window.addEventListener("keydown", function (evt) {
     if (writePopUp && !writePopUp.classList.contains(popupCloseClass)) {
       writePopUp.classList.add(popupCloseClass);
       writePopUp.classList.remove(popupErrorClass);
-    };
+    }
     if (mapPopUp && !mapPopUp.classList.contains(popupCloseClass)) {
       mapPopUp.classList.add(popupCloseClass);
-    };
+    }
     if (cartPopUp && !cartPopUp.classList.contains(popupCloseClass)) {
       cartPopUp.classList.add(popupCloseClass);
-    };
+    }
   };
 });
