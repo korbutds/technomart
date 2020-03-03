@@ -1107,8 +1107,8 @@ button {
 
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
-  padding-bottom: 85px;
+  padding-top: 79px;
+  padding-bottom: 86px;
 }
 
 .about-contacts h2 {
@@ -1121,7 +1121,7 @@ button {
 
 .about-section p {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .about-section,
@@ -1164,7 +1164,7 @@ button {
 
 .about-partners li::before {
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: -35px;
 
   content: "";
@@ -1200,7 +1200,7 @@ button {
 .map-section button {
   padding: 0;
   margin-top: 32px;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 
   border: none;
 }
@@ -1561,7 +1561,6 @@ fieldset.range-field {
 .scale {
   width: 180px;
   height: 2px;
-
 
   background-color: #d7dcde;
 }
